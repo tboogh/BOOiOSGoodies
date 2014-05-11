@@ -8,6 +8,7 @@
 
 #import "UIImage+ReflectedImage.h"
 
+// From Apple demo code
 @implementation UIImage (ReflectedImage)
 CGImageRef CreateGradientImage(int pixelsWide, int pixelsHigh)
 {
