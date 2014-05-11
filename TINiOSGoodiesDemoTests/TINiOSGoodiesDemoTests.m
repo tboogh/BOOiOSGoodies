@@ -1,6 +1,6 @@
 //
-//  TINiOSGoodiesTests.m
-//  TINiOSGoodiesTests
+//  TINiOSGoodiesDemoTests.m
+//  TINiOSGoodiesDemoTests
 //
 //  Created by Tobias Boogh on 11/05/14.
 //  Copyright (c) 2014 Tobias Boogh. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface TINiOSGoodiesTests : XCTestCase
+@interface TINiOSGoodiesDemoTests : XCTestCase
 
 @end
 
-@implementation TINiOSGoodiesTests
+@implementation TINiOSGoodiesDemoTests
 
 - (void)setUp
 {

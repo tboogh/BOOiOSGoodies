@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "TINGradientBackground.h"
 @interface TINViewController : UIViewController
+@property (weak, nonatomic) IBOutlet TINGradientBackground *gradientBackground;
 
 @end
