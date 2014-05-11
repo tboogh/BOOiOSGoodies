@@ -16,22 +16,11 @@
 		14B50A731920012100A6C372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B50A711920012100A6C372 /* Main.storyboard */; };
 		14B50A761920012100A6C372 /* TINViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A751920012100A6C372 /* TINViewController.m */; };
 		14B50A781920012100A6C372 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B50A771920012100A6C372 /* Images.xcassets */; };
-		14B50A7E1920012100A6C372 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86065191FE75900E2AD38 /* XCTest.framework */; };
-		14B50A7F1920012100A6C372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
-		14B50A801920012100A6C372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D8604A191FE75900E2AD38 /* UIKit.framework */; };
-		14B50A881920012100A6C372 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14B50A861920012100A6C372 /* InfoPlist.strings */; };
-		14B50A8A1920012100A6C372 /* TINiOSGoodiesDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A891920012100A6C372 /* TINiOSGoodiesDemoTests.m */; };
+		14B50A9C1920308000A6C372 /* TINBaseCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A951920308000A6C372 /* TINBaseCollectionViewLayout.m */; };
+		14B50A9D1920308000A6C372 /* TINHorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A971920308000A6C372 /* TINHorizontalCollectionViewLayout.m */; };
+		14B50A9E1920308000A6C372 /* TINHorizontalLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A991920308000A6C372 /* TINHorizontalLinearLayout.m */; };
+		14B50A9F1920308000A6C372 /* TINVerticalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A9B1920308000A6C372 /* TINVerticalCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		14B50A811920012100A6C372 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14D8603B191FE75900E2AD38 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14B50A601920012100A6C372;
-			remoteInfo = TINiOSGoodiesDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		14B50A611920012100A6C372 /* TINiOSGoodiesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TINiOSGoodiesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,10 +34,15 @@
 		14B50A741920012100A6C372 /* TINViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TINViewController.h; sourceTree = "<group>"; };
 		14B50A751920012100A6C372 /* TINViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINViewController.m; sourceTree = "<group>"; };
 		14B50A771920012100A6C372 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		14B50A7D1920012100A6C372 /* TINiOSGoodiesDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TINiOSGoodiesDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14B50A851920012100A6C372 /* TINiOSGoodiesDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TINiOSGoodiesDemoTests-Info.plist"; sourceTree = "<group>"; };
-		14B50A871920012100A6C372 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		14B50A891920012100A6C372 /* TINiOSGoodiesDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINiOSGoodiesDemoTests.m; sourceTree = "<group>"; };
+		14B50A921920308000A6C372 /* TINCGUtilites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINCGUtilites.h; sourceTree = "<group>"; };
+		14B50A941920308000A6C372 /* TINBaseCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINBaseCollectionViewLayout.h; sourceTree = "<group>"; };
+		14B50A951920308000A6C372 /* TINBaseCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINBaseCollectionViewLayout.m; sourceTree = "<group>"; };
+		14B50A961920308000A6C372 /* TINHorizontalCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINHorizontalCollectionViewLayout.h; sourceTree = "<group>"; };
+		14B50A971920308000A6C372 /* TINHorizontalCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINHorizontalCollectionViewLayout.m; sourceTree = "<group>"; };
+		14B50A981920308000A6C372 /* TINHorizontalLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINHorizontalLinearLayout.h; sourceTree = "<group>"; };
+		14B50A991920308000A6C372 /* TINHorizontalLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINHorizontalLinearLayout.m; sourceTree = "<group>"; };
+		14B50A9A1920308000A6C372 /* TINVerticalCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINVerticalCollectionViewLayout.h; sourceTree = "<group>"; };
+		14B50A9B1920308000A6C372 /* TINVerticalCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINVerticalCollectionViewLayout.m; sourceTree = "<group>"; };
 		14D86046191FE75900E2AD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14D86048191FE75900E2AD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		14D8604A191FE75900E2AD38 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -67,16 +61,6 @@
 				14B50A631920012100A6C372 /* CoreGraphics.framework in Frameworks */,
 				14B50A641920012100A6C372 /* UIKit.framework in Frameworks */,
 				14B50A621920012100A6C372 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14B50A7A1920012100A6C372 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14B50A7E1920012100A6C372 /* XCTest.framework in Frameworks */,
-				14B50A801920012100A6C372 /* UIKit.framework in Frameworks */,
-				14B50A7F1920012100A6C372 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,22 +92,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		14B50A831920012100A6C372 /* TINiOSGoodiesDemoTests */ = {
+		14B50A911920308000A6C372 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				14B50A891920012100A6C372 /* TINiOSGoodiesDemoTests.m */,
-				14B50A841920012100A6C372 /* Supporting Files */,
+				14B50A921920308000A6C372 /* TINCGUtilites.h */,
 			);
-			path = TINiOSGoodiesDemoTests;
+			path = Common;
 			sourceTree = "<group>";
 		};
-		14B50A841920012100A6C372 /* Supporting Files */ = {
+		14B50A931920308000A6C372 /* UICollectionViewLayouts */ = {
 			isa = PBXGroup;
 			children = (
-				14B50A851920012100A6C372 /* TINiOSGoodiesDemoTests-Info.plist */,
-				14B50A861920012100A6C372 /* InfoPlist.strings */,
+				14B50A941920308000A6C372 /* TINBaseCollectionViewLayout.h */,
+				14B50A951920308000A6C372 /* TINBaseCollectionViewLayout.m */,
+				14B50A961920308000A6C372 /* TINHorizontalCollectionViewLayout.h */,
+				14B50A971920308000A6C372 /* TINHorizontalCollectionViewLayout.m */,
+				14B50A981920308000A6C372 /* TINHorizontalLinearLayout.h */,
+				14B50A991920308000A6C372 /* TINHorizontalLinearLayout.m */,
+				14B50A9A1920308000A6C372 /* TINVerticalCollectionViewLayout.h */,
+				14B50A9B1920308000A6C372 /* TINVerticalCollectionViewLayout.m */,
 			);
-			name = "Supporting Files";
+			path = UICollectionViewLayouts;
 			sourceTree = "<group>";
 		};
 		14D8603A191FE75900E2AD38 = {
@@ -131,7 +120,6 @@
 			children = (
 				14D8604C191FE75900E2AD38 /* TINiOSGoodies */,
 				14B50A651920012100A6C372 /* TINiOSGoodiesDemo */,
-				14B50A831920012100A6C372 /* TINiOSGoodiesDemoTests */,
 				14D86045191FE75900E2AD38 /* Frameworks */,
 				14D86044191FE75900E2AD38 /* Products */,
 			);
@@ -141,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				14B50A611920012100A6C372 /* TINiOSGoodiesDemo.app */,
-				14B50A7D1920012100A6C372 /* TINiOSGoodiesDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +147,8 @@
 		14D8604C191FE75900E2AD38 /* TINiOSGoodies */ = {
 			isa = PBXGroup;
 			children = (
+				14B50A911920308000A6C372 /* Common */,
+				14B50A931920308000A6C372 /* UICollectionViewLayouts */,
 				14D86082191FFFAD00E2AD38 /* Categories */,
 				14D8607E191FE79C00E2AD38 /* Views */,
 			);
@@ -204,24 +193,6 @@
 			productReference = 14B50A611920012100A6C372 /* TINiOSGoodiesDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		14B50A7C1920012100A6C372 /* TINiOSGoodiesDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 14B50A8E1920012100A6C372 /* Build configuration list for PBXNativeTarget "TINiOSGoodiesDemoTests" */;
-			buildPhases = (
-				14B50A791920012100A6C372 /* Sources */,
-				14B50A7A1920012100A6C372 /* Frameworks */,
-				14B50A7B1920012100A6C372 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				14B50A821920012100A6C372 /* PBXTargetDependency */,
-			);
-			name = TINiOSGoodiesDemoTests;
-			productName = TINiOSGoodiesDemoTests;
-			productReference = 14B50A7D1920012100A6C372 /* TINiOSGoodiesDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -231,11 +202,6 @@
 				CLASSPREFIX = TIN;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Tobias Boogh";
-				TargetAttributes = {
-					14B50A7C1920012100A6C372 = {
-						TestTargetID = 14B50A601920012100A6C372;
-					};
-				};
 			};
 			buildConfigurationList = 14D8603E191FE75900E2AD38 /* Build configuration list for PBXProject "TINiOSGoodies" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -251,7 +217,6 @@
 			projectRoot = "";
 			targets = (
 				14B50A601920012100A6C372 /* TINiOSGoodiesDemo */,
-				14B50A7C1920012100A6C372 /* TINiOSGoodiesDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,14 +232,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14B50A7B1920012100A6C372 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14B50A881920012100A6C372 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -284,27 +241,15 @@
 			files = (
 				14B50A701920012100A6C372 /* TINAppDelegate.m in Sources */,
 				14B50A761920012100A6C372 /* TINViewController.m in Sources */,
+				14B50A9E1920308000A6C372 /* TINHorizontalLinearLayout.m in Sources */,
 				14B50A6C1920012100A6C372 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		14B50A791920012100A6C372 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				14B50A8A1920012100A6C372 /* TINiOSGoodiesDemoTests.m in Sources */,
+				14B50A9F1920308000A6C372 /* TINVerticalCollectionViewLayout.m in Sources */,
+				14B50A9C1920308000A6C372 /* TINBaseCollectionViewLayout.m in Sources */,
+				14B50A9D1920308000A6C372 /* TINHorizontalCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		14B50A821920012100A6C372 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14B50A601920012100A6C372 /* TINiOSGoodiesDemo */;
-			targetProxy = 14B50A811920012100A6C372 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		14B50A681920012100A6C372 /* InfoPlist.strings */ = {
@@ -321,14 +266,6 @@
 				14B50A721920012100A6C372 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		14B50A861920012100A6C372 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14B50A871920012100A6C372 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -361,46 +298,6 @@
 				INFOPLIST_FILE = "TINiOSGoodiesDemo/TINiOSGoodiesDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		14B50A8F1920012100A6C372 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TINiOSGoodiesDemo.app/TINiOSGoodiesDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TINiOSGoodiesDemo/TINiOSGoodiesDemo-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "TINiOSGoodiesDemoTests/TINiOSGoodiesDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		14B50A901920012100A6C372 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TINiOSGoodiesDemo.app/TINiOSGoodiesDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TINiOSGoodiesDemo/TINiOSGoodiesDemo-Prefix.pch";
-				INFOPLIST_FILE = "TINiOSGoodiesDemoTests/TINiOSGoodiesDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -484,14 +381,6 @@
 			buildConfigurations = (
 				14B50A8C1920012100A6C372 /* Debug */,
 				14B50A8D1920012100A6C372 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		14B50A8E1920012100A6C372 /* Build configuration list for PBXNativeTarget "TINiOSGoodiesDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				14B50A8F1920012100A6C372 /* Debug */,
-				14B50A901920012100A6C372 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
