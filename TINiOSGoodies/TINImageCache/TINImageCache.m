@@ -169,7 +169,7 @@
     });
 }
 
--(void)getImageFromFilePath:(NSString *)filePath withSize:(CGSize)size withCompletion:(TINImageCacheCompletion)completion{
+-(void)getThumbnailForImage:(NSString *)filePath withSize:(CGSize)size withCompletion:(TINImageCacheCompletion)completion{
     dispatch_async(self.fetch_image_queue, ^{
         UIImage *image = [self getThumbnailForImage:filePath withSize:size];
         dispatch_async(dispatch_get_main_queue(), ^{

@@ -20,6 +20,11 @@
 		14B50A9D1920308000A6C372 /* TINHorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A971920308000A6C372 /* TINHorizontalCollectionViewLayout.m */; };
 		14B50A9E1920308000A6C372 /* TINHorizontalLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A991920308000A6C372 /* TINHorizontalLinearLayout.m */; };
 		14B50A9F1920308000A6C372 /* TINVerticalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A9B1920308000A6C372 /* TINVerticalCollectionViewLayout.m */; };
+		14B50ABD192031BD00A6C372 /* TINImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50ABC192031BD00A6C372 /* TINImageCache.m */; };
+		14B50AC0192031F400A6C372 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50ABF192031F400A6C372 /* UIImage+Resize.m */; };
+		14B50AC71920321900A6C372 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50AC21920321900A6C372 /* UIImage+Alpha.m */; };
+		14B50AC81920321900A6C372 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50AC41920321900A6C372 /* UIImage+RoundedCorner.m */; };
+		14B50AC91920321900A6C372 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50AC61920321900A6C372 /* UIImage+Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,16 @@
 		14B50A991920308000A6C372 /* TINHorizontalLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINHorizontalLinearLayout.m; sourceTree = "<group>"; };
 		14B50A9A1920308000A6C372 /* TINVerticalCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINVerticalCollectionViewLayout.h; sourceTree = "<group>"; };
 		14B50A9B1920308000A6C372 /* TINVerticalCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINVerticalCollectionViewLayout.m; sourceTree = "<group>"; };
+		14B50ABB192031BD00A6C372 /* TINImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINImageCache.h; sourceTree = "<group>"; };
+		14B50ABC192031BD00A6C372 /* TINImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINImageCache.m; sourceTree = "<group>"; };
+		14B50ABE192031F400A6C372 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "Categories/UIImage+Resize.h"; sourceTree = "<group>"; };
+		14B50ABF192031F400A6C372 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "Categories/UIImage+Resize.m"; sourceTree = "<group>"; };
+		14B50AC11920321900A6C372 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Alpha.h"; path = "Categories/UIImage+Alpha.h"; sourceTree = "<group>"; };
+		14B50AC21920321900A6C372 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Alpha.m"; path = "Categories/UIImage+Alpha.m"; sourceTree = "<group>"; };
+		14B50AC31920321900A6C372 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+RoundedCorner.h"; path = "Categories/UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		14B50AC41920321900A6C372 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RoundedCorner.m"; path = "Categories/UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		14B50AC51920321900A6C372 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Utilities.h"; path = "Categories/UIImage+Utilities.h"; sourceTree = "<group>"; };
+		14B50AC61920321900A6C372 /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Utilities.m"; path = "Categories/UIImage+Utilities.m"; sourceTree = "<group>"; };
 		14D86046191FE75900E2AD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14D86048191FE75900E2AD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		14D8604A191FE75900E2AD38 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -115,6 +130,15 @@
 			path = UICollectionViewLayouts;
 			sourceTree = "<group>";
 		};
+		14B50ABA192031BD00A6C372 /* TINImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				14B50ABB192031BD00A6C372 /* TINImageCache.h */,
+				14B50ABC192031BD00A6C372 /* TINImageCache.m */,
+			);
+			path = TINImageCache;
+			sourceTree = "<group>";
+		};
 		14D8603A191FE75900E2AD38 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +171,7 @@
 		14D8604C191FE75900E2AD38 /* TINiOSGoodies */ = {
 			isa = PBXGroup;
 			children = (
+				14B50ABA192031BD00A6C372 /* TINImageCache */,
 				14B50A911920308000A6C372 /* Common */,
 				14B50A931920308000A6C372 /* UICollectionViewLayouts */,
 				14D86082191FFFAD00E2AD38 /* Categories */,
@@ -167,6 +192,14 @@
 		14D86082191FFFAD00E2AD38 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				14B50AC11920321900A6C372 /* UIImage+Alpha.h */,
+				14B50AC21920321900A6C372 /* UIImage+Alpha.m */,
+				14B50AC31920321900A6C372 /* UIImage+RoundedCorner.h */,
+				14B50AC41920321900A6C372 /* UIImage+RoundedCorner.m */,
+				14B50AC51920321900A6C372 /* UIImage+Utilities.h */,
+				14B50AC61920321900A6C372 /* UIImage+Utilities.m */,
+				14B50ABE192031F400A6C372 /* UIImage+Resize.h */,
+				14B50ABF192031F400A6C372 /* UIImage+Resize.m */,
 				14D86083191FFFC200E2AD38 /* UIImage+ReflectedImage.h */,
 				14D86084191FFFC200E2AD38 /* UIImage+ReflectedImage.m */,
 			);
@@ -243,8 +276,13 @@
 				14B50A761920012100A6C372 /* TINViewController.m in Sources */,
 				14B50A9E1920308000A6C372 /* TINHorizontalLinearLayout.m in Sources */,
 				14B50A6C1920012100A6C372 /* main.m in Sources */,
+				14B50ABD192031BD00A6C372 /* TINImageCache.m in Sources */,
+				14B50AC81920321900A6C372 /* UIImage+RoundedCorner.m in Sources */,
+				14B50AC0192031F400A6C372 /* UIImage+Resize.m in Sources */,
 				14B50A9F1920308000A6C372 /* TINVerticalCollectionViewLayout.m in Sources */,
 				14B50A9C1920308000A6C372 /* TINBaseCollectionViewLayout.m in Sources */,
+				14B50AC71920321900A6C372 /* UIImage+Alpha.m in Sources */,
+				14B50AC91920321900A6C372 /* UIImage+Utilities.m in Sources */,
 				14B50A9D1920308000A6C372 /* TINHorizontalCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
