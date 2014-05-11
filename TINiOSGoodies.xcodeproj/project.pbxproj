@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14D86047191FE75900E2AD38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
+		14D86049191FE75900E2AD38 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86048191FE75900E2AD38 /* CoreGraphics.framework */; };
+		14D8604B191FE75900E2AD38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D8604A191FE75900E2AD38 /* UIKit.framework */; };
+		14D86051191FE75900E2AD38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14D8604F191FE75900E2AD38 /* InfoPlist.strings */; };
+		14D86053191FE75900E2AD38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D86052191FE75900E2AD38 /* main.m */; };
+		14D86057191FE75900E2AD38 /* TINAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D86056191FE75900E2AD38 /* TINAppDelegate.m */; };
+		14D8605A191FE75900E2AD38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D86058191FE75900E2AD38 /* Main.storyboard */; };
+		14D8605D191FE75900E2AD38 /* TINViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D8605C191FE75900E2AD38 /* TINViewController.m */; };
+		14D8605F191FE75900E2AD38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D8605E191FE75900E2AD38 /* Images.xcassets */; };
+		14D86066191FE75900E2AD38 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86065191FE75900E2AD38 /* XCTest.framework */; };
+		14D86067191FE75900E2AD38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
+		14D86068191FE75900E2AD38 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D8604A191FE75900E2AD38 /* UIKit.framework */; };
+		14D86070191FE75900E2AD38 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14D8606E191FE75900E2AD38 /* InfoPlist.strings */; };
+		14D86072191FE75900E2AD38 /* TINiOSGoodiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D86071191FE75900E2AD38 /* TINiOSGoodiesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14D86069191FE75900E2AD38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14D8603B191FE75900E2AD38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D86042191FE75900E2AD38;
+			remoteInfo = TINiOSGoodies;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14D86043191FE75900E2AD38 /* TINiOSGoodies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TINiOSGoodies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D86046191FE75900E2AD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		14D86048191FE75900E2AD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		14D8604A191FE75900E2AD38 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		14D8604E191FE75900E2AD38 /* TINiOSGoodies-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TINiOSGoodies-Info.plist"; sourceTree = "<group>"; };
+		14D86050191FE75900E2AD38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14D86052191FE75900E2AD38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14D86054191FE75900E2AD38 /* TINiOSGoodies-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TINiOSGoodies-Prefix.pch"; sourceTree = "<group>"; };
+		14D86055191FE75900E2AD38 /* TINAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TINAppDelegate.h; sourceTree = "<group>"; };
+		14D86056191FE75900E2AD38 /* TINAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINAppDelegate.m; sourceTree = "<group>"; };
+		14D86059191FE75900E2AD38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14D8605B191FE75900E2AD38 /* TINViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TINViewController.h; sourceTree = "<group>"; };
+		14D8605C191FE75900E2AD38 /* TINViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINViewController.m; sourceTree = "<group>"; };
+		14D8605E191FE75900E2AD38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		14D86064191FE75900E2AD38 /* TINiOSGoodiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TINiOSGoodiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D86065191FE75900E2AD38 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		14D8606D191FE75900E2AD38 /* TINiOSGoodiesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TINiOSGoodiesTests-Info.plist"; sourceTree = "<group>"; };
+		14D8606F191FE75900E2AD38 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14D86071191FE75900E2AD38 /* TINiOSGoodiesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINiOSGoodiesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14D86040191FE75900E2AD38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D86049191FE75900E2AD38 /* CoreGraphics.framework in Frameworks */,
+				14D8604B191FE75900E2AD38 /* UIKit.framework in Frameworks */,
+				14D86047191FE75900E2AD38 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D86061191FE75900E2AD38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D86066191FE75900E2AD38 /* XCTest.framework in Frameworks */,
+				14D86068191FE75900E2AD38 /* UIKit.framework in Frameworks */,
+				14D86067191FE75900E2AD38 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14D8603A191FE75900E2AD38 = {
+			isa = PBXGroup;
+			children = (
+				14D8604C191FE75900E2AD38 /* TINiOSGoodies */,
+				14D8606B191FE75900E2AD38 /* TINiOSGoodiesTests */,
+				14D86045191FE75900E2AD38 /* Frameworks */,
+				14D86044191FE75900E2AD38 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14D86044191FE75900E2AD38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14D86043191FE75900E2AD38 /* TINiOSGoodies.app */,
+				14D86064191FE75900E2AD38 /* TINiOSGoodiesTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14D86045191FE75900E2AD38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14D86046191FE75900E2AD38 /* Foundation.framework */,
+				14D86048191FE75900E2AD38 /* CoreGraphics.framework */,
+				14D8604A191FE75900E2AD38 /* UIKit.framework */,
+				14D86065191FE75900E2AD38 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14D8604C191FE75900E2AD38 /* TINiOSGoodies */ = {
+			isa = PBXGroup;
+			children = (
+				14D86055191FE75900E2AD38 /* TINAppDelegate.h */,
+				14D86056191FE75900E2AD38 /* TINAppDelegate.m */,
+				14D86058191FE75900E2AD38 /* Main.storyboard */,
+				14D8605B191FE75900E2AD38 /* TINViewController.h */,
+				14D8605C191FE75900E2AD38 /* TINViewController.m */,
+				14D8605E191FE75900E2AD38 /* Images.xcassets */,
+				14D8604D191FE75900E2AD38 /* Supporting Files */,
+			);
+			path = TINiOSGoodies;
+			sourceTree = "<group>";
+		};
+		14D8604D191FE75900E2AD38 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14D8604E191FE75900E2AD38 /* TINiOSGoodies-Info.plist */,
+				14D8604F191FE75900E2AD38 /* InfoPlist.strings */,
+				14D86052191FE75900E2AD38 /* main.m */,
+				14D86054191FE75900E2AD38 /* TINiOSGoodies-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14D8606B191FE75900E2AD38 /* TINiOSGoodiesTests */ = {
+			isa = PBXGroup;
+			children = (
+				14D86071191FE75900E2AD38 /* TINiOSGoodiesTests.m */,
+				14D8606C191FE75900E2AD38 /* Supporting Files */,
+			);
+			path = TINiOSGoodiesTests;
+			sourceTree = "<group>";
+		};
+		14D8606C191FE75900E2AD38 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14D8606D191FE75900E2AD38 /* TINiOSGoodiesTests-Info.plist */,
+				14D8606E191FE75900E2AD38 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14D86042191FE75900E2AD38 /* TINiOSGoodies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D86075191FE75900E2AD38 /* Build configuration list for PBXNativeTarget "TINiOSGoodies" */;
+			buildPhases = (
+				14D8603F191FE75900E2AD38 /* Sources */,
+				14D86040191FE75900E2AD38 /* Frameworks */,
+				14D86041191FE75900E2AD38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TINiOSGoodies;
+			productName = TINiOSGoodies;
+			productReference = 14D86043191FE75900E2AD38 /* TINiOSGoodies.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14D86063191FE75900E2AD38 /* TINiOSGoodiesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D86078191FE75900E2AD38 /* Build configuration list for PBXNativeTarget "TINiOSGoodiesTests" */;
+			buildPhases = (
+				14D86060191FE75900E2AD38 /* Sources */,
+				14D86061191FE75900E2AD38 /* Frameworks */,
+				14D86062191FE75900E2AD38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14D8606A191FE75900E2AD38 /* PBXTargetDependency */,
+			);
+			name = TINiOSGoodiesTests;
+			productName = TINiOSGoodiesTests;
+			productReference = 14D86064191FE75900E2AD38 /* TINiOSGoodiesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14D8603B191FE75900E2AD38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TIN;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Tobias Boogh";
+				TargetAttributes = {
+					14D86063191FE75900E2AD38 = {
+						TestTargetID = 14D86042191FE75900E2AD38;
+					};
+				};
+			};
+			buildConfigurationList = 14D8603E191FE75900E2AD38 /* Build configuration list for PBXProject "TINiOSGoodies" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14D8603A191FE75900E2AD38;
+			productRefGroup = 14D86044191FE75900E2AD38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14D86042191FE75900E2AD38 /* TINiOSGoodies */,
+				14D86063191FE75900E2AD38 /* TINiOSGoodiesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14D86041191FE75900E2AD38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D8605F191FE75900E2AD38 /* Images.xcassets in Resources */,
+				14D86051191FE75900E2AD38 /* InfoPlist.strings in Resources */,
+				14D8605A191FE75900E2AD38 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D86062191FE75900E2AD38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D86070191FE75900E2AD38 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14D8603F191FE75900E2AD38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D86057191FE75900E2AD38 /* TINAppDelegate.m in Sources */,
+				14D8605D191FE75900E2AD38 /* TINViewController.m in Sources */,
+				14D86053191FE75900E2AD38 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D86060191FE75900E2AD38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D86072191FE75900E2AD38 /* TINiOSGoodiesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14D8606A191FE75900E2AD38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D86042191FE75900E2AD38 /* TINiOSGoodies */;
+			targetProxy = 14D86069191FE75900E2AD38 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14D8604F191FE75900E2AD38 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D86050191FE75900E2AD38 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		14D86058191FE75900E2AD38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D86059191FE75900E2AD38 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14D8606E191FE75900E2AD38 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14D8606F191FE75900E2AD38 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14D86073191FE75900E2AD38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		14D86074191FE75900E2AD38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14D86076191FE75900E2AD38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TINiOSGoodies/TINiOSGoodies-Prefix.pch";
+				INFOPLIST_FILE = "TINiOSGoodies/TINiOSGoodies-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		14D86077191FE75900E2AD38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TINiOSGoodies/TINiOSGoodies-Prefix.pch";
+				INFOPLIST_FILE = "TINiOSGoodies/TINiOSGoodies-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		14D86079191FE75900E2AD38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TINiOSGoodies.app/TINiOSGoodies";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TINiOSGoodies/TINiOSGoodies-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TINiOSGoodiesTests/TINiOSGoodiesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		14D8607A191FE75900E2AD38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TINiOSGoodies.app/TINiOSGoodies";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TINiOSGoodies/TINiOSGoodies-Prefix.pch";
+				INFOPLIST_FILE = "TINiOSGoodiesTests/TINiOSGoodiesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14D8603E191FE75900E2AD38 /* Build configuration list for PBXProject "TINiOSGoodies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D86073191FE75900E2AD38 /* Debug */,
+				14D86074191FE75900E2AD38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D86075191FE75900E2AD38 /* Build configuration list for PBXNativeTarget "TINiOSGoodies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D86076191FE75900E2AD38 /* Debug */,
+				14D86077191FE75900E2AD38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		14D86078191FE75900E2AD38 /* Build configuration list for PBXNativeTarget "TINiOSGoodiesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D86079191FE75900E2AD38 /* Debug */,
+				14D8607A191FE75900E2AD38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14D8603B191FE75900E2AD38 /* Project object */;
+}
