@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "TINBaseCollectionViewLayout.h"
 #define DEG2RAD(x) return (x / 180 * M_PI)
+
+// Const for SupplementaryViewOfKind
+UIKIT_EXTERN NSString * const kTINHorizontalLinearLayoutViewReflectionKind;
+
 @interface TINHorizontalLinearLayout : TINBaseCollectionViewLayout<UICollectionViewDelegateFlowLayout>
 @property (nonatomic) float zoomScale;
 @end
