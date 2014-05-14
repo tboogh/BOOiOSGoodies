@@ -12,7 +12,7 @@ UIKIT_EXTERN NSString *const kBOOBaseCollectionViewLayoutBackground;
 
 @interface BOOBaseCollectionViewLayout : UICollectionViewFlowLayout
 @property (nonatomic) CGSize totalSize;
-@property (nonatomic, strong) NSArray *layoutAttributes;
+@property (nonatomic, strong) NSArray *layoutSections;
 @property (nonatomic) UIEdgeInsets margins;
 @property (nonatomic) CGSize cellSize;
 @property (nonatomic) float falloffDistance;

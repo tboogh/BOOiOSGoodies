@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Tobias Boogh. All rights reserved.
 //
 
-#import "TINGradientBackground.h"
+#import "BOOGradientBackgroundView.h"
 
-@interface TINGradientBackground()
+@interface BOOGradientBackgroundView()
 @property (nonatomic, strong) NSMutableArray *colors;
 @end
 
-@implementation TINGradientBackground
+@implementation BOOGradientBackgroundView
 
 +(Class)layerClass{
     return [CAGradientLayer class];

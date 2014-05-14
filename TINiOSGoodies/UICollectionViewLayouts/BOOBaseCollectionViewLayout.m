@@ -23,12 +23,15 @@ NSString *const kBOOBaseCollectionViewLayoutBackground = @"TINBaseCollectionView
 
 -(void)prepareLayoutForHorizontalLayout{
     BOOL dynamicCellSize = [self.collectionView.delegate respondsToSelector:@selector(collectionView:layout:sizeForItemAtIndexPath:)];
-    NSMutableArray *attributeArray = [[NSMutableArray alloc] initWithCapacity:1];
+    
     CGSize totalSize = CGSizeZero;
 
     long sectionCount = [self.collectionView numberOfSections];
+    NSMutableArray *sectionsArray = [[NSMutableArray alloc] initWithCapacity:sectionCount];
     for (int section=0; section < sectionCount; ++section){
         long rowsInSection = [self.collectionView numberOfItemsInSection:section];
+        NSMutableArray *rowsArray = [[NSMutableArray alloc] initWithCapacity:rowsInSection];
+        [sectionsArray addObject:rowsArray];
         for (int row=0; row < rowsInSection; ++row) {
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:section];
             
@@ -48,17 +51,17 @@ NSString *const kBOOBaseCollectionViewLayoutBackground = @"TINBaseCollectionView
             
             attr.frame = cellFrame;
             
-            [attributeArray addObject:attr];
+            [rowsArray addObject:attr];
             
             totalSize.height = MAX(totalSize.height, y + cellSize.height + self.margins.bottom);
             totalSize.width = cellFrame.origin.x + cellFrame.size.width + self.margins.right;
         }
     }
-    UICollectionViewLayoutAttributes *lastAttribute = [attributeArray lastObject];
+    UICollectionViewLayoutAttributes *lastAttribute = [[sectionsArray lastObject] lastObject];
     totalSize.width += (self.collectionView.bounds.size.width * 0.5f) - (lastAttribute.frame.size.width * 0.5f);
     
     
     self.totalSize = totalSize;
-    self.layoutAttributes = attributeArray;
+    self.layoutSections = sectionsArray;
 }
 @end

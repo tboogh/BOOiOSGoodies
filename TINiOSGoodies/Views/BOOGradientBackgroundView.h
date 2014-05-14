@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TINGradientBackground : UIView
+@interface BOOGradientBackgroundView : UIView
 -(void)addColor:(UIColor *)color;
 -(void)insertColor:(UIColor *)color atIndex:(int)index;
 -(void)removeColorAtIndex:(int)index;
