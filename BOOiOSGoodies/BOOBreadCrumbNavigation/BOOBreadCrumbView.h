@@ -8,24 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, BOOBreadCrumbPosition) {
-    kBOOBreadCrumpPositionFirst,
-    kBOOBreadCrumpPositionLast
-};
+#import "BOOBreadCrumbButton.h"
 
-@protocol BOOBreadCrumbDelegate <NSObject>
--(bool)shouldSelectAtIndex:(int)index;
--(void)buttonSelectedAtIndex:(int)index;
--(UIControl *)controlForButtonAtIndex:(int)index withPosition:(BOOBreadCrumbPosition)position;
+@protocol BOOBreadCrumbDataSource <NSObject>
+-(BOOBreadCrumbButton *)controlForButtonAtIndex:(int)index;
 @end
 
-@interface BOOBreadCrumbView : UIScrollView{
+@protocol BOOBreadCrumbDelegate <NSObject>
+@optional
+-(bool)shouldSelectAtIndex:(int)index;
+-(void)buttonSelectedAtIndex:(int)index;
+@end
+
+@interface BOOBreadCrumbView : UIScrollView <UIScrollViewDelegate>{
 }
 @property (nonatomic, strong) NSMutableArray *buttons;
 @property (nonatomic, weak) IBOutlet id <BOOBreadCrumbDelegate> breadCrumbDelegate;
+@property (nonatomic, weak) IBOutlet id <BOOBreadCrumbDataSource> breadCrumbDataSource;
 @property (nonatomic) CGFloat buttonSpacing;
 -(void)setHomeButtonTitle:(NSString *)title;
--(void)addButtonWithTitle:(NSString*)title;
+-(void)addButton;
 -(void)removeButtonsAfterIndex:(uint)index;
 -(void)clearButtons;
 -(void)setHidden:(BOOL)hidden animated:(BOOL)animated;

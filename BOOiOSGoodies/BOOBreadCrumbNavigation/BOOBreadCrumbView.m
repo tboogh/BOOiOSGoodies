@@ -85,10 +85,10 @@
     }];
 }
 
--(void)setHomeButtonTitle:(NSString *)title{
-    _homeButtonTitle = title;
-    [self addButtonWithTitle:_homeButtonTitle];
-}
+//-(void)setHomeButtonTitle:(NSString *)title{
+//    _homeButtonTitle = title;
+//    [self addButtonWithTitle:_homeButtonTitle];
+//}
 
 -(void)clearButtons{
     for (UIView *view in self.subviews){
@@ -96,48 +96,55 @@
     }
     
     [self.buttons removeAllObjects];
-    [self addButtonWithTitle:_homeButtonTitle];
+//    [self addButtonWithTitle:_homeButtonTitle];
 }
 
--(BOOBreadCrumbPosition)positionForNextItem{
-    if (self.buttons.count == 0){
-        return kBOOBreadCrumpPositionFirst;
-    } else {
-        return kBOOBreadCrumpPositionLast;
-    }
-}
-
--(void)addButtonWithTitle:(NSString*)title{
+-(void)addButton{
     CGRect buttonFrame;
     CGRect targetFrame;
-    if (![self.breadCrumbDelegate respondsToSelector:@selector(controlForButtonAtIndex:withPosition:)]){
-        @throw [NSException exceptionWithName:@"BOOBreadCrumbDelegateNotImplemented" reason:@"Missing implementation for viewForButtonAtIndex:withPosition:" userInfo:nil];
+    if (![self.breadCrumbDataSource respondsToSelector:@selector(controlForButtonAtIndex:)]){
+        @throw [NSException exceptionWithName:@"BOOBreadCrumbDelegateNotImplemented" reason:@"Missing implementation for controlForButtonAtIndex:withPosition:" userInfo:nil];
     }
     
-    UIControl *buttonView = [self.breadCrumbDelegate controlForButtonAtIndex:self.buttons.count withPosition:[self positionForNextItem]];
+    BOOBreadCrumbButton *buttonView = [self.breadCrumbDataSource controlForButtonAtIndex:self.buttons.count];
     
     buttonFrame = targetFrame = buttonView.bounds;
-    buttonFrame.origin.x = self.contentSize.width;
+    
     if (self.buttons.count > 0){
-        buttonFrame.origin.x += self.buttonSpacing;
+        buttonFrame.origin.x = self.contentSize.width + self.buttonSpacing;
     }
+    
+    targetFrame = buttonFrame;
     
     CGSize contentSize = self.contentSize;
     contentSize.height = MAX(buttonFrame.size.height, contentSize.height);
     contentSize.width = buttonFrame.origin.x + buttonFrame.size.width;
+    self.contentSize = contentSize;
     
-    targetFrame = buttonFrame;
     buttonFrame.origin.x = MAX(self.contentSize.width, self.bounds.size.width);
-
+    buttonView.frame = buttonFrame;
     [self.buttons addObject:buttonView];
     
     [buttonView addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:buttonView];
-    
+    [self updateButtons];
     [UIView animateWithDuration:0.3 animations:^{
         buttonView.frame = targetFrame;
+    } completion:^(BOOL finished) {
+        
+        [self scrollRectToVisible:buttonView.frame animated:YES];
     }];
     
+}
+
+-(void)updateButtons{
+    for (BOOBreadCrumbButton *button in self.buttons) {
+        if ([self.buttons lastObject] == button){
+            [button setState:kBOOBreadCrumbButtonStateCurrent];
+        } else {
+            [button setState:kBOOBreadCrumbButtonStateNormal];
+        }
+    }
 }
 
 @end
