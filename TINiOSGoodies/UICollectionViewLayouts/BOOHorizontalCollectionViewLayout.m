@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Tobias Boogh. All rights reserved.
 //
 
-#import "TINHorizontalCollectionViewLayout.h"
+#import "BOOHorizontalCollectionViewLayout.h"
 
-@implementation TINHorizontalCollectionViewLayout
+@implementation BOOHorizontalCollectionViewLayout
 -(id)init{
     self = [super init];
     if (self){

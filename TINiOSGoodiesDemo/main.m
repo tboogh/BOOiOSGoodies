@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TINAppDelegate.h"
+#import "BOODemoAppDelegate.h"
 
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TINAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([BOODemoAppDelegate class]));
     }
 }

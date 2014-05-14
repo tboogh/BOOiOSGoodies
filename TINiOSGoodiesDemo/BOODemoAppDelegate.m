@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Tobias Boogh. All rights reserved.
 //
 
-#import "TINAppDelegate.h"
+#import "BOODemoAppDelegate.h"
 
-@implementation TINAppDelegate
+@implementation BOODemoAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

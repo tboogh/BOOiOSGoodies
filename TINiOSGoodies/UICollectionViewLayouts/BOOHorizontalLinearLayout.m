@@ -6,14 +6,14 @@
 //  Copyright (c) 2014 Tobias Boogh. All rights reserved.
 //
 
-#import "TINHorizontalLinearLayout.h"
-#include "TINCGUtilites.h"
+#import "BOOHorizontalLinearLayout.h"
+#include "BOOCGUtilites.h"
 
-@interface TINHorizontalLinearLayout()
+@interface BOOHorizontalLinearLayout()
 @property (nonatomic, strong) UICollectionViewLayoutAttributes *backgroundAttribute;
 @end
 
-@implementation TINHorizontalLinearLayout
+@implementation BOOHorizontalLinearLayout
 
 - (id)init
 {
@@ -28,7 +28,7 @@
 -(void)prepareLayout{
     [super prepareLayoutForHorizontalLayout];
     
-    UICollectionViewLayoutAttributes *attr = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:kTINBaseCollectionViewLayoutBackground withIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    UICollectionViewLayoutAttributes *attr = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:kBOOBaseCollectionViewLayoutBackground withIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     CGRect bounds = self.collectionView.bounds;
     bounds.origin.x = 0;
     bounds.origin.y = 0;
@@ -84,8 +84,8 @@
 }
 
 -(UICollectionViewLayoutAttributes *)layoutAttributesForDecorationViewOfKind:(NSString *)decorationViewKind atIndexPath:(NSIndexPath *)indexPath{
-    if ([decorationViewKind isEqualToString:kTINBaseCollectionViewLayoutBackground]){
-        UICollectionViewLayoutAttributes *attr = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:kTINBaseCollectionViewLayoutBackground withIndexPath:indexPath];
+    if ([decorationViewKind isEqualToString:kBOOBaseCollectionViewLayoutBackground]){
+        UICollectionViewLayoutAttributes *attr = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:kBOOBaseCollectionViewLayoutBackground withIndexPath:indexPath];
         
         CGRect bounds = self.collectionView.bounds;
         bounds.origin = CGPointZero;

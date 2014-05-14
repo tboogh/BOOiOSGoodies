@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-UIKIT_EXTERN NSString *const kTINBaseCollectionViewLayoutBackground;
+UIKIT_EXTERN NSString *const kBOOBaseCollectionViewLayoutBackground;
 
-@interface TINBaseCollectionViewLayout : UICollectionViewFlowLayout
+@interface BOOBaseCollectionViewLayout : UICollectionViewFlowLayout
 @property (nonatomic) CGSize totalSize;
 @property (nonatomic, strong) NSArray *layoutAttributes;
 @property (nonatomic) UIEdgeInsets margins;

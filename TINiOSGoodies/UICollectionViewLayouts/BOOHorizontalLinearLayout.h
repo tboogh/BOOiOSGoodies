@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TINBaseCollectionViewLayout.h"
+#import "BOOBaseCollectionViewLayout.h"
 #define DEG2RAD(x) return (x / 180 * M_PI)
-@interface TINHorizontalLinearLayout : TINBaseCollectionViewLayout<UICollectionViewDelegateFlowLayout>
+@interface BOOHorizontalLinearLayout : BOOBaseCollectionViewLayout<UICollectionViewDelegateFlowLayout>
 @property (nonatomic) float zoomScale;
 @end

@@ -12,44 +12,41 @@
 		14B50A641920012100A6C372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D8604A191FE75900E2AD38 /* UIKit.framework */; };
 		14B50A6A1920012100A6C372 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14B50A681920012100A6C372 /* InfoPlist.strings */; };
 		14B50A6C1920012100A6C372 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A6B1920012100A6C372 /* main.m */; };
-		14B50A701920012100A6C372 /* TINAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A6F1920012100A6C372 /* TINAppDelegate.m */; };
+		14B50A701920012100A6C372 /* BOODemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A6F1920012100A6C372 /* BOODemoAppDelegate.m */; };
 		14B50A731920012100A6C372 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14B50A711920012100A6C372 /* Main.storyboard */; };
-		14B50A761920012100A6C372 /* TINViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A751920012100A6C372 /* TINViewController.m */; };
 		14B50A781920012100A6C372 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14B50A771920012100A6C372 /* Images.xcassets */; };
-		14B50A9C1920308000A6C372 /* TINBaseCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A951920308000A6C372 /* TINBaseCollectionViewLayout.m */; };
-		14B50A9D1920308000A6C372 /* TINHorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A971920308000A6C372 /* TINHorizontalCollectionViewLayout.m */; };
-		14B50A9E1920308000A6C372 /* TINHorizontalLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A991920308000A6C372 /* TINHorizontalLinearLayout.m */; };
-		14B50A9F1920308000A6C372 /* TINVerticalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A9B1920308000A6C372 /* TINVerticalCollectionViewLayout.m */; };
-		14B50ABD192031BD00A6C372 /* TINImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50ABC192031BD00A6C372 /* TINImageCache.m */; };
+		14B50A9C1920308000A6C372 /* BOOBaseCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A951920308000A6C372 /* BOOBaseCollectionViewLayout.m */; };
+		14B50A9D1920308000A6C372 /* BOOHorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A971920308000A6C372 /* BOOHorizontalCollectionViewLayout.m */; };
+		14B50A9E1920308000A6C372 /* BOOHorizontalLinearLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A991920308000A6C372 /* BOOHorizontalLinearLayout.m */; };
+		14B50A9F1920308000A6C372 /* BOOVerticalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50A9B1920308000A6C372 /* BOOVerticalCollectionViewLayout.m */; };
 		14B50AC0192031F400A6C372 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50ABF192031F400A6C372 /* UIImage+Resize.m */; };
 		14B50AC71920321900A6C372 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50AC21920321900A6C372 /* UIImage+Alpha.m */; };
 		14B50AC81920321900A6C372 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50AC41920321900A6C372 /* UIImage+RoundedCorner.m */; };
 		14B50AC91920321900A6C372 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B50AC61920321900A6C372 /* UIImage+Utilities.m */; };
+		14EB50C61922BCCD0072B383 /* BOODisplayLinkTimerExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50C51922BCCD0072B383 /* BOODisplayLinkTimerExampleViewController.m */; };
+		14EB50D6192364130072B383 /* BOOImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50D2192364130072B383 /* BOOImageCache.m */; };
+		14EB50D7192364130072B383 /* BOODisplayLinkTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50D5192364130072B383 /* BOODisplayLinkTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14B50A611920012100A6C372 /* TINiOSGoodiesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TINiOSGoodiesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		14B50A671920012100A6C372 /* TINiOSGoodiesDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TINiOSGoodiesDemo-Info.plist"; sourceTree = "<group>"; };
+		14B50A611920012100A6C372 /* BOOiOSGoodiesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BOOiOSGoodiesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B50A671920012100A6C372 /* BOOiOSGoodiesDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BOOiOSGoodiesDemo-Info.plist"; sourceTree = "<group>"; };
 		14B50A691920012100A6C372 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14B50A6B1920012100A6C372 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		14B50A6D1920012100A6C372 /* TINiOSGoodiesDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TINiOSGoodiesDemo-Prefix.pch"; sourceTree = "<group>"; };
-		14B50A6E1920012100A6C372 /* TINAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TINAppDelegate.h; sourceTree = "<group>"; };
-		14B50A6F1920012100A6C372 /* TINAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINAppDelegate.m; sourceTree = "<group>"; };
+		14B50A6D1920012100A6C372 /* BOOiOSGoodiesDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BOOiOSGoodiesDemo-Prefix.pch"; sourceTree = "<group>"; };
+		14B50A6E1920012100A6C372 /* BOODemoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BOODemoAppDelegate.h; sourceTree = "<group>"; };
+		14B50A6F1920012100A6C372 /* BOODemoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BOODemoAppDelegate.m; sourceTree = "<group>"; };
 		14B50A721920012100A6C372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		14B50A741920012100A6C372 /* TINViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TINViewController.h; sourceTree = "<group>"; };
-		14B50A751920012100A6C372 /* TINViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TINViewController.m; sourceTree = "<group>"; };
 		14B50A771920012100A6C372 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		14B50A921920308000A6C372 /* TINCGUtilites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINCGUtilites.h; sourceTree = "<group>"; };
-		14B50A941920308000A6C372 /* TINBaseCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINBaseCollectionViewLayout.h; sourceTree = "<group>"; };
-		14B50A951920308000A6C372 /* TINBaseCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINBaseCollectionViewLayout.m; sourceTree = "<group>"; };
-		14B50A961920308000A6C372 /* TINHorizontalCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINHorizontalCollectionViewLayout.h; sourceTree = "<group>"; };
-		14B50A971920308000A6C372 /* TINHorizontalCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINHorizontalCollectionViewLayout.m; sourceTree = "<group>"; };
-		14B50A981920308000A6C372 /* TINHorizontalLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINHorizontalLinearLayout.h; sourceTree = "<group>"; };
-		14B50A991920308000A6C372 /* TINHorizontalLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINHorizontalLinearLayout.m; sourceTree = "<group>"; };
-		14B50A9A1920308000A6C372 /* TINVerticalCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINVerticalCollectionViewLayout.h; sourceTree = "<group>"; };
-		14B50A9B1920308000A6C372 /* TINVerticalCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINVerticalCollectionViewLayout.m; sourceTree = "<group>"; };
-		14B50ABB192031BD00A6C372 /* TINImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TINImageCache.h; sourceTree = "<group>"; };
-		14B50ABC192031BD00A6C372 /* TINImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINImageCache.m; sourceTree = "<group>"; };
+		14B50A921920308000A6C372 /* BOOCGUtilites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOCGUtilites.h; sourceTree = "<group>"; };
+		14B50A941920308000A6C372 /* BOOBaseCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOBaseCollectionViewLayout.h; sourceTree = "<group>"; };
+		14B50A951920308000A6C372 /* BOOBaseCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOBaseCollectionViewLayout.m; sourceTree = "<group>"; };
+		14B50A961920308000A6C372 /* BOOHorizontalCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOHorizontalCollectionViewLayout.h; sourceTree = "<group>"; };
+		14B50A971920308000A6C372 /* BOOHorizontalCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOHorizontalCollectionViewLayout.m; sourceTree = "<group>"; };
+		14B50A981920308000A6C372 /* BOOHorizontalLinearLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOHorizontalLinearLayout.h; sourceTree = "<group>"; };
+		14B50A991920308000A6C372 /* BOOHorizontalLinearLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOHorizontalLinearLayout.m; sourceTree = "<group>"; };
+		14B50A9A1920308000A6C372 /* BOOVerticalCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOVerticalCollectionViewLayout.h; sourceTree = "<group>"; };
+		14B50A9B1920308000A6C372 /* BOOVerticalCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOVerticalCollectionViewLayout.m; sourceTree = "<group>"; };
 		14B50ABE192031F400A6C372 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "Categories/UIImage+Resize.h"; sourceTree = "<group>"; };
 		14B50ABF192031F400A6C372 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "Categories/UIImage+Resize.m"; sourceTree = "<group>"; };
 		14B50AC11920321900A6C372 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Alpha.h"; path = "Categories/UIImage+Alpha.h"; sourceTree = "<group>"; };
@@ -66,6 +63,12 @@
 		14D86080191FE79C00E2AD38 /* TINGradientBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TINGradientBackground.m; sourceTree = "<group>"; };
 		14D86083191FFFC200E2AD38 /* UIImage+ReflectedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ReflectedImage.h"; path = "Categories/UIImage+ReflectedImage.h"; sourceTree = "<group>"; };
 		14D86084191FFFC200E2AD38 /* UIImage+ReflectedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ReflectedImage.m"; path = "Categories/UIImage+ReflectedImage.m"; sourceTree = "<group>"; };
+		14EB50C41922BCCD0072B383 /* BOODisplayLinkTimerExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODisplayLinkTimerExampleViewController.h; sourceTree = "<group>"; };
+		14EB50C51922BCCD0072B383 /* BOODisplayLinkTimerExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODisplayLinkTimerExampleViewController.m; sourceTree = "<group>"; };
+		14EB50D1192364130072B383 /* BOOImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOImageCache.h; sourceTree = "<group>"; };
+		14EB50D2192364130072B383 /* BOOImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOImageCache.m; sourceTree = "<group>"; };
+		14EB50D4192364130072B383 /* BOODisplayLinkTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODisplayLinkTimer.h; sourceTree = "<group>"; };
+		14EB50D5192364130072B383 /* BOODisplayLinkTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODisplayLinkTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +88,13 @@
 		14B50A651920012100A6C372 /* TINiOSGoodiesDemo */ = {
 			isa = PBXGroup;
 			children = (
-				14B50A6E1920012100A6C372 /* TINAppDelegate.h */,
-				14B50A6F1920012100A6C372 /* TINAppDelegate.m */,
+				14B50A6E1920012100A6C372 /* BOODemoAppDelegate.h */,
+				14B50A6F1920012100A6C372 /* BOODemoAppDelegate.m */,
 				14B50A711920012100A6C372 /* Main.storyboard */,
-				14B50A741920012100A6C372 /* TINViewController.h */,
-				14B50A751920012100A6C372 /* TINViewController.m */,
 				14B50A771920012100A6C372 /* Images.xcassets */,
 				14B50A661920012100A6C372 /* Supporting Files */,
+				14EB50C41922BCCD0072B383 /* BOODisplayLinkTimerExampleViewController.h */,
+				14EB50C51922BCCD0072B383 /* BOODisplayLinkTimerExampleViewController.m */,
 			);
 			path = TINiOSGoodiesDemo;
 			sourceTree = "<group>";
@@ -99,10 +102,10 @@
 		14B50A661920012100A6C372 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				14B50A671920012100A6C372 /* TINiOSGoodiesDemo-Info.plist */,
+				14B50A671920012100A6C372 /* BOOiOSGoodiesDemo-Info.plist */,
 				14B50A681920012100A6C372 /* InfoPlist.strings */,
 				14B50A6B1920012100A6C372 /* main.m */,
-				14B50A6D1920012100A6C372 /* TINiOSGoodiesDemo-Prefix.pch */,
+				14B50A6D1920012100A6C372 /* BOOiOSGoodiesDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -110,7 +113,7 @@
 		14B50A911920308000A6C372 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				14B50A921920308000A6C372 /* TINCGUtilites.h */,
+				14B50A921920308000A6C372 /* BOOCGUtilites.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -118,31 +121,22 @@
 		14B50A931920308000A6C372 /* UICollectionViewLayouts */ = {
 			isa = PBXGroup;
 			children = (
-				14B50A941920308000A6C372 /* TINBaseCollectionViewLayout.h */,
-				14B50A951920308000A6C372 /* TINBaseCollectionViewLayout.m */,
-				14B50A961920308000A6C372 /* TINHorizontalCollectionViewLayout.h */,
-				14B50A971920308000A6C372 /* TINHorizontalCollectionViewLayout.m */,
-				14B50A981920308000A6C372 /* TINHorizontalLinearLayout.h */,
-				14B50A991920308000A6C372 /* TINHorizontalLinearLayout.m */,
-				14B50A9A1920308000A6C372 /* TINVerticalCollectionViewLayout.h */,
-				14B50A9B1920308000A6C372 /* TINVerticalCollectionViewLayout.m */,
+				14B50A941920308000A6C372 /* BOOBaseCollectionViewLayout.h */,
+				14B50A951920308000A6C372 /* BOOBaseCollectionViewLayout.m */,
+				14B50A961920308000A6C372 /* BOOHorizontalCollectionViewLayout.h */,
+				14B50A971920308000A6C372 /* BOOHorizontalCollectionViewLayout.m */,
+				14B50A981920308000A6C372 /* BOOHorizontalLinearLayout.h */,
+				14B50A991920308000A6C372 /* BOOHorizontalLinearLayout.m */,
+				14B50A9A1920308000A6C372 /* BOOVerticalCollectionViewLayout.h */,
+				14B50A9B1920308000A6C372 /* BOOVerticalCollectionViewLayout.m */,
 			);
 			path = UICollectionViewLayouts;
-			sourceTree = "<group>";
-		};
-		14B50ABA192031BD00A6C372 /* TINImageCache */ = {
-			isa = PBXGroup;
-			children = (
-				14B50ABB192031BD00A6C372 /* TINImageCache.h */,
-				14B50ABC192031BD00A6C372 /* TINImageCache.m */,
-			);
-			path = TINImageCache;
 			sourceTree = "<group>";
 		};
 		14D8603A191FE75900E2AD38 = {
 			isa = PBXGroup;
 			children = (
-				14D8604C191FE75900E2AD38 /* TINiOSGoodies */,
+				14D8604C191FE75900E2AD38 /* BOOiOSGoodies */,
 				14B50A651920012100A6C372 /* TINiOSGoodiesDemo */,
 				14D86045191FE75900E2AD38 /* Frameworks */,
 				14D86044191FE75900E2AD38 /* Products */,
@@ -152,7 +146,7 @@
 		14D86044191FE75900E2AD38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				14B50A611920012100A6C372 /* TINiOSGoodiesDemo.app */,
+				14B50A611920012100A6C372 /* BOOiOSGoodiesDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,15 +162,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		14D8604C191FE75900E2AD38 /* TINiOSGoodies */ = {
+		14D8604C191FE75900E2AD38 /* BOOiOSGoodies */ = {
 			isa = PBXGroup;
 			children = (
-				14B50ABA192031BD00A6C372 /* TINImageCache */,
+				14EB50D0192364130072B383 /* BOOImageCache */,
+				14EB50D3192364130072B383 /* BOOTimer */,
 				14B50A911920308000A6C372 /* Common */,
 				14B50A931920308000A6C372 /* UICollectionViewLayouts */,
 				14D86082191FFFAD00E2AD38 /* Categories */,
 				14D8607E191FE79C00E2AD38 /* Views */,
 			);
+			name = BOOiOSGoodies;
 			path = TINiOSGoodies;
 			sourceTree = "<group>";
 		};
@@ -206,12 +202,30 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		14EB50D0192364130072B383 /* BOOImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				14EB50D1192364130072B383 /* BOOImageCache.h */,
+				14EB50D2192364130072B383 /* BOOImageCache.m */,
+			);
+			path = BOOImageCache;
+			sourceTree = "<group>";
+		};
+		14EB50D3192364130072B383 /* BOOTimer */ = {
+			isa = PBXGroup;
+			children = (
+				14EB50D4192364130072B383 /* BOODisplayLinkTimer.h */,
+				14EB50D5192364130072B383 /* BOODisplayLinkTimer.m */,
+			);
+			path = BOOTimer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		14B50A601920012100A6C372 /* TINiOSGoodiesDemo */ = {
+		14B50A601920012100A6C372 /* BOOiOSGoodiesDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 14B50A8B1920012100A6C372 /* Build configuration list for PBXNativeTarget "TINiOSGoodiesDemo" */;
+			buildConfigurationList = 14B50A8B1920012100A6C372 /* Build configuration list for PBXNativeTarget "BOOiOSGoodiesDemo" */;
 			buildPhases = (
 				14B50A5D1920012100A6C372 /* Sources */,
 				14B50A5E1920012100A6C372 /* Frameworks */,
@@ -221,9 +235,9 @@
 			);
 			dependencies = (
 			);
-			name = TINiOSGoodiesDemo;
+			name = BOOiOSGoodiesDemo;
 			productName = TINiOSGoodiesDemo;
-			productReference = 14B50A611920012100A6C372 /* TINiOSGoodiesDemo.app */;
+			productReference = 14B50A611920012100A6C372 /* BOOiOSGoodiesDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -236,7 +250,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Tobias Boogh";
 			};
-			buildConfigurationList = 14D8603E191FE75900E2AD38 /* Build configuration list for PBXProject "TINiOSGoodies" */;
+			buildConfigurationList = 14D8603E191FE75900E2AD38 /* Build configuration list for PBXProject "BOOiOSGoodies" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -249,7 +263,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				14B50A601920012100A6C372 /* TINiOSGoodiesDemo */,
+				14B50A601920012100A6C372 /* BOOiOSGoodiesDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -272,18 +286,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14B50A701920012100A6C372 /* TINAppDelegate.m in Sources */,
-				14B50A761920012100A6C372 /* TINViewController.m in Sources */,
-				14B50A9E1920308000A6C372 /* TINHorizontalLinearLayout.m in Sources */,
+				14B50A701920012100A6C372 /* BOODemoAppDelegate.m in Sources */,
+				14B50A9E1920308000A6C372 /* BOOHorizontalLinearLayout.m in Sources */,
 				14B50A6C1920012100A6C372 /* main.m in Sources */,
-				14B50ABD192031BD00A6C372 /* TINImageCache.m in Sources */,
 				14B50AC81920321900A6C372 /* UIImage+RoundedCorner.m in Sources */,
 				14B50AC0192031F400A6C372 /* UIImage+Resize.m in Sources */,
-				14B50A9F1920308000A6C372 /* TINVerticalCollectionViewLayout.m in Sources */,
-				14B50A9C1920308000A6C372 /* TINBaseCollectionViewLayout.m in Sources */,
+				14B50A9F1920308000A6C372 /* BOOVerticalCollectionViewLayout.m in Sources */,
+				14B50A9C1920308000A6C372 /* BOOBaseCollectionViewLayout.m in Sources */,
 				14B50AC71920321900A6C372 /* UIImage+Alpha.m in Sources */,
+				14EB50C61922BCCD0072B383 /* BOODisplayLinkTimerExampleViewController.m in Sources */,
+				14EB50D6192364130072B383 /* BOOImageCache.m in Sources */,
 				14B50AC91920321900A6C372 /* UIImage+Utilities.m in Sources */,
-				14B50A9D1920308000A6C372 /* TINHorizontalCollectionViewLayout.m in Sources */,
+				14EB50D7192364130072B383 /* BOODisplayLinkTimer.m in Sources */,
+				14B50A9D1920308000A6C372 /* BOOHorizontalCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,13 +330,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TINiOSGoodiesDemo/TINiOSGoodiesDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "TINiOSGoodiesDemo/BOOiOSGoodiesDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "TINiOSGoodiesDemo/TINiOSGoodiesDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "TINiOSGoodiesDemo/BOOiOSGoodiesDemo-Info.plist";
+				PRODUCT_NAME = BOOiOSGoodiesDemo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -332,9 +347,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TINiOSGoodiesDemo/TINiOSGoodiesDemo-Prefix.pch";
-				INFOPLIST_FILE = "TINiOSGoodiesDemo/TINiOSGoodiesDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "TINiOSGoodiesDemo/BOOiOSGoodiesDemo-Prefix.pch";
+				INFOPLIST_FILE = "TINiOSGoodiesDemo/BOOiOSGoodiesDemo-Info.plist";
+				PRODUCT_NAME = BOOiOSGoodiesDemo;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -414,15 +429,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		14B50A8B1920012100A6C372 /* Build configuration list for PBXNativeTarget "TINiOSGoodiesDemo" */ = {
+		14B50A8B1920012100A6C372 /* Build configuration list for PBXNativeTarget "BOOiOSGoodiesDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14B50A8C1920012100A6C372 /* Debug */,
 				14B50A8D1920012100A6C372 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		14D8603E191FE75900E2AD38 /* Build configuration list for PBXProject "TINiOSGoodies" */ = {
+		14D8603E191FE75900E2AD38 /* Build configuration list for PBXProject "BOOiOSGoodies" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				14D86073191FE75900E2AD38 /* Debug */,

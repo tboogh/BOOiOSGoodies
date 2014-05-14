@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Tobias Boogh. All rights reserved.
 //
 
-#import "TINVerticalCollectionViewLayout.h"
+#import "BOOVerticalCollectionViewLayout.h"
 
-@implementation TINVerticalCollectionViewLayout
+@implementation BOOVerticalCollectionViewLayout
 
 @end

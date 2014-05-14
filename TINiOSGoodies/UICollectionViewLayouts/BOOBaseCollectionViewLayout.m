@@ -6,11 +6,11 @@
 //  Copyright (c) 2014 Tobias Boogh. All rights reserved.
 //
 
-#import "TINBaseCollectionViewLayout.h"
+#import "BOOBaseCollectionViewLayout.h"
 
-NSString *const kTINBaseCollectionViewLayoutBackground = @"TINBaseCollectionViewLayoutBackground";
+NSString *const kBOOBaseCollectionViewLayoutBackground = @"TINBaseCollectionViewLayoutBackground";
 
-@implementation TINBaseCollectionViewLayout
+@implementation BOOBaseCollectionViewLayout
 
 - (instancetype)init
 {

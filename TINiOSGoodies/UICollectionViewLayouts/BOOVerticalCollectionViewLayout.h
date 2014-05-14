@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TINBaseCollectionViewLayout.h"
-@interface TINVerticalCollectionViewLayout : TINBaseCollectionViewLayout
+#import "BOOBaseCollectionViewLayout.h"
+@interface BOOVerticalCollectionViewLayout : BOOBaseCollectionViewLayout
 
 @end

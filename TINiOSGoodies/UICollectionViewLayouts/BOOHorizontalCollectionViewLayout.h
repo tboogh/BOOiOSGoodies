@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TINHorizontalCollectionViewLayout : UICollectionViewFlowLayout
+@interface BOOHorizontalCollectionViewLayout : UICollectionViewFlowLayout
 
 @end

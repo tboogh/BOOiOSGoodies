@@ -6,12 +6,12 @@
 //  Copyright (c) 2012 ByBrick. All rights reserved.
 //
 
-#import "TINImageCache.h"
+#import "BOOImageCache.h"
 #import <AVFoundation/AVFoundation.h>
 #import <math.h>
 #import <ImageIO/ImageIO.h>
 
-@interface TINImageCache(){
+@interface BOOImageCache(){
     dispatch_semaphore_t video_semaphore;
 }
 @property (nonatomic, strong) AVAssetImageGenerator *generator;
@@ -20,13 +20,13 @@
 @property (nonatomic, strong) NSString *fileCacheDirectory;
 @end
 
-@implementation TINImageCache
+@implementation BOOImageCache
 
-+(TINImageCache *)getInstance{
-    static TINImageCache *imageCache = nil;
++(BOOImageCache *)getInstance{
+    static BOOImageCache *imageCache = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        imageCache = [[TINImageCache alloc] init];
+        imageCache = [[BOOImageCache alloc] init];
     });
     return imageCache;
 }
@@ -137,7 +137,7 @@
     return thumbnail;
 }
 
--(void)getThumbnailForPdf:(NSString *)filePath withSize:(CGSize)size withCompletion:(TINImageCacheCompletion)completion{
+-(void)getThumbnailForPdf:(NSString *)filePath withSize:(CGSize)size withCompletion:(BOOImageCacheCompletion)completion{
     dispatch_async(self.fetch_image_queue, ^{
         dispatch_async(self.fetch_image_queue, ^{
             UIImage *image = [self getThumbnailForPdf:filePath withSize:size];
@@ -148,7 +148,7 @@
     });
 }
 
--(void)getThumbnailForVideo:(NSString *)filePath withSize:(CGSize)size withCompletion:(TINImageCacheCompletion)completion{
+-(void)getThumbnailForVideo:(NSString *)filePath withSize:(CGSize)size withCompletion:(BOOImageCacheCompletion)completion{
     dispatch_async(self.fetch_image_queue, ^{
         UIImage *thumbnail = [self getThumbnailForFilePath:filePath withSize:size];
         if (thumbnail != nil){
@@ -169,7 +169,7 @@
     });
 }
 
--(void)getThumbnailForImage:(NSString *)filePath withSize:(CGSize)size withCompletion:(TINImageCacheCompletion)completion{
+-(void)getThumbnailForImage:(NSString *)filePath withSize:(CGSize)size withCompletion:(BOOImageCacheCompletion)completion{
     dispatch_async(self.fetch_image_queue, ^{
         UIImage *image = [self getThumbnailForImage:filePath withSize:size];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -241,7 +241,7 @@
     return thumbnailImage;
 }
 
--(void)createThumbnailForVideo:(NSString *)filepath withSize:(CGSize)size withCompletion:(TINImageCacheCompletion)completion{
+-(void)createThumbnailForVideo:(NSString *)filepath withSize:(CGSize)size withCompletion:(BOOImageCacheCompletion)completion{
     NSURL *fileUrl = [NSURL fileURLWithPath:filepath];
     
     AVURLAsset *asset=[[AVURLAsset alloc] initWithURL:fileUrl options:nil];

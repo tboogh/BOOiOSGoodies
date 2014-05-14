@@ -1,5 +1,5 @@
 //
-//  TINViewController.h
+//  TINAppDelegate.h
 //  TINiOSGoodiesDemo
 //
 //  Created by Tobias Boogh on 11/05/14.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TINViewController : UIViewController
+@interface BOODemoAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end
