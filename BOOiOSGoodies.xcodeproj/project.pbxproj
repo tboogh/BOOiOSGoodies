@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1455C5E719236F3200A8CCF8 /* BOOBreadCrumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */; };
 		14B50A621920012100A6C372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
 		14B50A631920012100A6C372 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86048191FE75900E2AD38 /* CoreGraphics.framework */; };
 		14B50A641920012100A6C372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D8604A191FE75900E2AD38 /* UIKit.framework */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1455C5E519236F3200A8CCF8 /* BOOBreadCrumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOBreadCrumbView.h; sourceTree = "<group>"; };
+		1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOBreadCrumbView.m; sourceTree = "<group>"; };
 		14B50A611920012100A6C372 /* BOOiOSGoodiesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BOOiOSGoodiesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D86046191FE75900E2AD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14D86048191FE75900E2AD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -90,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1455C5E419236F3200A8CCF8 /* BOOBreadCrumbNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				1455C5E519236F3200A8CCF8 /* BOOBreadCrumbView.h */,
+				1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */,
+			);
+			path = BOOBreadCrumbNavigation;
+			sourceTree = "<group>";
+		};
 		14D8603A191FE75900E2AD38 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +134,7 @@
 		14EB50DB192366480072B383 /* BOOiOSGoodies */ = {
 			isa = PBXGroup;
 			children = (
+				1455C5E419236F3200A8CCF8 /* BOOBreadCrumbNavigation */,
 				14EB50DC192366480072B383 /* BOOImageCache */,
 				14EB50DF192366480072B383 /* BOOTimer */,
 				14EB50E2192366480072B383 /* Categories */,
@@ -244,7 +257,7 @@
 		14D8603B191FE75900E2AD38 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = TIN;
+				CLASSPREFIX = BOO;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Tobias Boogh";
 			};
@@ -295,6 +308,7 @@
 				14EB5110192366480072B383 /* UIImage+TINImageCache.m in Sources */,
 				14EB510B192366480072B383 /* BOODisplayLinkTimer.m in Sources */,
 				14EB510C192366480072B383 /* UIImage+Alpha.m in Sources */,
+				1455C5E719236F3200A8CCF8 /* BOOBreadCrumbView.m in Sources */,
 				14EB510F192366480072B383 /* UIImage+RoundedCorner.m in Sources */,
 				14EB5111192366480072B383 /* UIImage+Utilities.m in Sources */,
 				14EB5115192366480072B383 /* BOOVerticalCollectionViewLayout.m in Sources */,
