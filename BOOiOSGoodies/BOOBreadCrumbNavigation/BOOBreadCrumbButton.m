@@ -50,9 +50,6 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self commmonInit];
-        UILabel *label = [[UILabel alloc] initWithFrame:frame];
-        [self addSubview:label];
-        self.titleLabel = label;
     }
     return self;
 }
@@ -64,6 +61,12 @@
     state.title = @"";
     state.titleColor = [UIColor whiteColor];
     state.backgroundColor = [UIColor clearColor];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:self.frame];
+    label.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [self addSubview:label];
+    self.titleLabel = label;
+    self.titleLabel.userInteractionEnabled = NO;
 }
 
 -(BOOBreadCrumbButtonStateConfiguration *)configurationForState:(BOOBreadCrumbButtonState)state{

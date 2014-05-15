@@ -10,14 +10,16 @@
 
 #import "BOOBreadCrumbButton.h"
 
+@class BOOBreadCrumbView;
+
 @protocol BOOBreadCrumbDataSource <NSObject>
--(BOOBreadCrumbButton *)controlForButtonAtIndex:(int)index;
+-(BOOBreadCrumbButton *)breadCrumbView:(BOOBreadCrumbView *)breadCrumbView controlForButtonAtIndex:(int)index;
 @end
 
 @protocol BOOBreadCrumbDelegate <NSObject>
 @optional
--(bool)shouldSelectAtIndex:(int)index;
--(void)buttonSelectedAtIndex:(int)index;
+-(bool)breadCrumbView:(BOOBreadCrumbView *)breadCrumbView shouldSelectAtIndex:(int)index;
+-(void)breadCrumbView:(BOOBreadCrumbView *)breadCrumbView didSelectedButtonAtIndex:(int)index;
 @end
 
 @interface BOOBreadCrumbView : UIScrollView <UIScrollViewDelegate>{
@@ -29,6 +31,4 @@
 -(void)setHomeButtonTitle:(NSString *)title;
 -(void)addButton;
 -(void)removeButtonsAfterIndex:(uint)index;
--(void)clearButtons;
--(void)setHidden:(BOOL)hidden animated:(BOOL)animated;
 @end

@@ -28,50 +28,38 @@
 }
 
 -(void)commonInit{
+    self.delegate = self;
     self.buttons = [[NSMutableArray alloc] init];
 }
 
--(void)setHidden:(BOOL)hidden animated:(BOOL)animated{
-    if (animated){
-        if (self.hidden){
-            self.alpha = 0.0f;
-            [super setHidden:NO];
-        } else {
-            self.alpha = 1.0f;
-        }
-        [UIView animateWithDuration:0.3f animations:^{
-            if (hidden){
-                self.alpha = 0.0;
-            } else {
-                self.alpha = 1.0;
-            }
-        } completion:^(BOOL finished) {
-            [super setHidden:hidden];
-        }];
-    } else {
-        [super setHidden:hidden];
-    }
-}
-
 -(void)buttonPressed:(id)sender{
-    int index = [self.subviews indexOfObject:sender];
-    if (index == self.subviews.count - 1){
+    
+    int index = [self.buttons indexOfObject:sender];
+    if (index == self.buttons.count - 1){
         return;
     }
-    if ([_breadCrumbDelegate shouldSelectAtIndex:index]){
-        [self removeButtonsAfterIndex:index];
-        [_breadCrumbDelegate buttonSelectedAtIndex:index];
+    if ([self.breadCrumbDelegate respondsToSelector:@selector(breadCrumbView:shouldSelectAtIndex:)]){
+        if (![_breadCrumbDelegate breadCrumbView:self shouldSelectAtIndex:index]){
+            return;
+        }
+    }
+    [self removeButtonsAfterIndex:index];
+    if ([self.breadCrumbDelegate respondsToSelector:@selector(breadCrumbView:didSelectedButtonAtIndex:)]){
+        [_breadCrumbDelegate breadCrumbView:self didSelectedButtonAtIndex:index];
     }
 }
 
 -(void)removeButtonsAfterIndex:(uint)index{
     NSMutableArray *removeArray = [[NSMutableArray alloc] init];
+    if (index+1 >= self.buttons.count){
+        return;
+    }
     [UIView animateWithDuration:0.3 animations:^{
-        for (int i=1; i < self.subviews.count; i++){
-            UIView *view = (self.subviews)[i];
+        for (int i=index+1; i < self.buttons.count; i++){
+            UIView *view = (self.buttons)[i];
             
             if (i > index){
-                CGRect arrowFrame = [(self.subviews)[i-1] frame];
+                CGRect arrowFrame = [(self.buttons)[i-1] frame];
                 view.frame = arrowFrame;
                 view.alpha = 0.0;
                 [removeArray addObject:view];
@@ -82,31 +70,24 @@
             [view removeFromSuperview];
             [self.buttons removeObject:view];
         }
+        BOOBreadCrumbButton *lastButton = [self.buttons lastObject];
+        CGSize contentSize = self.contentSize;
+        contentSize.height = MAX(lastButton.frame.size.height, contentSize.height);
+        contentSize.width = lastButton.frame.origin.x + lastButton.frame.size.width;
+        self.contentSize = contentSize;
+        [self updateButtons];
+        [self scrollRectToVisible:lastButton.frame animated:YES];
     }];
-}
-
-//-(void)setHomeButtonTitle:(NSString *)title{
-//    _homeButtonTitle = title;
-//    [self addButtonWithTitle:_homeButtonTitle];
-//}
-
--(void)clearButtons{
-    for (UIView *view in self.subviews){
-        [view removeFromSuperview];
-    }
-    
-    [self.buttons removeAllObjects];
-//    [self addButtonWithTitle:_homeButtonTitle];
 }
 
 -(void)addButton{
     CGRect buttonFrame;
     CGRect targetFrame;
-    if (![self.breadCrumbDataSource respondsToSelector:@selector(controlForButtonAtIndex:)]){
+    if (![self.breadCrumbDataSource respondsToSelector:@selector(breadCrumbView:controlForButtonAtIndex:)]){
         @throw [NSException exceptionWithName:@"BOOBreadCrumbDelegateNotImplemented" reason:@"Missing implementation for controlForButtonAtIndex:withPosition:" userInfo:nil];
     }
     
-    BOOBreadCrumbButton *buttonView = [self.breadCrumbDataSource controlForButtonAtIndex:self.buttons.count];
+    BOOBreadCrumbButton *buttonView = [self.breadCrumbDataSource breadCrumbView:self controlForButtonAtIndex:self.buttons.count];
     
     buttonFrame = targetFrame = buttonView.bounds;
     
@@ -134,7 +115,6 @@
         
         [self scrollRectToVisible:buttonView.frame animated:YES];
     }];
-    
 }
 
 -(void)updateButtons{
