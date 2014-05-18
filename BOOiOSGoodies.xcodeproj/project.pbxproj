@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142CB4C6192891BE005D5A8C /* BOODemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142CB4C5192891BE005D5A8C /* BOODemoTableViewController.m */; };
+		142CB4CE1928E3F2005D5A8C /* BOODemoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142CB4CD1928E3F2005D5A8C /* BOODemoCollectionViewController.m */; };
 		1455C5E719236F3200A8CCF8 /* BOOBreadCrumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */; };
+		147AC57A1928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147AC5791928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard */; };
+		147AC57D1928E90C00A59FC7 /* BOODemoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AC57C1928E90C00A59FC7 /* BOODemoDetailViewController.m */; };
 		14B50A621920012100A6C372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
 		14B50A631920012100A6C372 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86048191FE75900E2AD38 /* CoreGraphics.framework */; };
 		14B50A641920012100A6C372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D8604A191FE75900E2AD38 /* UIKit.framework */; };
@@ -33,8 +37,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142CB4C4192891BE005D5A8C /* BOODemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODemoTableViewController.h; sourceTree = "<group>"; };
+		142CB4C5192891BE005D5A8C /* BOODemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODemoTableViewController.m; sourceTree = "<group>"; };
+		142CB4CC1928E3F2005D5A8C /* BOODemoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODemoCollectionViewController.h; sourceTree = "<group>"; };
+		142CB4CD1928E3F2005D5A8C /* BOODemoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODemoCollectionViewController.m; sourceTree = "<group>"; };
 		1455C5E519236F3200A8CCF8 /* BOOBreadCrumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOBreadCrumbView.h; sourceTree = "<group>"; };
 		1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOBreadCrumbView.m; sourceTree = "<group>"; };
+		147AC5791928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BOOCollectionViewDemoStoryboard.storyboard; path = Interface/BOOCollectionViewDemoStoryboard.storyboard; sourceTree = "<group>"; };
+		147AC57B1928E90C00A59FC7 /* BOODemoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODemoDetailViewController.h; sourceTree = "<group>"; };
+		147AC57C1928E90C00A59FC7 /* BOODemoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODemoDetailViewController.m; sourceTree = "<group>"; };
 		14B50A611920012100A6C372 /* BOOiOSGoodiesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BOOiOSGoodiesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D86046191FE75900E2AD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14D86048191FE75900E2AD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,6 +104,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142CB4CA1928E3F2005D5A8C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				142CB4CB1928E3F2005D5A8C /* CollectionViewDemo */,
+				147AC57B1928E90C00A59FC7 /* BOODemoDetailViewController.h */,
+				147AC57C1928E90C00A59FC7 /* BOODemoDetailViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		142CB4CB1928E3F2005D5A8C /* CollectionViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				142CB4CC1928E3F2005D5A8C /* BOODemoCollectionViewController.h */,
+				142CB4CD1928E3F2005D5A8C /* BOODemoCollectionViewController.m */,
+			);
+			path = CollectionViewDemo;
+			sourceTree = "<group>";
+		};
 		1455C5E419236F3200A8CCF8 /* BOOBreadCrumbNavigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +130,14 @@
 				1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */,
 			);
 			path = BOOBreadCrumbNavigation;
+			sourceTree = "<group>";
+		};
+		147AC5781928E68200A59FC7 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				147AC5791928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard */,
+			);
+			name = Interface;
 			sourceTree = "<group>";
 		};
 		14D8603A191FE75900E2AD38 = {
@@ -217,6 +255,8 @@
 		14EB50FD192366480072B383 /* BOOiOSGoodiesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				147AC5781928E68200A59FC7 /* Interface */,
+				142CB4CA1928E3F2005D5A8C /* ViewControllers */,
 				14EB50FE192366480072B383 /* Main.storyboard */,
 				14EB5100192366480072B383 /* BOODemoAppDelegate.h */,
 				14EB5101192366480072B383 /* BOODemoAppDelegate.m */,
@@ -227,6 +267,8 @@
 				14EB5106192366480072B383 /* InfoPlist.strings */,
 				14EB5108192366480072B383 /* Images.xcassets */,
 				14EB5109192366480072B383 /* main.m */,
+				142CB4C4192891BE005D5A8C /* BOODemoTableViewController.h */,
+				142CB4C5192891BE005D5A8C /* BOODemoTableViewController.m */,
 			);
 			path = BOOiOSGoodiesDemo;
 			sourceTree = "<group>";
@@ -286,6 +328,7 @@
 			files = (
 				14EB5117192366480072B383 /* Main.storyboard in Resources */,
 				14EB511C192366480072B383 /* Images.xcassets in Resources */,
+				147AC57A1928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard in Resources */,
 				14EB511B192366480072B383 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,11 +344,14 @@
 				14EB510D192366480072B383 /* UIImage+ReflectedImage.m in Sources */,
 				14EB5113192366480072B383 /* BOOHorizontalCollectionViewLayout.m in Sources */,
 				14EB5119192366480072B383 /* BOODisplayLinkTimerExampleViewController.m in Sources */,
+				142CB4CE1928E3F2005D5A8C /* BOODemoCollectionViewController.m in Sources */,
 				14EB5114192366480072B383 /* BOOHorizontalLinearLayout.m in Sources */,
 				14EB5116192366480072B383 /* BOOGradientBackgroundView.m in Sources */,
+				147AC57D1928E90C00A59FC7 /* BOODemoDetailViewController.m in Sources */,
 				14EB511D192366480072B383 /* main.m in Sources */,
 				14EB510A192366480072B383 /* BOOImageCache.m in Sources */,
 				14EB5110192366480072B383 /* UIImage+TINImageCache.m in Sources */,
+				142CB4C6192891BE005D5A8C /* BOODemoTableViewController.m in Sources */,
 				14EB510B192366480072B383 /* BOODisplayLinkTimer.m in Sources */,
 				14EB510C192366480072B383 /* UIImage+Alpha.m in Sources */,
 				1455C5E719236F3200A8CCF8 /* BOOBreadCrumbView.m in Sources */,
