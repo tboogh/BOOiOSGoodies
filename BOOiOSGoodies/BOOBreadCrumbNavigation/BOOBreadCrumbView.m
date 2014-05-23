@@ -33,8 +33,7 @@
 }
 
 -(void)buttonPressed:(id)sender{
-    
-    int index = [self.buttons indexOfObject:sender];
+    NSUInteger index = [self.buttons indexOfObject:sender];
     if (index == self.buttons.count - 1){
         return;
     }

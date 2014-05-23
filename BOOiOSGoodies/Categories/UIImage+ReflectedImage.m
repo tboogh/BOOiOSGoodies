@@ -10,7 +10,7 @@
 
 // From Apple demo code
 @implementation UIImage (ReflectedImage)
-CGImageRef CreateGradientImage(int pixelsWide, int pixelsHigh)
+CGImageRef CreateGradientImage(NSUInteger pixelsWide, NSUInteger pixelsHigh)
 {
 	CGImageRef theCGImage = NULL;
     
@@ -46,7 +46,7 @@ CGImageRef CreateGradientImage(int pixelsWide, int pixelsHigh)
     return theCGImage;
 }
 
-CGContextRef MyCreateBitmapContext(int pixelsWide, int pixelsHigh)
+CGContextRef MyCreateBitmapContext(NSUInteger pixelsWide, NSUInteger pixelsHigh)
 {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	
