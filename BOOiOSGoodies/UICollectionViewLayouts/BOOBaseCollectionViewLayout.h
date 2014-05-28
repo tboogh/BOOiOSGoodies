@@ -10,8 +10,20 @@
 
 UIKIT_EXTERN NSString *const kBOOBaseCollectionViewLayoutBackground;
 
+@interface BOOCollectionViewLayoutAttributeSection : NSObject
+@property (nonatomic, strong) UICollectionViewLayoutAttributes *sectionAttribute;
+@property (nonatomic, strong) NSMutableArray *sectionAttributes;
+
+@end
+
+@protocol BOOBaseCollectionViewDelegateLayout <UICollectionViewDelegateFlowLayout>
+@optional
+
+@end
+
 @interface BOOBaseCollectionViewLayout : UICollectionViewFlowLayout
 @property (nonatomic) CGSize totalSize;
+@property (nonatomic) CGSize unadjustedSize;
 @property (nonatomic, strong) NSArray *layoutSections;
 @property (nonatomic) UIEdgeInsets margins;
 @property (nonatomic) CGSize cellSize;

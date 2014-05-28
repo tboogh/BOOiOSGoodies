@@ -8,6 +8,17 @@
 
 #import "BOOBaseCollectionViewLayout.h"
 
+@implementation BOOCollectionViewLayoutAttributeSection
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.sectionAttributes = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+@end
+
 NSString *const kBOOBaseCollectionViewLayoutBackground = @"TINBaseCollectionViewLayoutBackground";
 
 @implementation BOOBaseCollectionViewLayout
@@ -57,6 +68,7 @@ NSString *const kBOOBaseCollectionViewLayoutBackground = @"TINBaseCollectionView
             totalSize.width = cellFrame.origin.x + cellFrame.size.width + self.margins.right;
         }
     }
+    self.unadjustedSize = totalSize;
     UICollectionViewLayoutAttributes *lastAttribute = [[sectionsArray lastObject] lastObject];
     totalSize.width += (self.collectionView.bounds.size.width * 0.5f) - (lastAttribute.frame.size.width * 0.5f);
     

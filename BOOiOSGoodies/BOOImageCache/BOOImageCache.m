@@ -16,7 +16,6 @@
 }
 @property (nonatomic, strong) AVAssetImageGenerator *generator;
 @property (nonatomic) dispatch_queue_t fetch_image_queue;
-@property (nonatomic) dispatch_queue_t file_manager_queue;
 @property (nonatomic, strong) NSString *fileCacheDirectory;
 @end
 
@@ -34,9 +33,8 @@
 - (id)init {
     self = [super init];
     if (self) {
-        _fetch_image_queue = dispatch_queue_create("fetch_image_queue", DISPATCH_QUEUE_CONCURRENT);
+        _fetch_image_queue = dispatch_queue_create("com.booimagecache.processimagequeue", DISPATCH_QUEUE_CONCURRENT);
         [self setFileCacheDirectory:[@"~/tmp/TINImageCache" stringByExpandingTildeInPath]];
-        _file_manager_queue = dispatch_queue_create("filemanager_queue", DISPATCH_QUEUE_SERIAL);
         video_semaphore = dispatch_semaphore_create(0);
     }
     return self;
@@ -72,7 +70,7 @@
         return nil;
     }
     NSString *key = [self keyForFilePath:filePath withSize:size];
-    NSLog(@"GetkeyForFilePath: %@", key);
+//    NSLog(@"GetkeyForFilePath: %@", key);
     UIImage *image = [self objectForKey:key];
     return image;
 }
@@ -88,7 +86,7 @@
     UIImage *resizedImage = nil;
     if (!CGSizeEqualToSize(size, CGSizeZero)){
         resizedImage = [self resizeImage:image withSize:size];
-        [self writeImageToFilePath:image filePath:key];
+        [self writeImageToFilePath:resizedImage filePath:key];
     }
     if (resizedImage != nil){
         [self setObject:resizedImage forKey:key];
@@ -139,11 +137,9 @@
 
 -(void)getThumbnailForPdf:(NSString *)filePath withSize:(CGSize)size withCompletion:(BOOImageCacheCompletion)completion{
     dispatch_async(self.fetch_image_queue, ^{
-        dispatch_async(self.fetch_image_queue, ^{
-            UIImage *image = [self getThumbnailForPdf:filePath withSize:size];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(image);
-            });
+        UIImage *image = [self getThumbnailForPdf:filePath withSize:size];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(image);
         });
     });
 }
