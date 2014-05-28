@@ -13,5 +13,5 @@
 -(void)insertColor:(UIColor *)color atIndex:(int)index;
 -(void)removeColorAtIndex:(int)index;
 
--(int)numberOfColors;
+-(NSUInteger)numberOfColors;
 @end

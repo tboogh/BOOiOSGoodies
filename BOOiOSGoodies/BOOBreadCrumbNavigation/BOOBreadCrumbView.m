@@ -48,13 +48,13 @@
     }
 }
 
--(void)removeButtonsAfterIndex:(uint)index{
+-(void)removeButtonsAfterIndex:(NSUInteger)index{
     NSMutableArray *removeArray = [[NSMutableArray alloc] init];
     if (index+1 >= self.buttons.count){
         return;
     }
     [UIView animateWithDuration:0.3 animations:^{
-        for (int i=index+1; i < self.buttons.count; i++){
+        for (NSUInteger i=index + 1; i < self.buttons.count; i++){
             UIView *view = (self.buttons)[i];
             
             if (i > index){

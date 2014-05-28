@@ -18,7 +18,7 @@
     return [CAGradientLayer class];
 }
 
--(int)numberOfColors{
+-(NSUInteger)numberOfColors{
     return self.colors.count;
 }
 

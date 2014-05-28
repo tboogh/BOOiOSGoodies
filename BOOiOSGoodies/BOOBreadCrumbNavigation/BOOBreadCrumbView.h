@@ -30,5 +30,5 @@
 @property (nonatomic) CGFloat buttonSpacing;
 -(void)setHomeButtonTitle:(NSString *)title;
 -(void)addButton;
--(void)removeButtonsAfterIndex:(uint)index;
+-(void)removeButtonsAfterIndex:(NSUInteger)index;
 @end

@@ -72,11 +72,11 @@ NSString * const kBOOCollectionViewElementKindNavigationSectionBackground = @"kB
         UIEdgeInsets sectionEdgeInset = UIEdgeInsetsMake(10, 0, 10, 0);
         
         CGRect previousSectionRect = CGRectZero;
-        int sections = [self.collectionView.dataSource numberOfSectionsInCollectionView:self.collectionView];
+        NSUInteger sections = [self.collectionView.dataSource numberOfSectionsInCollectionView:self.collectionView];
         
         
         for (int sectionIndex=0; sectionIndex < sections; ++sectionIndex){
-            int itemCount = [self.collectionView.dataSource collectionView:self.collectionView numberOfItemsInSection:sectionIndex];
+            NSUInteger itemCount = [self.collectionView.dataSource collectionView:self.collectionView numberOfItemsInSection:sectionIndex];
             NSIndexPath *sectionIndexPath = [NSIndexPath indexPathForItem:0 inSection:sectionIndex];
             
             UICollectionViewLayoutAttributes *sectionLayoutAttribute = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:kBOOCollectionViewElementKindNavigationSectionBackground withIndexPath:sectionIndexPath];
