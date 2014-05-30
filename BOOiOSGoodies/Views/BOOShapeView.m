@@ -34,8 +34,18 @@
     [self setNeedsDisplay];
 }
 
-- (void)drawRect:(CGRect)rect{
+-(void)fillPoints:(CGPoint [])points length:(NSUInteger)length{
     UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:points[0]];
+    for (int i=1; i < length; ++i){
+        [path addLineToPoint:points[i]];
+    }
+    [self.fillColor setFill];
+    [path fill];
+
+}
+
+- (void)drawRect:(CGRect)rect{
     
     switch (self.shape) {
         case BOOShapeViewShapeTriangleDown:
@@ -51,12 +61,7 @@
                     points[i].y = rect.size.height - points[i].y;
                 }
             }
-            [path moveToPoint:points[0]];
-            for (int i=1; i < sizeof(points) / sizeof(CGPoint); ++i){
-                [path addLineToPoint:points[i]];
-            }
-            [self.fillColor setFill];
-            [path fill];
+            [self fillPoints:points length:sizeof(points) / sizeof(CGPoint)];
         } break;
         case BOORoundedRectCornersBottom:
         case BOORoundedRectCornersTop:{
@@ -77,6 +82,14 @@
             [path fill];
             
             } break;
+        case BOOTriangleCornerUpperRight:{
+            CGPoint points[] = {
+                CGPointMake(CGRectGetMinX(rect), CGRectGetMinY(rect)),
+                CGPointMake(CGRectGetMaxX(rect), CGRectGetMinY(rect)),
+                CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect))
+            };
+            [self fillPoints:points length:sizeof(points) / sizeof(CGPoint)];
+        } break;
     }
     
 }

@@ -12,7 +12,8 @@ typedef NS_ENUM(NSUInteger, BOOShapeViewShape) {
     BOOShapeViewShapeTriangleUp,
     BOOShapeViewShapeTriangleDown,
     BOORoundedRectCornersTop,
-    BOORoundedRectCornersBottom
+    BOORoundedRectCornersBottom,
+    BOOTriangleCornerUpperRight
 };
 
 @interface BOOShapeView : UIView
