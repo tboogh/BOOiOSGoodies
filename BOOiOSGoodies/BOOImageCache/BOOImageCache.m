@@ -59,8 +59,13 @@
 -(NSString *)keyForFilePath:(NSString *)filePath withSize:(CGSize)size{
     NSString *key = filePath;
     if (!CGSizeEqualToSize(size, CGSizeZero)){
+        CGFloat scale = [[UIScreen mainScreen] scale];
         NSString *imageName = [[filePath pathComponents] lastObject];
-        key = [NSString stringWithFormat:@"%@/tn_%d_%d_%@.png", _fileCacheDirectory, (int)size.width, (int)size.height, imageName];
+        if (scale > 1.0f){
+            key = [NSString stringWithFormat:@"%@/tn_%d_%d_%@_/@%dx.png", _fileCacheDirectory, (int)size.width, (int)size.height, imageName, (int)scale];
+        } else {
+            key = [NSString stringWithFormat:@"%@/tn_%d_%d_%@.png", _fileCacheDirectory, (int)size.width, (int)size.height, imageName];
+        }
     }
     return key;
 }
@@ -70,7 +75,6 @@
         return nil;
     }
     NSString *key = [self keyForFilePath:filePath withSize:size];
-//    NSLog(@"GetkeyForFilePath: %@", key);
     UIImage *image = [self objectForKey:key];
     return image;
 }
@@ -85,6 +89,9 @@
     NSString *key = [self keyForFilePath:filePath withSize:size];
     UIImage *resizedImage = nil;
     if (!CGSizeEqualToSize(size, CGSizeZero)){
+        CGFloat scale = [[UIScreen mainScreen] scale];
+        size.width *= scale;
+        size.height *= scale;
         resizedImage = [self resizeImage:image withSize:size];
         [self writeImageToFilePath:resizedImage filePath:key];
     }
