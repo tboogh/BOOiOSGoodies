@@ -13,11 +13,14 @@ typedef NS_ENUM(NSUInteger, BOOShapeViewShape) {
     BOOShapeViewShapeTriangleDown,
     BOORoundedRectCornersTop,
     BOORoundedRectCornersBottom,
-    BOOTriangleCornerUpperRight
+    BOOTriangleCornerUpperRight,
+    BOOChevronRight
 };
 
 @interface BOOShapeView : UIView
 @property (nonatomic) BOOShapeViewShape shape;
 @property (nonatomic, strong) UIColor *fillColor;
+@property (nonatomic, strong) UIColor *lineColor;
+@property (nonatomic) CGFloat lineWidth;
 -(id)initWithFrame:(CGRect)frame andShape:(BOOShapeViewShape)shape;
 @end

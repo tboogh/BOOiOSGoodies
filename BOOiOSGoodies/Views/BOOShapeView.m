@@ -25,6 +25,8 @@
 
 -(void)commonInit{
     self.fillColor = [UIColor clearColor];
+    self.lineColor = [UIColor whiteColor];
+    self.lineWidth = 1.0f;
     self.backgroundColor = [UIColor clearColor];
     self.userInteractionEnabled = NO;
 }
@@ -42,7 +44,17 @@
     }
     [self.fillColor setFill];
     [path fill];
+}
 
+-(void)strokePoints:(CGPoint [])points length:(NSUInteger)length{
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:points[0]];
+    for (int i=1; i < length; ++i){
+        [path addLineToPoint:points[i]];
+    }
+    path.lineWidth = self.lineWidth;
+    [self.lineColor setStroke];
+    [path stroke];
 }
 
 - (void)drawRect:(CGRect)rect{
@@ -89,6 +101,14 @@
                 CGPointMake(CGRectGetMaxX(rect), CGRectGetMaxY(rect))
             };
             [self fillPoints:points length:sizeof(points) / sizeof(CGPoint)];
+        } break;
+        case BOOChevronRight:{
+            CGPoint points[] = {
+                CGPointMake(CGRectGetMinX(rect), CGRectGetMinY(rect)),
+                CGPointMake(CGRectGetMaxX(rect), CGRectGetMidY(rect)),
+                CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(rect))
+            };
+            [self strokePoints:points length:sizeof(points) / sizeof(CGPoint)];
         } break;
     }
     

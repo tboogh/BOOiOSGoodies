@@ -1,5 +1,5 @@
 //
-//  UIImage+TINImageCache.h
+//  UIImage+BOOImageCache.h
 //  Catalog
 //
 //  Created by Tobias Boogh on 12/05/14.

@@ -1,12 +1,12 @@
 //
-//  UIImage+TINImageCache.m
+//  UIImage+BOOImageCache.m
 //  Catalog
 //
 //  Created by Tobias Boogh on 12/05/14.
 //  Copyright (c) 2014 Tobias Boogh. All rights reserved.
 //
 
-#import "UIImage+TINImageCache.h"
+#import "UIImage+BOOImageCache.h"
 
 @implementation UIImage (TINImageCache)
 +(void)thumbnailForImageWithFilepath:(NSString *)filePath withSize:(CGSize)size withCompletion:(BOOImageCacheCompletion)completion{
