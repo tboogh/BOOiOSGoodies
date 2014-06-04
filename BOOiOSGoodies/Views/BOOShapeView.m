@@ -24,11 +24,11 @@
 }
 
 -(void)commonInit{
-    self.fillColor = [UIColor clearColor];
-    self.lineColor = [UIColor whiteColor];
-    self.lineWidth = 1.0f;
+//    self.fillColor = [UIColor clearColor];
+//    self.lineColor = [UIColor whiteColor];
+//    self.lineWidth = 1.0f;
     self.backgroundColor = [UIColor clearColor];
-    self.userInteractionEnabled = NO;
+//    self.userInteractionEnabled = NO;
 }
 
 -(void)setFillColor:(UIColor *)fillColor{
@@ -76,7 +76,8 @@
             [self fillPoints:points length:sizeof(points) / sizeof(CGPoint)];
         } break;
         case BOORoundedRectCornersBottom:
-        case BOORoundedRectCornersTop:{
+        case BOORoundedRectCornersTop:
+        case BOORoundedRectCornersAll:{
             UIRectCorner corners = UIRectCornerAllCorners;
             switch (self.shape) {
                 case BOORoundedRectCornersTop:
@@ -85,6 +86,7 @@
                 case BOORoundedRectCornersBottom:
                     corners = UIRectCornerBottomLeft | UIRectCornerBottomRight;
                     break;
+                BOORoundedRectCornersAll:
                 default:
                     break;
             }
