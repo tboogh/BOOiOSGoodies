@@ -106,6 +106,7 @@
     if (thumbnailImage == nil){
         UIImage *image = [UIImage imageWithContentsOfFile:filePath];
         if (image == nil){
+            NSLog(@"%s: Image not found for %@", __PRETTY_FUNCTION__, filePath);
             return nil;
         }
         thumbnailImage = [self resizeAndWriteImage:image withFilePath:filePath andSize:size];

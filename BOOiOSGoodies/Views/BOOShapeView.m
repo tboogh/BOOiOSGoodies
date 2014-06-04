@@ -112,6 +112,11 @@
             };
             [self strokePoints:points length:sizeof(points) / sizeof(CGPoint)];
         } break;
+        case BOOCircle:{
+            UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
+            [self.fillColor setFill];
+            [path fill];
+        } break;
     }
     
 }
