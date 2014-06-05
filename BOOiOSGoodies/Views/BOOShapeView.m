@@ -24,15 +24,16 @@
 }
 
 -(void)commonInit{
-//    self.fillColor = [UIColor clearColor];
-//    self.lineColor = [UIColor whiteColor];
-//    self.lineWidth = 1.0f;
     self.backgroundColor = [UIColor clearColor];
-//    self.userInteractionEnabled = NO;
 }
 
 -(void)setFillColor:(UIColor *)fillColor{
     _fillColor = fillColor;
+    [self setNeedsDisplay];
+}
+
+-(void)setShape:(BOOShapeViewShape)shape{
+    _shape = shape;
     [self setNeedsDisplay];
 }
 
@@ -58,7 +59,6 @@
 }
 
 - (void)drawRect:(CGRect)rect{
-    
     switch (self.shape) {
         case BOOShapeViewShapeTriangleDown:
         case BOOShapeViewShapeTriangleUp:{
@@ -71,6 +71,21 @@
             if (self.shape == BOOShapeViewShapeTriangleDown){
                 for (int i=0; i < sizeof(points) / sizeof(CGPoint); ++i){
                     points[i].y = rect.size.height - points[i].y;
+                }
+            }
+            [self fillPoints:points length:sizeof(points) / sizeof(CGPoint)];
+        } break;
+        case BOOShapeViewShapeTriangleLeft:
+        case BOOShapeViewShapeTriangleRight:{
+            CGPoint points[] = {
+                CGPointMake(CGRectGetMinX(rect), CGRectGetMaxY(rect)),
+                CGPointMake(CGRectGetMaxX(rect), CGRectGetMidY(rect)),
+                CGPointMake(CGRectGetMinX(rect), CGRectGetMinY(rect))
+            };
+            
+            if (self.shape == BOOShapeViewShapeTriangleLeft){
+                for (int i=0; i < sizeof(points) / sizeof(CGPoint); ++i){
+                    points[i].x = CGRectGetMaxX(rect) - points[i].x;
                 }
             }
             [self fillPoints:points length:sizeof(points) / sizeof(CGPoint)];

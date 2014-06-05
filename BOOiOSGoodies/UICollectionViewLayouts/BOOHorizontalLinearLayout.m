@@ -7,7 +7,7 @@
 //
 
 #import "BOOHorizontalLinearLayout.h"
-#include "BOOCGUtilites.h"
+#include "BOOUtilities.h"
 
 @interface BOOHorizontalLinearLayout()
 @property (nonatomic, strong) UICollectionViewLayoutAttributes *backgroundAttribute;
