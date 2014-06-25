@@ -50,10 +50,11 @@
     NSString *fileInPath = nil;
     while (fileInPath = [enumerator nextObject]) {
         BOOL isDirectory = NO;
-        if ([filemanager fileExistsAtPath:fileInPath isDirectory:&isDirectory]){
+        NSString *filePath = [self.fileCacheDirectory stringByAppendingPathComponent:fileInPath];
+        if ([filemanager fileExistsAtPath:filePath isDirectory:&isDirectory]){
             if (!isDirectory){
                 NSError *error = nil;
-                if (![filemanager removeItemAtPath:fileInPath error:&error]){
+                if (![filemanager removeItemAtPath:filePath error:&error]){
                     NSLog(@"%s: Error removing file %@  Error: %@", __PRETTY_FUNCTION__, fileInPath, [error localizedDescription]);
                 }
             }
