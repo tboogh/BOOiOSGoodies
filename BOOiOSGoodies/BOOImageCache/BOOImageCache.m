@@ -44,6 +44,23 @@
     [self removeAllObjects];
 }
 
+-(void)clearDiskCache{
+    NSFileManager *filemanager = [[NSFileManager alloc] init];
+    NSDirectoryEnumerator *enumerator = [filemanager enumeratorAtPath:self.fileCacheDirectory];
+    NSString *fileInPath = nil;
+    while (fileInPath = [enumerator nextObject]) {
+        BOOL isDirectory = NO;
+        if ([filemanager fileExistsAtPath:fileInPath isDirectory:&isDirectory]){
+            if (!isDirectory){
+                NSError *error = nil;
+                if (![filemanager removeItemAtPath:fileInPath error:&error]){
+                    NSLog(@"%s: Error removing file %@  Error: %@", __PRETTY_FUNCTION__, fileInPath, [error localizedDescription]);
+                }
+            }
+        }
+    }
+}
+
 -(void)setFileCacheDirectory:(NSString *)cacheDirectory{
     _fileCacheDirectory = cacheDirectory;
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -62,7 +79,7 @@
         CGFloat scale = [[UIScreen mainScreen] scale];
         NSString *imageName = [[filePath pathComponents] lastObject];
         if (scale > 1.0f){
-            key = [NSString stringWithFormat:@"%@/tn_%d_%d_%@_/@%dx.png", _fileCacheDirectory, (int)size.width, (int)size.height, imageName, (int)scale];
+            key = [NSString stringWithFormat:@"%@/tn_%d_%d_%@_@%dx.png", _fileCacheDirectory, (int)size.width, (int)size.height, imageName, (int)scale];
         } else {
             key = [NSString stringWithFormat:@"%@/tn_%d_%d_%@.png", _fileCacheDirectory, (int)size.width, (int)size.height, imageName];
         }
@@ -76,6 +93,7 @@
     }
     NSString *key = [self keyForFilePath:filePath withSize:size];
     UIImage *image = [self objectForKey:key];
+
     return image;
 }
 
@@ -279,6 +297,7 @@
     
     CGFloat width = 0.0f, height = 0.0f;
     CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, NULL);
+    CFRelease(imageSource);
     if (imageProperties != NULL) {
         CFNumberRef widthNum  = (CFNumberRef)CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelWidth);
         if (widthNum != NULL) {

@@ -21,7 +21,7 @@ UIKIT_EXTERN NSString *const kBOOBaseCollectionViewLayoutBackground;
 
 @end
 
-@interface BOOBaseCollectionViewLayout : UICollectionViewFlowLayout
+@interface BOOBaseCollectionViewLayout : UICollectionViewLayout
 @property (nonatomic) CGSize totalSize;
 @property (nonatomic) CGSize unadjustedSize;
 @property (nonatomic, strong) NSArray *layoutSections;

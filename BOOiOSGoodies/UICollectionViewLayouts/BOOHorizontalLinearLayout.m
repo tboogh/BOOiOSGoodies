@@ -25,19 +25,26 @@ NSString * const kBOOCollectionViewElementKindNavigationCell = @"kBOOCollectionV
 NSString * const kBOOCollectionViewElementKindNavigationIndicator = @"kBOOCollectionViewElementKindNavigationIndicator";
 NSString * const kBOOCollectionViewElementKindNavigationSectionBackground = @"kBOOCollectionViewElementKindNavigationSectionBackground";
 
-- (id)init
-{
+- (id)init{
     self = [super init];
     if (self) {
-        self.zoomScale = 1.0f;
-        self.falloffDistance = 240;
-        self.displayBackground = NO;
-        self.displayNavigation = NO;
-        self.navigationMargins = UIEdgeInsetsMake(20, 20, 20, 20);
-        self.navigationItemSize = CGSizeMake(40, 40);
-        self.navigationHeight = 60.0f;
+        [self commonInit];
     }
     return self;
+}
+
+-(void)awakeFromNib{
+    [self commonInit];
+}
+
+-(void)commonInit{
+    self.zoomScale = 1.0f;
+    self.falloffDistance = 240;
+    self.displayBackground = NO;
+    self.displayNavigation = NO;
+    self.navigationMargins = UIEdgeInsetsMake(20, 20, 20, 20);
+    self.navigationItemSize = CGSizeMake(40, 40);
+    self.navigationHeight = 60.0f;
 }
 
 -(void)prepareLayout{
@@ -106,6 +113,7 @@ NSString * const kBOOCollectionViewElementKindNavigationSectionBackground = @"kB
         CGRect frame = lastNavigationAttribute.frame;
         CGFloat maxX = CGRectGetMaxX(frame);
         navigationFrame = CGRectMake(0, 0, maxX, frame.size.height);
+        
         for (BOOCollectionViewLayoutAttributeSection *attribute in navigationSectionAttributes) {
             CGRect attributeFrame = attribute.sectionAttribute.frame;
             attributeFrame.origin.x = self.collectionView.bounds.size.width - maxX + attributeFrame.origin.x;

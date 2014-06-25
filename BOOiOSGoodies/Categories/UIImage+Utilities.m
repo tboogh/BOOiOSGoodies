@@ -21,6 +21,7 @@
     
     CGFloat width = 0.0f, height = 0.0f;
     CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, NULL);
+    CFRelease(imageSource);
     if (imageProperties != NULL) {
         CFNumberRef widthNum  = CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelWidth);
         if (widthNum != NULL) {

@@ -35,6 +35,11 @@
 /* Begin PBXFileReference section */
 		1455C5E519236F3200A8CCF8 /* BOOBreadCrumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOBreadCrumbView.h; sourceTree = "<group>"; };
 		1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOBreadCrumbView.m; sourceTree = "<group>"; };
+		14B11450194B89E000D6A2F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14B11453194B89E000D6A2F6 /* BOOMapperTesting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BOOMapperTesting-Prefix.pch"; sourceTree = "<group>"; };
+		14B11454194B89E000D6A2F6 /* BOOMapperTesting.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BOOMapperTesting.1; sourceTree = "<group>"; };
+		14B1145E194B8A3B00D6A2F6 /* BOOTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOTestClass.h; sourceTree = "<group>"; };
+		14B1145F194B8A3B00D6A2F6 /* BOOTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOTestClass.m; sourceTree = "<group>"; };
 		14B50A611920012100A6C372 /* BOOiOSGoodiesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BOOiOSGoodiesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D86046191FE75900E2AD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14D86048191FE75900E2AD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -102,11 +107,32 @@
 			path = BOOBreadCrumbNavigation;
 			sourceTree = "<group>";
 		};
+		14B1144F194B89E000D6A2F6 /* BOOMapperTesting */ = {
+			isa = PBXGroup;
+			children = (
+				14B11450194B89E000D6A2F6 /* main.m */,
+				14B11454194B89E000D6A2F6 /* BOOMapperTesting.1 */,
+				14B11452194B89E000D6A2F6 /* Supporting Files */,
+				14B1145E194B8A3B00D6A2F6 /* BOOTestClass.h */,
+				14B1145F194B8A3B00D6A2F6 /* BOOTestClass.m */,
+			);
+			path = BOOMapperTesting;
+			sourceTree = "<group>";
+		};
+		14B11452194B89E000D6A2F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14B11453194B89E000D6A2F6 /* BOOMapperTesting-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		14D8603A191FE75900E2AD38 = {
 			isa = PBXGroup;
 			children = (
 				14EB50DB192366480072B383 /* BOOiOSGoodies */,
 				14EB50FD192366480072B383 /* BOOiOSGoodiesDemo */,
+				14B1144F194B89E000D6A2F6 /* BOOMapperTesting */,
 				14D86045191FE75900E2AD38 /* Frameworks */,
 				14D86044191FE75900E2AD38 /* Products */,
 			);
