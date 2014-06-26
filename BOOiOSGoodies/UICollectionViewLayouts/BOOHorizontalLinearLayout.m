@@ -194,6 +194,7 @@ NSString * const kBOOCollectionViewElementKindNavigationSectionBackground = @"kB
     if (self.displayBackground){
         CGRect frame = self.backgroundAttribute.frame;
         frame.origin =self.collectionView.contentOffset;
+        frame.size = self.collectionView.bounds.size;
         self.backgroundAttribute.frame = frame;
         [intersectingArray addObject:self.backgroundAttribute];
     }
