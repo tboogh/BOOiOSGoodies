@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F445BC75-9D4F-42C4-8F1F-B3E78659AB36</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BOOiOSGoodies</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0D05CE07-EA65-4E33-8D1B-3E3FD231F339</key>
+		<string>https://github.com/tboogh/BOOiOSGoodies.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BOOiOSGoodies.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0D05CE07-EA65-4E33-8D1B-3E3FD231F339</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tboogh/BOOiOSGoodies.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0D05CE07-EA65-4E33-8D1B-3E3FD231F339</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0D05CE07-EA65-4E33-8D1B-3E3FD231F339</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BOOiOSGoodies</string>
+		</dict>
+	</array>
+</dict>
+</plist>

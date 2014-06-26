@@ -21,4 +21,5 @@ typedef void(^BOOImageCacheCompletion)(UIImage *image);
 -(void)getThumbnailForVideo:(NSString *)filePath withSize:(CGSize)size withCompletion:(BOOImageCacheCompletion)completion;
 
 -(void)emptyCache;
+-(void)clearDiskCache;
 @end

@@ -7,12 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		142CB4C6192891BE005D5A8C /* BOODemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142CB4C5192891BE005D5A8C /* BOODemoTableViewController.m */; };
-		142CB4CE1928E3F2005D5A8C /* BOODemoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142CB4CD1928E3F2005D5A8C /* BOODemoCollectionViewController.m */; };
 		1455C5E719236F3200A8CCF8 /* BOOBreadCrumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */; };
-		147AC57A1928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147AC5791928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard */; };
-		147AC57D1928E90C00A59FC7 /* BOODemoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AC57C1928E90C00A59FC7 /* BOODemoDetailViewController.m */; };
-		14996808192927FA0058E0B5 /* BOODemoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14996807192927FA0058E0B5 /* BOODemoCollectionViewCell.m */; };
 		14B50A621920012100A6C372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
 		14B50A631920012100A6C372 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86048191FE75900E2AD38 /* CoreGraphics.framework */; };
 		14B50A641920012100A6C372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D8604A191FE75900E2AD38 /* UIKit.framework */; };
@@ -22,7 +17,7 @@
 		14EB510D192366480072B383 /* UIImage+ReflectedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50E6192366480072B383 /* UIImage+ReflectedImage.m */; };
 		14EB510E192366480072B383 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50E8192366480072B383 /* UIImage+Resize.m */; };
 		14EB510F192366480072B383 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EA192366480072B383 /* UIImage+RoundedCorner.m */; };
-		14EB5110192366480072B383 /* UIImage+BOOImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EC192366480072B383 /* UIImage+BOOImageCache.m */; };
+		14EB5110192366480072B383 /* UIImage+TINImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EC192366480072B383 /* UIImage+TINImageCache.m */; };
 		14EB5111192366480072B383 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EE192366480072B383 /* UIImage+Utilities.m */; };
 		14EB5112192366480072B383 /* BOOBaseCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50F3192366480072B383 /* BOOBaseCollectionViewLayout.m */; };
 		14EB5113192366480072B383 /* BOOHorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50F5192366480072B383 /* BOOHorizontalCollectionViewLayout.m */; };
@@ -35,22 +30,16 @@
 		14EB511B192366480072B383 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14EB5106192366480072B383 /* InfoPlist.strings */; };
 		14EB511C192366480072B383 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EB5108192366480072B383 /* Images.xcassets */; };
 		14EB511D192366480072B383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB5109192366480072B383 /* main.m */; };
-		14EBC4D4192924FF0029F27E /* TestImages in Resources */ = {isa = PBXBuildFile; fileRef = 14EBC4D3192924FF0029F27E /* TestImages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		142CB4C4192891BE005D5A8C /* BOODemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODemoTableViewController.h; sourceTree = "<group>"; };
-		142CB4C5192891BE005D5A8C /* BOODemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODemoTableViewController.m; sourceTree = "<group>"; };
-		142CB4CC1928E3F2005D5A8C /* BOODemoCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODemoCollectionViewController.h; sourceTree = "<group>"; };
-		142CB4CD1928E3F2005D5A8C /* BOODemoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODemoCollectionViewController.m; sourceTree = "<group>"; };
 		1455C5E519236F3200A8CCF8 /* BOOBreadCrumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOBreadCrumbView.h; sourceTree = "<group>"; };
 		1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOBreadCrumbView.m; sourceTree = "<group>"; };
-		147AC5791928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BOOCollectionViewDemoStoryboard.storyboard; path = Interface/BOOCollectionViewDemoStoryboard.storyboard; sourceTree = "<group>"; };
-		147AC57B1928E90C00A59FC7 /* BOODemoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODemoDetailViewController.h; sourceTree = "<group>"; };
-		147AC57C1928E90C00A59FC7 /* BOODemoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODemoDetailViewController.m; sourceTree = "<group>"; };
-		14996806192927FA0058E0B5 /* BOODemoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODemoCollectionViewCell.h; sourceTree = "<group>"; };
-		14996807192927FA0058E0B5 /* BOODemoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODemoCollectionViewCell.m; sourceTree = "<group>"; };
-		14B114AA194DC50500D6A2F6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		14B11450194B89E000D6A2F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14B11453194B89E000D6A2F6 /* BOOMapperTesting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BOOMapperTesting-Prefix.pch"; sourceTree = "<group>"; };
+		14B11454194B89E000D6A2F6 /* BOOMapperTesting.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BOOMapperTesting.1; sourceTree = "<group>"; };
+		14B1145E194B8A3B00D6A2F6 /* BOOTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOTestClass.h; sourceTree = "<group>"; };
+		14B1145F194B8A3B00D6A2F6 /* BOOTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOTestClass.m; sourceTree = "<group>"; };
 		14B50A611920012100A6C372 /* BOOiOSGoodiesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BOOiOSGoodiesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D86046191FE75900E2AD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14D86048191FE75900E2AD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,8 +57,8 @@
 		14EB50E8192366480072B383 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		14EB50E9192366480072B383 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
 		14EB50EA192366480072B383 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
-		14EB50EB192366480072B383 /* UIImage+BOOImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BOOImageCache.h"; sourceTree = "<group>"; };
-		14EB50EC192366480072B383 /* UIImage+BOOImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BOOImageCache.m"; sourceTree = "<group>"; };
+		14EB50EB192366480072B383 /* UIImage+TINImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TINImageCache.h"; sourceTree = "<group>"; };
+		14EB50EC192366480072B383 /* UIImage+TINImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TINImageCache.m"; sourceTree = "<group>"; };
 		14EB50ED192366480072B383 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
 		14EB50EE192366480072B383 /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utilities.m"; sourceTree = "<group>"; };
 		14EB50F0192366480072B383 /* BOOCGUtilites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOCGUtilites.h; sourceTree = "<group>"; };
@@ -93,7 +82,6 @@
 		14EB5107192366480072B383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14EB5108192366480072B383 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		14EB5109192366480072B383 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		14EBC4D3192924FF0029F27E /* TestImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestImages; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,25 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		142CB4CA1928E3F2005D5A8C /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				142CB4CB1928E3F2005D5A8C /* CollectionViewDemo */,
-				147AC57B1928E90C00A59FC7 /* BOODemoDetailViewController.h */,
-				147AC57C1928E90C00A59FC7 /* BOODemoDetailViewController.m */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		142CB4CB1928E3F2005D5A8C /* CollectionViewDemo */ = {
-			isa = PBXGroup;
-			children = (
-				142CB4CC1928E3F2005D5A8C /* BOODemoCollectionViewController.h */,
-				142CB4CD1928E3F2005D5A8C /* BOODemoCollectionViewController.m */,
-			);
-			path = CollectionViewDemo;
-			sourceTree = "<group>";
-		};
 		1455C5E419236F3200A8CCF8 /* BOOBreadCrumbNavigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,22 +107,24 @@
 			path = BOOBreadCrumbNavigation;
 			sourceTree = "<group>";
 		};
-		147AC5781928E68200A59FC7 /* Interface */ = {
+		14B1144F194B89E000D6A2F6 /* BOOMapperTesting */ = {
 			isa = PBXGroup;
 			children = (
-				14EB50FE192366480072B383 /* Main.storyboard */,
-				147AC5791928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard */,
+				14B11450194B89E000D6A2F6 /* main.m */,
+				14B11454194B89E000D6A2F6 /* BOOMapperTesting.1 */,
+				14B11452194B89E000D6A2F6 /* Supporting Files */,
+				14B1145E194B8A3B00D6A2F6 /* BOOTestClass.h */,
+				14B1145F194B8A3B00D6A2F6 /* BOOTestClass.m */,
 			);
-			name = Interface;
+			path = BOOMapperTesting;
 			sourceTree = "<group>";
 		};
-		14996805192927E60058E0B5 /* Views */ = {
+		14B11452194B89E000D6A2F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				14996806192927FA0058E0B5 /* BOODemoCollectionViewCell.h */,
-				14996807192927FA0058E0B5 /* BOODemoCollectionViewCell.m */,
+				14B11453194B89E000D6A2F6 /* BOOMapperTesting-Prefix.pch */,
 			);
-			path = Views;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		14D8603A191FE75900E2AD38 = {
@@ -161,6 +132,7 @@
 			children = (
 				14EB50DB192366480072B383 /* BOOiOSGoodies */,
 				14EB50FD192366480072B383 /* BOOiOSGoodiesDemo */,
+				14B1144F194B89E000D6A2F6 /* BOOMapperTesting */,
 				14D86045191FE75900E2AD38 /* Frameworks */,
 				14D86044191FE75900E2AD38 /* Products */,
 			);
@@ -177,7 +149,6 @@
 		14D86045191FE75900E2AD38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				14B114AA194DC50500D6A2F6 /* CoreData.framework */,
 				14D86046191FE75900E2AD38 /* Foundation.framework */,
 				14D86048191FE75900E2AD38 /* CoreGraphics.framework */,
 				14D8604A191FE75900E2AD38 /* UIKit.framework */,
@@ -229,8 +200,8 @@
 				14EB50E8192366480072B383 /* UIImage+Resize.m */,
 				14EB50E9192366480072B383 /* UIImage+RoundedCorner.h */,
 				14EB50EA192366480072B383 /* UIImage+RoundedCorner.m */,
-				14EB50EB192366480072B383 /* UIImage+BOOImageCache.h */,
-				14EB50EC192366480072B383 /* UIImage+BOOImageCache.m */,
+				14EB50EB192366480072B383 /* UIImage+TINImageCache.h */,
+				14EB50EC192366480072B383 /* UIImage+TINImageCache.m */,
 				14EB50ED192366480072B383 /* UIImage+Utilities.h */,
 				14EB50EE192366480072B383 /* UIImage+Utilities.m */,
 			);
@@ -272,10 +243,7 @@
 		14EB50FD192366480072B383 /* BOOiOSGoodiesDemo */ = {
 			isa = PBXGroup;
 			children = (
-				14996805192927E60058E0B5 /* Views */,
-				14EBC4C5192924E20029F27E /* Resources */,
-				147AC5781928E68200A59FC7 /* Interface */,
-				142CB4CA1928E3F2005D5A8C /* ViewControllers */,
+				14EB50FE192366480072B383 /* Main.storyboard */,
 				14EB5100192366480072B383 /* BOODemoAppDelegate.h */,
 				14EB5101192366480072B383 /* BOODemoAppDelegate.m */,
 				14EB5102192366480072B383 /* BOODisplayLinkTimerExampleViewController.h */,
@@ -285,18 +253,8 @@
 				14EB5106192366480072B383 /* InfoPlist.strings */,
 				14EB5108192366480072B383 /* Images.xcassets */,
 				14EB5109192366480072B383 /* main.m */,
-				142CB4C4192891BE005D5A8C /* BOODemoTableViewController.h */,
-				142CB4C5192891BE005D5A8C /* BOODemoTableViewController.m */,
 			);
 			path = BOOiOSGoodiesDemo;
-			sourceTree = "<group>";
-		};
-		14EBC4C5192924E20029F27E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				14EBC4D3192924FF0029F27E /* TestImages */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,8 +312,6 @@
 			files = (
 				14EB5117192366480072B383 /* Main.storyboard in Resources */,
 				14EB511C192366480072B383 /* Images.xcassets in Resources */,
-				14EBC4D4192924FF0029F27E /* TestImages in Resources */,
-				147AC57A1928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard in Resources */,
 				14EB511B192366480072B383 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,17 +327,13 @@
 				14EB510D192366480072B383 /* UIImage+ReflectedImage.m in Sources */,
 				14EB5113192366480072B383 /* BOOHorizontalCollectionViewLayout.m in Sources */,
 				14EB5119192366480072B383 /* BOODisplayLinkTimerExampleViewController.m in Sources */,
-				142CB4CE1928E3F2005D5A8C /* BOODemoCollectionViewController.m in Sources */,
 				14EB5114192366480072B383 /* BOOHorizontalLinearLayout.m in Sources */,
 				14EB5116192366480072B383 /* BOOGradientBackgroundView.m in Sources */,
-				147AC57D1928E90C00A59FC7 /* BOODemoDetailViewController.m in Sources */,
 				14EB511D192366480072B383 /* main.m in Sources */,
 				14EB510A192366480072B383 /* BOOImageCache.m in Sources */,
-				14EB5110192366480072B383 /* UIImage+BOOImageCache.m in Sources */,
-				142CB4C6192891BE005D5A8C /* BOODemoTableViewController.m in Sources */,
+				14EB5110192366480072B383 /* UIImage+TINImageCache.m in Sources */,
 				14EB510B192366480072B383 /* BOODisplayLinkTimer.m in Sources */,
 				14EB510C192366480072B383 /* UIImage+Alpha.m in Sources */,
-				14996808192927FA0058E0B5 /* BOODemoCollectionViewCell.m in Sources */,
 				1455C5E719236F3200A8CCF8 /* BOOBreadCrumbView.m in Sources */,
 				14EB510F192366480072B383 /* UIImage+RoundedCorner.m in Sources */,
 				14EB5111192366480072B383 /* UIImage+Utilities.m in Sources */,

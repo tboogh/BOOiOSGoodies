@@ -13,13 +13,13 @@
 @class BOOBreadCrumbView;
 
 @protocol BOOBreadCrumbDataSource <NSObject>
--(BOOBreadCrumbButton *)breadCrumbView:(BOOBreadCrumbView *)breadCrumbView controlForButtonAtIndex:(int)index;
+-(BOOBreadCrumbButton *)breadCrumbView:(BOOBreadCrumbView *)breadCrumbView controlForButtonAtIndex:(NSUInteger)index;
 @end
 
 @protocol BOOBreadCrumbDelegate <NSObject>
 @optional
--(bool)breadCrumbView:(BOOBreadCrumbView *)breadCrumbView shouldSelectAtIndex:(int)index;
--(void)breadCrumbView:(BOOBreadCrumbView *)breadCrumbView didSelectedButtonAtIndex:(int)index;
+-(bool)breadCrumbView:(BOOBreadCrumbView *)breadCrumbView shouldSelectAtIndex:(NSUInteger)index;
+-(void)breadCrumbView:(BOOBreadCrumbView *)breadCrumbView didSelectedButtonAtIndex:(NSUInteger)index;
 @end
 
 @interface BOOBreadCrumbView : UIScrollView <UIScrollViewDelegate>{
@@ -30,5 +30,5 @@
 @property (nonatomic) CGFloat buttonSpacing;
 -(void)setHomeButtonTitle:(NSString *)title;
 -(void)addButton;
--(void)removeButtonsAfterIndex:(uint)index;
+-(void)removeButtonsAfterIndex:(NSUInteger)index;
 @end

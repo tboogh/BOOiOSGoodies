@@ -16,7 +16,6 @@
 }
 @property (nonatomic, strong) AVAssetImageGenerator *generator;
 @property (nonatomic) dispatch_queue_t fetch_image_queue;
-@property (nonatomic) dispatch_queue_t file_manager_queue;
 @property (nonatomic, strong) NSString *fileCacheDirectory;
 @end
 
@@ -34,9 +33,8 @@
 - (id)init {
     self = [super init];
     if (self) {
-        _fetch_image_queue = dispatch_queue_create("fetch_image_queue", DISPATCH_QUEUE_CONCURRENT);
+        _fetch_image_queue = dispatch_queue_create("com.booimagecache.processimagequeue", DISPATCH_QUEUE_CONCURRENT);
         [self setFileCacheDirectory:[@"~/tmp/TINImageCache" stringByExpandingTildeInPath]];
-        _file_manager_queue = dispatch_queue_create("filemanager_queue", DISPATCH_QUEUE_SERIAL);
         video_semaphore = dispatch_semaphore_create(0);
     }
     return self;
@@ -44,6 +42,24 @@
 
 -(void)emptyCache{
     [self removeAllObjects];
+}
+
+-(void)clearDiskCache{
+    NSFileManager *filemanager = [[NSFileManager alloc] init];
+    NSDirectoryEnumerator *enumerator = [filemanager enumeratorAtPath:self.fileCacheDirectory];
+    NSString *fileInPath = nil;
+    while (fileInPath = [enumerator nextObject]) {
+        BOOL isDirectory = NO;
+        NSString *filePath = [self.fileCacheDirectory stringByAppendingPathComponent:fileInPath];
+        if ([filemanager fileExistsAtPath:filePath isDirectory:&isDirectory]){
+            if (!isDirectory){
+                NSError *error = nil;
+                if (![filemanager removeItemAtPath:filePath error:&error]){
+                    NSLog(@"%s: Error removing file %@  Error: %@", __PRETTY_FUNCTION__, fileInPath, [error localizedDescription]);
+                }
+            }
+        }
+    }
 }
 
 -(void)setFileCacheDirectory:(NSString *)cacheDirectory{
@@ -61,8 +77,13 @@
 -(NSString *)keyForFilePath:(NSString *)filePath withSize:(CGSize)size{
     NSString *key = filePath;
     if (!CGSizeEqualToSize(size, CGSizeZero)){
+        CGFloat scale = [[UIScreen mainScreen] scale];
         NSString *imageName = [[filePath pathComponents] lastObject];
-        key = [NSString stringWithFormat:@"%@/tn_%d_%d_%@.png", _fileCacheDirectory, (int)size.width, (int)size.height, imageName];
+        if (scale > 1.0f){
+            key = [NSString stringWithFormat:@"%@/tn_%d_%d_%@_@%dx.png", _fileCacheDirectory, (int)size.width, (int)size.height, imageName, (int)scale];
+        } else {
+            key = [NSString stringWithFormat:@"%@/tn_%d_%d_%@.png", _fileCacheDirectory, (int)size.width, (int)size.height, imageName];
+        }
     }
     return key;
 }
@@ -72,8 +93,8 @@
         return nil;
     }
     NSString *key = [self keyForFilePath:filePath withSize:size];
-    NSLog(@"GetkeyForFilePath: %@", key);
     UIImage *image = [self objectForKey:key];
+
     return image;
 }
 
@@ -87,8 +108,11 @@
     NSString *key = [self keyForFilePath:filePath withSize:size];
     UIImage *resizedImage = nil;
     if (!CGSizeEqualToSize(size, CGSizeZero)){
+        CGFloat scale = [[UIScreen mainScreen] scale];
+        size.width *= scale;
+        size.height *= scale;
         resizedImage = [self resizeImage:image withSize:size];
-        [self writeImageToFilePath:image filePath:key];
+        [self writeImageToFilePath:resizedImage filePath:key];
     }
     if (resizedImage != nil){
         [self setObject:resizedImage forKey:key];
@@ -101,6 +125,7 @@
     if (thumbnailImage == nil){
         UIImage *image = [UIImage imageWithContentsOfFile:filePath];
         if (image == nil){
+            NSLog(@"%s: Image not found for %@", __PRETTY_FUNCTION__, filePath);
             return nil;
         }
         thumbnailImage = [self resizeAndWriteImage:image withFilePath:filePath andSize:size];
@@ -139,11 +164,9 @@
 
 -(void)getThumbnailForPdf:(NSString *)filePath withSize:(CGSize)size withCompletion:(BOOImageCacheCompletion)completion{
     dispatch_async(self.fetch_image_queue, ^{
-        dispatch_async(self.fetch_image_queue, ^{
-            UIImage *image = [self getThumbnailForPdf:filePath withSize:size];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(image);
-            });
+        UIImage *image = [self getThumbnailForPdf:filePath withSize:size];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(image);
         });
     });
 }
@@ -275,6 +298,7 @@
     
     CGFloat width = 0.0f, height = 0.0f;
     CFDictionaryRef imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, NULL);
+    CFRelease(imageSource);
     if (imageProperties != NULL) {
         CFNumberRef widthNum  = (CFNumberRef)CFDictionaryGetValue(imageProperties, kCGImagePropertyPixelWidth);
         if (widthNum != NULL) {
