@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1455C5E719236F3200A8CCF8 /* BOOBreadCrumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */; };
+		1496B56D195C499B00AEDF25 /* BOOInsetLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1496B568195C499B00AEDF25 /* BOOInsetLabel.m */; };
+		1496B56E195C499B00AEDF25 /* BOOShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1496B56A195C499B00AEDF25 /* BOOShapeView.m */; };
+		1496B56F195C499B00AEDF25 /* BOOShapeViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1496B56C195C499B00AEDF25 /* BOOShapeViewControl.m */; };
+		1496B572195C49A700AEDF25 /* BOOUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1496B571195C49A700AEDF25 /* BOOUtilities.m */; };
+		1496B575195C49B700AEDF25 /* UIImage+BOOImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1496B574195C49B700AEDF25 /* UIImage+BOOImageCache.m */; };
 		14B50A621920012100A6C372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
 		14B50A631920012100A6C372 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86048191FE75900E2AD38 /* CoreGraphics.framework */; };
 		14B50A641920012100A6C372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D8604A191FE75900E2AD38 /* UIKit.framework */; };
@@ -17,7 +22,6 @@
 		14EB510D192366480072B383 /* UIImage+ReflectedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50E6192366480072B383 /* UIImage+ReflectedImage.m */; };
 		14EB510E192366480072B383 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50E8192366480072B383 /* UIImage+Resize.m */; };
 		14EB510F192366480072B383 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EA192366480072B383 /* UIImage+RoundedCorner.m */; };
-		14EB5110192366480072B383 /* UIImage+TINImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EC192366480072B383 /* UIImage+TINImageCache.m */; };
 		14EB5111192366480072B383 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EE192366480072B383 /* UIImage+Utilities.m */; };
 		14EB5112192366480072B383 /* BOOBaseCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50F3192366480072B383 /* BOOBaseCollectionViewLayout.m */; };
 		14EB5113192366480072B383 /* BOOHorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50F5192366480072B383 /* BOOHorizontalCollectionViewLayout.m */; };
@@ -35,6 +39,16 @@
 /* Begin PBXFileReference section */
 		1455C5E519236F3200A8CCF8 /* BOOBreadCrumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOBreadCrumbView.h; sourceTree = "<group>"; };
 		1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOBreadCrumbView.m; sourceTree = "<group>"; };
+		1496B567195C499B00AEDF25 /* BOOInsetLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOInsetLabel.h; sourceTree = "<group>"; };
+		1496B568195C499B00AEDF25 /* BOOInsetLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOInsetLabel.m; sourceTree = "<group>"; };
+		1496B569195C499B00AEDF25 /* BOOShapeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOShapeView.h; sourceTree = "<group>"; };
+		1496B56A195C499B00AEDF25 /* BOOShapeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOShapeView.m; sourceTree = "<group>"; };
+		1496B56B195C499B00AEDF25 /* BOOShapeViewControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOShapeViewControl.h; sourceTree = "<group>"; };
+		1496B56C195C499B00AEDF25 /* BOOShapeViewControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOShapeViewControl.m; sourceTree = "<group>"; };
+		1496B570195C49A700AEDF25 /* BOOUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOUtilities.h; sourceTree = "<group>"; };
+		1496B571195C49A700AEDF25 /* BOOUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOUtilities.m; sourceTree = "<group>"; };
+		1496B573195C49B700AEDF25 /* UIImage+BOOImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BOOImageCache.h"; sourceTree = "<group>"; };
+		1496B574195C49B700AEDF25 /* UIImage+BOOImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BOOImageCache.m"; sourceTree = "<group>"; };
 		14B11450194B89E000D6A2F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14B11453194B89E000D6A2F6 /* BOOMapperTesting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BOOMapperTesting-Prefix.pch"; sourceTree = "<group>"; };
 		14B11454194B89E000D6A2F6 /* BOOMapperTesting.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BOOMapperTesting.1; sourceTree = "<group>"; };
@@ -57,11 +71,8 @@
 		14EB50E8192366480072B383 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		14EB50E9192366480072B383 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
 		14EB50EA192366480072B383 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
-		14EB50EB192366480072B383 /* UIImage+TINImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TINImageCache.h"; sourceTree = "<group>"; };
-		14EB50EC192366480072B383 /* UIImage+TINImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TINImageCache.m"; sourceTree = "<group>"; };
 		14EB50ED192366480072B383 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
 		14EB50EE192366480072B383 /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utilities.m"; sourceTree = "<group>"; };
-		14EB50F0192366480072B383 /* BOOCGUtilites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOCGUtilites.h; sourceTree = "<group>"; };
 		14EB50F2192366480072B383 /* BOOBaseCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOBaseCollectionViewLayout.h; sourceTree = "<group>"; };
 		14EB50F3192366480072B383 /* BOOBaseCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOBaseCollectionViewLayout.m; sourceTree = "<group>"; };
 		14EB50F4192366480072B383 /* BOOHorizontalCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOHorizontalCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -192,6 +203,8 @@
 		14EB50E2192366480072B383 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				1496B573195C49B700AEDF25 /* UIImage+BOOImageCache.h */,
+				1496B574195C49B700AEDF25 /* UIImage+BOOImageCache.m */,
 				14EB50E3192366480072B383 /* UIImage+Alpha.h */,
 				14EB50E4192366480072B383 /* UIImage+Alpha.m */,
 				14EB50E5192366480072B383 /* UIImage+ReflectedImage.h */,
@@ -200,8 +213,6 @@
 				14EB50E8192366480072B383 /* UIImage+Resize.m */,
 				14EB50E9192366480072B383 /* UIImage+RoundedCorner.h */,
 				14EB50EA192366480072B383 /* UIImage+RoundedCorner.m */,
-				14EB50EB192366480072B383 /* UIImage+TINImageCache.h */,
-				14EB50EC192366480072B383 /* UIImage+TINImageCache.m */,
 				14EB50ED192366480072B383 /* UIImage+Utilities.h */,
 				14EB50EE192366480072B383 /* UIImage+Utilities.m */,
 			);
@@ -211,7 +222,8 @@
 		14EB50EF192366480072B383 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				14EB50F0192366480072B383 /* BOOCGUtilites.h */,
+				1496B570195C49A700AEDF25 /* BOOUtilities.h */,
+				1496B571195C49A700AEDF25 /* BOOUtilities.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -234,6 +246,12 @@
 		14EB50FA192366480072B383 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1496B567195C499B00AEDF25 /* BOOInsetLabel.h */,
+				1496B568195C499B00AEDF25 /* BOOInsetLabel.m */,
+				1496B569195C499B00AEDF25 /* BOOShapeView.h */,
+				1496B56A195C499B00AEDF25 /* BOOShapeView.m */,
+				1496B56B195C499B00AEDF25 /* BOOShapeViewControl.h */,
+				1496B56C195C499B00AEDF25 /* BOOShapeViewControl.m */,
 				14EB50FB192366480072B383 /* BOOGradientBackgroundView.h */,
 				14EB50FC192366480072B383 /* BOOGradientBackgroundView.m */,
 			);
@@ -324,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14EB5118192366480072B383 /* BOODemoAppDelegate.m in Sources */,
+				1496B56D195C499B00AEDF25 /* BOOInsetLabel.m in Sources */,
 				14EB510D192366480072B383 /* UIImage+ReflectedImage.m in Sources */,
 				14EB5113192366480072B383 /* BOOHorizontalCollectionViewLayout.m in Sources */,
 				14EB5119192366480072B383 /* BOODisplayLinkTimerExampleViewController.m in Sources */,
@@ -331,15 +350,18 @@
 				14EB5116192366480072B383 /* BOOGradientBackgroundView.m in Sources */,
 				14EB511D192366480072B383 /* main.m in Sources */,
 				14EB510A192366480072B383 /* BOOImageCache.m in Sources */,
-				14EB5110192366480072B383 /* UIImage+TINImageCache.m in Sources */,
+				1496B56F195C499B00AEDF25 /* BOOShapeViewControl.m in Sources */,
 				14EB510B192366480072B383 /* BOODisplayLinkTimer.m in Sources */,
 				14EB510C192366480072B383 /* UIImage+Alpha.m in Sources */,
+				1496B575195C49B700AEDF25 /* UIImage+BOOImageCache.m in Sources */,
 				1455C5E719236F3200A8CCF8 /* BOOBreadCrumbView.m in Sources */,
 				14EB510F192366480072B383 /* UIImage+RoundedCorner.m in Sources */,
+				1496B56E195C499B00AEDF25 /* BOOShapeView.m in Sources */,
 				14EB5111192366480072B383 /* UIImage+Utilities.m in Sources */,
 				14EB5115192366480072B383 /* BOOVerticalCollectionViewLayout.m in Sources */,
 				14EB5112192366480072B383 /* BOOBaseCollectionViewLayout.m in Sources */,
 				14EB510E192366480072B383 /* UIImage+Resize.m in Sources */,
+				1496B572195C49A700AEDF25 /* BOOUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
