@@ -14,7 +14,7 @@ typedef NS_ENUM(NSUInteger, BOODemoCollectionViewLayouts) {
     kBOODemoCollectionViewLinearLayout
 };
 
-@interface BOODemoCollectionViewController : UICollectionViewController
-
+@interface BOODemoCollectionViewController : UICollectionViewController <UICollectionViewDelegateFlowLayout>
+@property (nonatomic, strong) NSArray *collectionViewSectionData;
 -(void)setLayout:(BOODemoCollectionViewLayouts)layout;
 @end

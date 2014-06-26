@@ -10,8 +10,73 @@
 		142CB4C6192891BE005D5A8C /* BOODemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142CB4C5192891BE005D5A8C /* BOODemoTableViewController.m */; };
 		142CB4CE1928E3F2005D5A8C /* BOODemoCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 142CB4CD1928E3F2005D5A8C /* BOODemoCollectionViewController.m */; };
 		1455C5E719236F3200A8CCF8 /* BOOBreadCrumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */; };
+		14679885194EDFAB00D4F7BC /* StructureNode+CatalogImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 14679884194EDFAB00D4F7BC /* StructureNode+CatalogImport.m */; };
+		14679888194EE8B400D4F7BC /* Product+CatalogImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 14679887194EE8B400D4F7BC /* Product+CatalogImport.m */; };
+		1467988B194EE8D500D4F7BC /* CatalogImportConstansts.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467988A194EE8D500D4F7BC /* CatalogImportConstansts.m */; };
+		1467988E194EEB9500D4F7BC /* Usp+CatalogImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467988D194EEB9500D4F7BC /* Usp+CatalogImport.m */; };
+		14679891194EF11900D4F7BC /* Image+CatalogImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 14679890194EF11900D4F7BC /* Image+CatalogImport.m */; };
+		14679894194EF86900D4F7BC /* Document+CatalogImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 14679893194EF86900D4F7BC /* Document+CatalogImport.m */; };
+		1467989A194EFF4A00D4F7BC /* Article+CatalogImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 14679899194EFF4A00D4F7BC /* Article+CatalogImport.m */; };
+		1467989D194EFFBC00D4F7BC /* Certificate+CatalogImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467989C194EFFBC00D4F7BC /* Certificate+CatalogImport.m */; };
+		146798A0194F017800D4F7BC /* CharsetP+CatalogImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467989F194F017800D4F7BC /* CharsetP+CatalogImport.m */; };
+		146798A3194F029E00D4F7BC /* Characteristics+CatalogImport.m in Sources */ = {isa = PBXBuildFile; fileRef = 146798A2194F029E00D4F7BC /* Characteristics+CatalogImport.m */; };
 		147AC57A1928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147AC5791928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard */; };
 		147AC57D1928E90C00A59FC7 /* BOODemoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AC57C1928E90C00A59FC7 /* BOODemoDetailViewController.m */; };
+		14996808192927FA0058E0B5 /* BOODemoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14996807192927FA0058E0B5 /* BOODemoCollectionViewCell.m */; };
+		14B11469194B916900D6A2F6 /* BOOMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11468194B916900D6A2F6 /* BOOMapper.m */; };
+		14B1146F194B91AC00D6A2F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
+		14B11472194B91AC00D6A2F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11471194B91AC00D6A2F6 /* main.m */; };
+		14B11476194B91AC00D6A2F6 /* BOOMapperTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14B11475194B91AC00D6A2F6 /* BOOMapperTest.1 */; };
+		14B1147E194B924600D6A2F6 /* BOOTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1147D194B924600D6A2F6 /* BOOTestClass.m */; };
+		14B1149A194B945A00D6A2F6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14B11498194B945A00D6A2F6 /* InfoPlist.strings */; };
+		14B1149C194B945A00D6A2F6 /* BOOMapper_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1149B194B945A00D6A2F6 /* BOOMapper_Tests.m */; };
+		14B114A3194B947D00D6A2F6 /* BOOMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11468194B916900D6A2F6 /* BOOMapper.m */; };
+		14B114A4194B948300D6A2F6 /* BOOTestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1147D194B924600D6A2F6 /* BOOTestClass.m */; };
+		14B114A5194B94B400D6A2F6 /* BOOMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11468194B916900D6A2F6 /* BOOMapper.m */; };
+		14B114A8194DC4F500D6A2F6 /* BOOTestCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B114A7194DC4F500D6A2F6 /* BOOTestCoreDataService.m */; };
+		14B114A9194DC4F500D6A2F6 /* BOOTestCoreDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B114A7194DC4F500D6A2F6 /* BOOTestCoreDataService.m */; };
+		14B114B1194DCB7A00D6A2F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B114AA194DC50500D6A2F6 /* CoreData.framework */; };
+		14B114B2194DCB7B00D6A2F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
+		14B114B5194DCB7B00D6A2F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B114B4194DCB7B00D6A2F6 /* main.m */; };
+		14B114BA194DCB7B00D6A2F6 /* CoreDataMapperTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14B114B8194DCB7B00D6A2F6 /* CoreDataMapperTest.xcdatamodeld */; };
+		14B114BC194DCB7B00D6A2F6 /* CoreDataMapperTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14B114BB194DCB7B00D6A2F6 /* CoreDataMapperTest.1 */; };
+		14B114C4194DCF1B00D6A2F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B114AA194DC50500D6A2F6 /* CoreData.framework */; };
+		14B114C5194DCF2000D6A2F6 /* CoreDataMapperTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14B114B8194DCB7B00D6A2F6 /* CoreDataMapperTest.xcdatamodeld */; };
+		14B114C6194DCF4500D6A2F6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86065191FE75900E2AD38 /* XCTest.framework */; };
+		14B114C9194E033600D6A2F6 /* CoreDataMapperTest.xcdatamodeld in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14B114B8194DCB7B00D6A2F6 /* CoreDataMapperTest.xcdatamodeld */; };
+		14B114D4194E262D00D6A2F6 /* CoreDataTestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B114D3194E262D00D6A2F6 /* CoreDataTestEntity.m */; };
+		14B114D5194E273400D6A2F6 /* CoreDataTestEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B114D3194E262D00D6A2F6 /* CoreDataTestEntity.m */; };
+		14B114DB194ED8D200D6A2F6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14B114D9194ED8D200D6A2F6 /* Model.xcdatamodeld */; };
+		14B114DC194ED8D200D6A2F6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14B114D9194ED8D200D6A2F6 /* Model.xcdatamodeld */; };
+		14B114DD194ED8D200D6A2F6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 14B114D9194ED8D200D6A2F6 /* Model.xcdatamodeld */; };
+		14B114DE194ED94000D6A2F6 /* Model.xcdatamodeld in CopyFiles */ = {isa = PBXBuildFile; fileRef = 14B114D9194ED8D200D6A2F6 /* Model.xcdatamodeld */; };
+		14B114E1194ED95D00D6A2F6 /* BOOImportTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B114E0194ED95D00D6A2F6 /* BOOImportTest.m */; };
+		14B114E2194ED95D00D6A2F6 /* BOOImportTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B114E0194ED95D00D6A2F6 /* BOOImportTest.m */; };
+		14B114E3194ED95D00D6A2F6 /* BOOImportTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B114E0194ED95D00D6A2F6 /* BOOImportTest.m */; };
+		14B1152D194EDAAA00D6A2F6 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11516194EDAAA00D6A2F6 /* Article.m */; };
+		14B1152E194EDAAA00D6A2F6 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11516194EDAAA00D6A2F6 /* Article.m */; };
+		14B1152F194EDAAA00D6A2F6 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11518194EDAAA00D6A2F6 /* BaseEntity.m */; };
+		14B11530194EDAAA00D6A2F6 /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11518194EDAAA00D6A2F6 /* BaseEntity.m */; };
+		14B11531194EDAAA00D6A2F6 /* Certificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1151A194EDAAA00D6A2F6 /* Certificate.m */; };
+		14B11532194EDAAA00D6A2F6 /* Certificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1151A194EDAAA00D6A2F6 /* Certificate.m */; };
+		14B11533194EDAAA00D6A2F6 /* Characteristics.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1151C194EDAAA00D6A2F6 /* Characteristics.m */; };
+		14B11534194EDAAA00D6A2F6 /* Characteristics.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1151C194EDAAA00D6A2F6 /* Characteristics.m */; };
+		14B11535194EDAAA00D6A2F6 /* CharsetP.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1151E194EDAAA00D6A2F6 /* CharsetP.m */; };
+		14B11536194EDAAA00D6A2F6 /* CharsetP.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1151E194EDAAA00D6A2F6 /* CharsetP.m */; };
+		14B11537194EDAAA00D6A2F6 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11520194EDAAA00D6A2F6 /* Document.m */; };
+		14B11538194EDAAA00D6A2F6 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11520194EDAAA00D6A2F6 /* Document.m */; };
+		14B11539194EDAAA00D6A2F6 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11522194EDAAA00D6A2F6 /* File.m */; };
+		14B1153A194EDAAA00D6A2F6 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11522194EDAAA00D6A2F6 /* File.m */; };
+		14B1153B194EDAAA00D6A2F6 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11524194EDAAA00D6A2F6 /* Image.m */; };
+		14B1153C194EDAAA00D6A2F6 /* Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11524194EDAAA00D6A2F6 /* Image.m */; };
+		14B1153D194EDAAA00D6A2F6 /* Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11526194EDAAA00D6A2F6 /* Language.m */; };
+		14B1153E194EDAAA00D6A2F6 /* Language.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11526194EDAAA00D6A2F6 /* Language.m */; };
+		14B1153F194EDAAA00D6A2F6 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11528194EDAAA00D6A2F6 /* Product.m */; };
+		14B11540194EDAAA00D6A2F6 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B11528194EDAAA00D6A2F6 /* Product.m */; };
+		14B11541194EDAAA00D6A2F6 /* StructureNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1152A194EDAAA00D6A2F6 /* StructureNode.m */; };
+		14B11542194EDAAA00D6A2F6 /* StructureNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1152A194EDAAA00D6A2F6 /* StructureNode.m */; };
+		14B11543194EDAAA00D6A2F6 /* Usp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1152C194EDAAA00D6A2F6 /* Usp.m */; };
+		14B11544194EDAAA00D6A2F6 /* Usp.m in Sources */ = {isa = PBXBuildFile; fileRef = 14B1152C194EDAAA00D6A2F6 /* Usp.m */; };
 		14B50A621920012100A6C372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
 		14B50A631920012100A6C372 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86048191FE75900E2AD38 /* CoreGraphics.framework */; };
 		14B50A641920012100A6C372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D8604A191FE75900E2AD38 /* UIKit.framework */; };
@@ -21,7 +86,7 @@
 		14EB510D192366480072B383 /* UIImage+ReflectedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50E6192366480072B383 /* UIImage+ReflectedImage.m */; };
 		14EB510E192366480072B383 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50E8192366480072B383 /* UIImage+Resize.m */; };
 		14EB510F192366480072B383 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EA192366480072B383 /* UIImage+RoundedCorner.m */; };
-		14EB5110192366480072B383 /* UIImage+TINImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EC192366480072B383 /* UIImage+TINImageCache.m */; };
+		14EB5110192366480072B383 /* UIImage+BOOImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EC192366480072B383 /* UIImage+BOOImageCache.m */; };
 		14EB5111192366480072B383 /* UIImage+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50EE192366480072B383 /* UIImage+Utilities.m */; };
 		14EB5112192366480072B383 /* BOOBaseCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50F3192366480072B383 /* BOOBaseCollectionViewLayout.m */; };
 		14EB5113192366480072B383 /* BOOHorizontalCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB50F5192366480072B383 /* BOOHorizontalCollectionViewLayout.m */; };
@@ -34,7 +99,52 @@
 		14EB511B192366480072B383 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 14EB5106192366480072B383 /* InfoPlist.strings */; };
 		14EB511C192366480072B383 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EB5108192366480072B383 /* Images.xcassets */; };
 		14EB511D192366480072B383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EB5109192366480072B383 /* main.m */; };
+		14EBC4D4192924FF0029F27E /* TestImages in Resources */ = {isa = PBXBuildFile; fileRef = 14EBC4D3192924FF0029F27E /* TestImages */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14B1149E194B945A00D6A2F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14D8603B191FE75900E2AD38 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14B1146D194B91AB00D6A2F6;
+			remoteInfo = BOOMapperTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14B1146C194B91AB00D6A2F6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				14B11476194B91AC00D6A2F6 /* BOOMapperTest.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		14B114AE194DCB7A00D6A2F6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				14B114BC194DCB7B00D6A2F6 /* CoreDataMapperTest.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		14B114C8194E032500D6A2F6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				14B114DE194ED94000D6A2F6 /* Model.xcdatamodeld in CopyFiles */,
+				14B114C9194E033600D6A2F6 /* CoreDataMapperTest.xcdatamodeld in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		142CB4C4192891BE005D5A8C /* BOODemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODemoTableViewController.h; sourceTree = "<group>"; };
@@ -43,9 +153,85 @@
 		142CB4CD1928E3F2005D5A8C /* BOODemoCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODemoCollectionViewController.m; sourceTree = "<group>"; };
 		1455C5E519236F3200A8CCF8 /* BOOBreadCrumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOBreadCrumbView.h; sourceTree = "<group>"; };
 		1455C5E619236F3200A8CCF8 /* BOOBreadCrumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOBreadCrumbView.m; sourceTree = "<group>"; };
+		14679883194EDFAB00D4F7BC /* StructureNode+CatalogImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StructureNode+CatalogImport.h"; sourceTree = "<group>"; };
+		14679884194EDFAB00D4F7BC /* StructureNode+CatalogImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StructureNode+CatalogImport.m"; sourceTree = "<group>"; };
+		14679886194EE8B400D4F7BC /* Product+CatalogImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Product+CatalogImport.h"; sourceTree = "<group>"; };
+		14679887194EE8B400D4F7BC /* Product+CatalogImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Product+CatalogImport.m"; sourceTree = "<group>"; };
+		14679889194EE8D500D4F7BC /* CatalogImportConstansts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatalogImportConstansts.h; sourceTree = "<group>"; };
+		1467988A194EE8D500D4F7BC /* CatalogImportConstansts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatalogImportConstansts.m; sourceTree = "<group>"; };
+		1467988C194EEB9500D4F7BC /* Usp+CatalogImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Usp+CatalogImport.h"; sourceTree = "<group>"; };
+		1467988D194EEB9500D4F7BC /* Usp+CatalogImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Usp+CatalogImport.m"; sourceTree = "<group>"; };
+		1467988F194EF11900D4F7BC /* Image+CatalogImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Image+CatalogImport.h"; sourceTree = "<group>"; };
+		14679890194EF11900D4F7BC /* Image+CatalogImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Image+CatalogImport.m"; sourceTree = "<group>"; };
+		14679892194EF86900D4F7BC /* Document+CatalogImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Document+CatalogImport.h"; sourceTree = "<group>"; };
+		14679893194EF86900D4F7BC /* Document+CatalogImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Document+CatalogImport.m"; sourceTree = "<group>"; };
+		14679898194EFF4A00D4F7BC /* Article+CatalogImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Article+CatalogImport.h"; sourceTree = "<group>"; };
+		14679899194EFF4A00D4F7BC /* Article+CatalogImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Article+CatalogImport.m"; sourceTree = "<group>"; };
+		1467989B194EFFBC00D4F7BC /* Certificate+CatalogImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Certificate+CatalogImport.h"; sourceTree = "<group>"; };
+		1467989C194EFFBC00D4F7BC /* Certificate+CatalogImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Certificate+CatalogImport.m"; sourceTree = "<group>"; };
+		1467989E194F017800D4F7BC /* CharsetP+CatalogImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CharsetP+CatalogImport.h"; sourceTree = "<group>"; };
+		1467989F194F017800D4F7BC /* CharsetP+CatalogImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CharsetP+CatalogImport.m"; sourceTree = "<group>"; };
+		146798A1194F029E00D4F7BC /* Characteristics+CatalogImport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Characteristics+CatalogImport.h"; sourceTree = "<group>"; };
+		146798A2194F029E00D4F7BC /* Characteristics+CatalogImport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Characteristics+CatalogImport.m"; sourceTree = "<group>"; };
+		146798A5194F04E900D4F7BC /* CatalogImportDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CatalogImportDelegate.h; sourceTree = "<group>"; };
 		147AC5791928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BOOCollectionViewDemoStoryboard.storyboard; path = Interface/BOOCollectionViewDemoStoryboard.storyboard; sourceTree = "<group>"; };
 		147AC57B1928E90C00A59FC7 /* BOODemoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODemoDetailViewController.h; sourceTree = "<group>"; };
 		147AC57C1928E90C00A59FC7 /* BOODemoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODemoDetailViewController.m; sourceTree = "<group>"; };
+		14996806192927FA0058E0B5 /* BOODemoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOODemoCollectionViewCell.h; sourceTree = "<group>"; };
+		14996807192927FA0058E0B5 /* BOODemoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOODemoCollectionViewCell.m; sourceTree = "<group>"; };
+		14B11467194B916900D6A2F6 /* BOOMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOMapper.h; sourceTree = "<group>"; };
+		14B11468194B916900D6A2F6 /* BOOMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOMapper.m; sourceTree = "<group>"; };
+		14B1146E194B91AB00D6A2F6 /* BOOMapperTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BOOMapperTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B11471194B91AC00D6A2F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14B11474194B91AC00D6A2F6 /* BOOMapperTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BOOMapperTest-Prefix.pch"; sourceTree = "<group>"; };
+		14B11475194B91AC00D6A2F6 /* BOOMapperTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BOOMapperTest.1; sourceTree = "<group>"; };
+		14B1147C194B924600D6A2F6 /* BOOTestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOTestClass.h; sourceTree = "<group>"; };
+		14B1147D194B924600D6A2F6 /* BOOTestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOTestClass.m; sourceTree = "<group>"; };
+		14B11486194B940C00D6A2F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14B11489194B940C00D6A2F6 /* Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test-Prefix.pch"; sourceTree = "<group>"; };
+		14B1148A194B940C00D6A2F6 /* Test.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Test.1; sourceTree = "<group>"; };
+		14B11493194B945A00D6A2F6 /* BOOMapper Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BOOMapper Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B11497194B945A00D6A2F6 /* BOOMapper Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BOOMapper Tests-Info.plist"; sourceTree = "<group>"; };
+		14B11499194B945A00D6A2F6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		14B1149B194B945A00D6A2F6 /* BOOMapper_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BOOMapper_Tests.m; sourceTree = "<group>"; };
+		14B1149D194B945A00D6A2F6 /* BOOMapper Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BOOMapper Tests-Prefix.pch"; sourceTree = "<group>"; };
+		14B114A6194DC4F500D6A2F6 /* BOOTestCoreDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOTestCoreDataService.h; sourceTree = "<group>"; };
+		14B114A7194DC4F500D6A2F6 /* BOOTestCoreDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOTestCoreDataService.m; sourceTree = "<group>"; };
+		14B114AA194DC50500D6A2F6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
+		14B114B0194DCB7A00D6A2F6 /* CoreDataMapperTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CoreDataMapperTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14B114B4194DCB7B00D6A2F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14B114B7194DCB7B00D6A2F6 /* CoreDataMapperTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreDataMapperTest-Prefix.pch"; sourceTree = "<group>"; };
+		14B114B9194DCB7B00D6A2F6 /* CoreDataMapperTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataMapperTest.xcdatamodel; sourceTree = "<group>"; };
+		14B114BB194DCB7B00D6A2F6 /* CoreDataMapperTest.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CoreDataMapperTest.1; sourceTree = "<group>"; };
+		14B114D2194E262D00D6A2F6 /* CoreDataTestEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTestEntity.h; sourceTree = "<group>"; };
+		14B114D3194E262D00D6A2F6 /* CoreDataTestEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestEntity.m; sourceTree = "<group>"; };
+		14B114DA194ED8D200D6A2F6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		14B114DF194ED95D00D6A2F6 /* BOOImportTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOImportTest.h; sourceTree = "<group>"; };
+		14B114E0194ED95D00D6A2F6 /* BOOImportTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOImportTest.m; sourceTree = "<group>"; };
+		14B11515194EDAAA00D6A2F6 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		14B11516194EDAAA00D6A2F6 /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
+		14B11517194EDAAA00D6A2F6 /* BaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
+		14B11518194EDAAA00D6A2F6 /* BaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
+		14B11519194EDAAA00D6A2F6 /* Certificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Certificate.h; sourceTree = "<group>"; };
+		14B1151A194EDAAA00D6A2F6 /* Certificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Certificate.m; sourceTree = "<group>"; };
+		14B1151B194EDAAA00D6A2F6 /* Characteristics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Characteristics.h; sourceTree = "<group>"; };
+		14B1151C194EDAAA00D6A2F6 /* Characteristics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Characteristics.m; sourceTree = "<group>"; };
+		14B1151D194EDAAA00D6A2F6 /* CharsetP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharsetP.h; sourceTree = "<group>"; };
+		14B1151E194EDAAA00D6A2F6 /* CharsetP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharsetP.m; sourceTree = "<group>"; };
+		14B1151F194EDAAA00D6A2F6 /* Document.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		14B11520194EDAAA00D6A2F6 /* Document.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		14B11521194EDAAA00D6A2F6 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
+		14B11522194EDAAA00D6A2F6 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = File.m; sourceTree = "<group>"; };
+		14B11523194EDAAA00D6A2F6 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		14B11524194EDAAA00D6A2F6 /* Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Image.m; sourceTree = "<group>"; };
+		14B11525194EDAAA00D6A2F6 /* Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Language.h; sourceTree = "<group>"; };
+		14B11526194EDAAA00D6A2F6 /* Language.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Language.m; sourceTree = "<group>"; };
+		14B11527194EDAAA00D6A2F6 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		14B11528194EDAAA00D6A2F6 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
+		14B11529194EDAAA00D6A2F6 /* StructureNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StructureNode.h; sourceTree = "<group>"; };
+		14B1152A194EDAAA00D6A2F6 /* StructureNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StructureNode.m; sourceTree = "<group>"; };
+		14B1152B194EDAAA00D6A2F6 /* Usp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usp.h; sourceTree = "<group>"; };
+		14B1152C194EDAAA00D6A2F6 /* Usp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usp.m; sourceTree = "<group>"; };
 		14B50A611920012100A6C372 /* BOOiOSGoodiesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BOOiOSGoodiesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D86046191FE75900E2AD38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		14D86048191FE75900E2AD38 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,8 +249,8 @@
 		14EB50E8192366480072B383 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
 		14EB50E9192366480072B383 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
 		14EB50EA192366480072B383 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
-		14EB50EB192366480072B383 /* UIImage+TINImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TINImageCache.h"; sourceTree = "<group>"; };
-		14EB50EC192366480072B383 /* UIImage+TINImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TINImageCache.m"; sourceTree = "<group>"; };
+		14EB50EB192366480072B383 /* UIImage+BOOImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BOOImageCache.h"; sourceTree = "<group>"; };
+		14EB50EC192366480072B383 /* UIImage+BOOImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BOOImageCache.m"; sourceTree = "<group>"; };
 		14EB50ED192366480072B383 /* UIImage+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utilities.h"; sourceTree = "<group>"; };
 		14EB50EE192366480072B383 /* UIImage+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utilities.m"; sourceTree = "<group>"; };
 		14EB50F0192366480072B383 /* BOOCGUtilites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOOCGUtilites.h; sourceTree = "<group>"; };
@@ -88,9 +274,36 @@
 		14EB5107192366480072B383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		14EB5108192366480072B383 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		14EB5109192366480072B383 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14EBC4D3192924FF0029F27E /* TestImages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestImages; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		14B1146B194B91AB00D6A2F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14B114C4194DCF1B00D6A2F6 /* CoreData.framework in Frameworks */,
+				14B1146F194B91AC00D6A2F6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14B11490194B945A00D6A2F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14B114C6194DCF4500D6A2F6 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14B114AD194DCB7A00D6A2F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14B114B1194DCB7A00D6A2F6 /* CoreData.framework in Frameworks */,
+				14B114B2194DCB7B00D6A2F6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14B50A5E1920012100A6C372 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,12 +345,175 @@
 			path = BOOBreadCrumbNavigation;
 			sourceTree = "<group>";
 		};
+		14679882194EDFAB00D4F7BC /* Catagories */ = {
+			isa = PBXGroup;
+			children = (
+				14679883194EDFAB00D4F7BC /* StructureNode+CatalogImport.h */,
+				14679884194EDFAB00D4F7BC /* StructureNode+CatalogImport.m */,
+				14679886194EE8B400D4F7BC /* Product+CatalogImport.h */,
+				14679887194EE8B400D4F7BC /* Product+CatalogImport.m */,
+				1467989B194EFFBC00D4F7BC /* Certificate+CatalogImport.h */,
+				1467989C194EFFBC00D4F7BC /* Certificate+CatalogImport.m */,
+				14679889194EE8D500D4F7BC /* CatalogImportConstansts.h */,
+				1467988A194EE8D500D4F7BC /* CatalogImportConstansts.m */,
+				1467988C194EEB9500D4F7BC /* Usp+CatalogImport.h */,
+				1467988D194EEB9500D4F7BC /* Usp+CatalogImport.m */,
+				1467988F194EF11900D4F7BC /* Image+CatalogImport.h */,
+				14679890194EF11900D4F7BC /* Image+CatalogImport.m */,
+				14679892194EF86900D4F7BC /* Document+CatalogImport.h */,
+				14679893194EF86900D4F7BC /* Document+CatalogImport.m */,
+				14679898194EFF4A00D4F7BC /* Article+CatalogImport.h */,
+				14679899194EFF4A00D4F7BC /* Article+CatalogImport.m */,
+				1467989E194F017800D4F7BC /* CharsetP+CatalogImport.h */,
+				1467989F194F017800D4F7BC /* CharsetP+CatalogImport.m */,
+				146798A1194F029E00D4F7BC /* Characteristics+CatalogImport.h */,
+				146798A2194F029E00D4F7BC /* Characteristics+CatalogImport.m */,
+			);
+			path = Catagories;
+			sourceTree = "<group>";
+		};
 		147AC5781928E68200A59FC7 /* Interface */ = {
 			isa = PBXGroup;
 			children = (
+				14EB50FE192366480072B383 /* Main.storyboard */,
 				147AC5791928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard */,
 			);
 			name = Interface;
+			sourceTree = "<group>";
+		};
+		14996805192927E60058E0B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14996806192927FA0058E0B5 /* BOODemoCollectionViewCell.h */,
+				14996807192927FA0058E0B5 /* BOODemoCollectionViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		14B11466194B916900D6A2F6 /* BOOMapper */ = {
+			isa = PBXGroup;
+			children = (
+				14B11467194B916900D6A2F6 /* BOOMapper.h */,
+				14B11468194B916900D6A2F6 /* BOOMapper.m */,
+			);
+			path = BOOMapper;
+			sourceTree = "<group>";
+		};
+		14B11470194B91AC00D6A2F6 /* BOOMapperTest */ = {
+			isa = PBXGroup;
+			children = (
+				146798A5194F04E900D4F7BC /* CatalogImportDelegate.h */,
+				14B11514194EDAAA00D6A2F6 /* Entities */,
+				14B1147C194B924600D6A2F6 /* BOOTestClass.h */,
+				14B1147D194B924600D6A2F6 /* BOOTestClass.m */,
+				14B11471194B91AC00D6A2F6 /* main.m */,
+				14B11475194B91AC00D6A2F6 /* BOOMapperTest.1 */,
+				14B11473194B91AC00D6A2F6 /* Supporting Files */,
+				14B114A6194DC4F500D6A2F6 /* BOOTestCoreDataService.h */,
+				14B114A7194DC4F500D6A2F6 /* BOOTestCoreDataService.m */,
+				14B114DF194ED95D00D6A2F6 /* BOOImportTest.h */,
+				14B114E0194ED95D00D6A2F6 /* BOOImportTest.m */,
+			);
+			path = BOOMapperTest;
+			sourceTree = "<group>";
+		};
+		14B11473194B91AC00D6A2F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14B11474194B91AC00D6A2F6 /* BOOMapperTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14B11485194B940C00D6A2F6 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				14B11486194B940C00D6A2F6 /* main.m */,
+				14B1148A194B940C00D6A2F6 /* Test.1 */,
+				14B11488194B940C00D6A2F6 /* Supporting Files */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		14B11488194B940C00D6A2F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14B11489194B940C00D6A2F6 /* Test-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14B11495194B945A00D6A2F6 /* BOOMapper Tests */ = {
+			isa = PBXGroup;
+			children = (
+				14B1149B194B945A00D6A2F6 /* BOOMapper_Tests.m */,
+				14B11496194B945A00D6A2F6 /* Supporting Files */,
+			);
+			path = "BOOMapper Tests";
+			sourceTree = "<group>";
+		};
+		14B11496194B945A00D6A2F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14B11497194B945A00D6A2F6 /* BOOMapper Tests-Info.plist */,
+				14B11498194B945A00D6A2F6 /* InfoPlist.strings */,
+				14B1149D194B945A00D6A2F6 /* BOOMapper Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14B114B3194DCB7B00D6A2F6 /* CoreDataMapperTest */ = {
+			isa = PBXGroup;
+			children = (
+				14B114D9194ED8D200D6A2F6 /* Model.xcdatamodeld */,
+				14B114B4194DCB7B00D6A2F6 /* main.m */,
+				14B114BB194DCB7B00D6A2F6 /* CoreDataMapperTest.1 */,
+				14B114D2194E262D00D6A2F6 /* CoreDataTestEntity.h */,
+				14B114D3194E262D00D6A2F6 /* CoreDataTestEntity.m */,
+				14B114B8194DCB7B00D6A2F6 /* CoreDataMapperTest.xcdatamodeld */,
+				14B114B6194DCB7B00D6A2F6 /* Supporting Files */,
+			);
+			path = CoreDataMapperTest;
+			sourceTree = "<group>";
+		};
+		14B114B6194DCB7B00D6A2F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14B114B7194DCB7B00D6A2F6 /* CoreDataMapperTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14B11514194EDAAA00D6A2F6 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				14679882194EDFAB00D4F7BC /* Catagories */,
+				14B11515194EDAAA00D6A2F6 /* Article.h */,
+				14B11516194EDAAA00D6A2F6 /* Article.m */,
+				14B11517194EDAAA00D6A2F6 /* BaseEntity.h */,
+				14B11518194EDAAA00D6A2F6 /* BaseEntity.m */,
+				14B11519194EDAAA00D6A2F6 /* Certificate.h */,
+				14B1151A194EDAAA00D6A2F6 /* Certificate.m */,
+				14B1151B194EDAAA00D6A2F6 /* Characteristics.h */,
+				14B1151C194EDAAA00D6A2F6 /* Characteristics.m */,
+				14B1151D194EDAAA00D6A2F6 /* CharsetP.h */,
+				14B1151E194EDAAA00D6A2F6 /* CharsetP.m */,
+				14B1151F194EDAAA00D6A2F6 /* Document.h */,
+				14B11520194EDAAA00D6A2F6 /* Document.m */,
+				14B11521194EDAAA00D6A2F6 /* File.h */,
+				14B11522194EDAAA00D6A2F6 /* File.m */,
+				14B11523194EDAAA00D6A2F6 /* Image.h */,
+				14B11524194EDAAA00D6A2F6 /* Image.m */,
+				14B11525194EDAAA00D6A2F6 /* Language.h */,
+				14B11526194EDAAA00D6A2F6 /* Language.m */,
+				14B11527194EDAAA00D6A2F6 /* Product.h */,
+				14B11528194EDAAA00D6A2F6 /* Product.m */,
+				14B11529194EDAAA00D6A2F6 /* StructureNode.h */,
+				14B1152A194EDAAA00D6A2F6 /* StructureNode.m */,
+				14B1152B194EDAAA00D6A2F6 /* Usp.h */,
+				14B1152C194EDAAA00D6A2F6 /* Usp.m */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		14D8603A191FE75900E2AD38 = {
@@ -145,6 +521,10 @@
 			children = (
 				14EB50DB192366480072B383 /* BOOiOSGoodies */,
 				14EB50FD192366480072B383 /* BOOiOSGoodiesDemo */,
+				14B11470194B91AC00D6A2F6 /* BOOMapperTest */,
+				14B11485194B940C00D6A2F6 /* Test */,
+				14B11495194B945A00D6A2F6 /* BOOMapper Tests */,
+				14B114B3194DCB7B00D6A2F6 /* CoreDataMapperTest */,
 				14D86045191FE75900E2AD38 /* Frameworks */,
 				14D86044191FE75900E2AD38 /* Products */,
 			);
@@ -154,6 +534,9 @@
 			isa = PBXGroup;
 			children = (
 				14B50A611920012100A6C372 /* BOOiOSGoodiesDemo.app */,
+				14B1146E194B91AB00D6A2F6 /* BOOMapperTest */,
+				14B11493194B945A00D6A2F6 /* BOOMapper Tests.xctest */,
+				14B114B0194DCB7A00D6A2F6 /* CoreDataMapperTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,6 +544,7 @@
 		14D86045191FE75900E2AD38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				14B114AA194DC50500D6A2F6 /* CoreData.framework */,
 				14D86046191FE75900E2AD38 /* Foundation.framework */,
 				14D86048191FE75900E2AD38 /* CoreGraphics.framework */,
 				14D8604A191FE75900E2AD38 /* UIKit.framework */,
@@ -172,6 +556,7 @@
 		14EB50DB192366480072B383 /* BOOiOSGoodies */ = {
 			isa = PBXGroup;
 			children = (
+				14B11466194B916900D6A2F6 /* BOOMapper */,
 				1455C5E419236F3200A8CCF8 /* BOOBreadCrumbNavigation */,
 				14EB50DC192366480072B383 /* BOOImageCache */,
 				14EB50DF192366480072B383 /* BOOTimer */,
@@ -212,8 +597,8 @@
 				14EB50E8192366480072B383 /* UIImage+Resize.m */,
 				14EB50E9192366480072B383 /* UIImage+RoundedCorner.h */,
 				14EB50EA192366480072B383 /* UIImage+RoundedCorner.m */,
-				14EB50EB192366480072B383 /* UIImage+TINImageCache.h */,
-				14EB50EC192366480072B383 /* UIImage+TINImageCache.m */,
+				14EB50EB192366480072B383 /* UIImage+BOOImageCache.h */,
+				14EB50EC192366480072B383 /* UIImage+BOOImageCache.m */,
 				14EB50ED192366480072B383 /* UIImage+Utilities.h */,
 				14EB50EE192366480072B383 /* UIImage+Utilities.m */,
 			);
@@ -255,9 +640,10 @@
 		14EB50FD192366480072B383 /* BOOiOSGoodiesDemo */ = {
 			isa = PBXGroup;
 			children = (
+				14996805192927E60058E0B5 /* Views */,
+				14EBC4C5192924E20029F27E /* Resources */,
 				147AC5781928E68200A59FC7 /* Interface */,
 				142CB4CA1928E3F2005D5A8C /* ViewControllers */,
-				14EB50FE192366480072B383 /* Main.storyboard */,
 				14EB5100192366480072B383 /* BOODemoAppDelegate.h */,
 				14EB5101192366480072B383 /* BOODemoAppDelegate.m */,
 				14EB5102192366480072B383 /* BOODisplayLinkTimerExampleViewController.h */,
@@ -273,9 +659,70 @@
 			path = BOOiOSGoodiesDemo;
 			sourceTree = "<group>";
 		};
+		14EBC4C5192924E20029F27E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14EBC4D3192924FF0029F27E /* TestImages */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		14B1146D194B91AB00D6A2F6 /* BOOMapperTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14B11477194B91AC00D6A2F6 /* Build configuration list for PBXNativeTarget "BOOMapperTest" */;
+			buildPhases = (
+				14B1146A194B91AB00D6A2F6 /* Sources */,
+				14B1146B194B91AB00D6A2F6 /* Frameworks */,
+				14B1146C194B91AB00D6A2F6 /* CopyFiles */,
+				14B114C8194E032500D6A2F6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BOOMapperTest;
+			productName = BOOMapperTest;
+			productReference = 14B1146E194B91AB00D6A2F6 /* BOOMapperTest */;
+			productType = "com.apple.product-type.tool";
+		};
+		14B11492194B945A00D6A2F6 /* BOOMapper Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14B114A0194B945A00D6A2F6 /* Build configuration list for PBXNativeTarget "BOOMapper Tests" */;
+			buildPhases = (
+				14B1148F194B945A00D6A2F6 /* Sources */,
+				14B11490194B945A00D6A2F6 /* Frameworks */,
+				14B11491194B945A00D6A2F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14B1149F194B945A00D6A2F6 /* PBXTargetDependency */,
+			);
+			name = "BOOMapper Tests";
+			productName = "BOOMapper Tests";
+			productReference = 14B11493194B945A00D6A2F6 /* BOOMapper Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14B114AF194DCB7A00D6A2F6 /* CoreDataMapperTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14B114BD194DCB7B00D6A2F6 /* Build configuration list for PBXNativeTarget "CoreDataMapperTest" */;
+			buildPhases = (
+				14B114AC194DCB7A00D6A2F6 /* Sources */,
+				14B114AD194DCB7A00D6A2F6 /* Frameworks */,
+				14B114AE194DCB7A00D6A2F6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoreDataMapperTest;
+			productName = CoreDataMapperTest;
+			productReference = 14B114B0194DCB7A00D6A2F6 /* CoreDataMapperTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		14B50A601920012100A6C372 /* BOOiOSGoodiesDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14B50A8B1920012100A6C372 /* Build configuration list for PBXNativeTarget "BOOiOSGoodiesDemo" */;
@@ -302,6 +749,11 @@
 				CLASSPREFIX = BOO;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Tobias Boogh";
+				TargetAttributes = {
+					14B11492194B945A00D6A2F6 = {
+						TestTargetID = 14B1146D194B91AB00D6A2F6;
+					};
+				};
 			};
 			buildConfigurationList = 14D8603E191FE75900E2AD38 /* Build configuration list for PBXProject "BOOiOSGoodies" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -317,17 +769,29 @@
 			projectRoot = "";
 			targets = (
 				14B50A601920012100A6C372 /* BOOiOSGoodiesDemo */,
+				14B1146D194B91AB00D6A2F6 /* BOOMapperTest */,
+				14B11492194B945A00D6A2F6 /* BOOMapper Tests */,
+				14B114AF194DCB7A00D6A2F6 /* CoreDataMapperTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		14B11491194B945A00D6A2F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14B1149A194B945A00D6A2F6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14B50A5F1920012100A6C372 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				14EB5117192366480072B383 /* Main.storyboard in Resources */,
 				14EB511C192366480072B383 /* Images.xcassets in Resources */,
+				14EBC4D4192924FF0029F27E /* TestImages in Resources */,
 				147AC57A1928E6A300A59FC7 /* BOOCollectionViewDemoStoryboard.storyboard in Resources */,
 				14EB511B192366480072B383 /* InfoPlist.strings in Resources */,
 			);
@@ -336,6 +800,80 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		14B1146A194B91AB00D6A2F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14B1152D194EDAAA00D6A2F6 /* Article.m in Sources */,
+				14B11533194EDAAA00D6A2F6 /* Characteristics.m in Sources */,
+				14B1152F194EDAAA00D6A2F6 /* BaseEntity.m in Sources */,
+				14B11535194EDAAA00D6A2F6 /* CharsetP.m in Sources */,
+				14679885194EDFAB00D4F7BC /* StructureNode+CatalogImport.m in Sources */,
+				14679888194EE8B400D4F7BC /* Product+CatalogImport.m in Sources */,
+				14B114C5194DCF2000D6A2F6 /* CoreDataMapperTest.xcdatamodeld in Sources */,
+				14B1153F194EDAAA00D6A2F6 /* Product.m in Sources */,
+				14B11539194EDAAA00D6A2F6 /* File.m in Sources */,
+				14B114A5194B94B400D6A2F6 /* BOOMapper.m in Sources */,
+				14B1147E194B924600D6A2F6 /* BOOTestClass.m in Sources */,
+				14B11472194B91AC00D6A2F6 /* main.m in Sources */,
+				14679891194EF11900D4F7BC /* Image+CatalogImport.m in Sources */,
+				1467989A194EFF4A00D4F7BC /* Article+CatalogImport.m in Sources */,
+				146798A3194F029E00D4F7BC /* Characteristics+CatalogImport.m in Sources */,
+				14679894194EF86900D4F7BC /* Document+CatalogImport.m in Sources */,
+				1467988B194EE8D500D4F7BC /* CatalogImportConstansts.m in Sources */,
+				14B11543194EDAAA00D6A2F6 /* Usp.m in Sources */,
+				14B1153D194EDAAA00D6A2F6 /* Language.m in Sources */,
+				14B11541194EDAAA00D6A2F6 /* StructureNode.m in Sources */,
+				1467988E194EEB9500D4F7BC /* Usp+CatalogImport.m in Sources */,
+				1467989D194EFFBC00D4F7BC /* Certificate+CatalogImport.m in Sources */,
+				14B1153B194EDAAA00D6A2F6 /* Image.m in Sources */,
+				14B114A8194DC4F500D6A2F6 /* BOOTestCoreDataService.m in Sources */,
+				14B11531194EDAAA00D6A2F6 /* Certificate.m in Sources */,
+				14B114DB194ED8D200D6A2F6 /* Model.xcdatamodeld in Sources */,
+				14B114E1194ED95D00D6A2F6 /* BOOImportTest.m in Sources */,
+				146798A0194F017800D4F7BC /* CharsetP+CatalogImport.m in Sources */,
+				14B11537194EDAAA00D6A2F6 /* Document.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14B1148F194B945A00D6A2F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14B1152E194EDAAA00D6A2F6 /* Article.m in Sources */,
+				14B11534194EDAAA00D6A2F6 /* Characteristics.m in Sources */,
+				14B11530194EDAAA00D6A2F6 /* BaseEntity.m in Sources */,
+				14B11536194EDAAA00D6A2F6 /* CharsetP.m in Sources */,
+				14B114D5194E273400D6A2F6 /* CoreDataTestEntity.m in Sources */,
+				14B11540194EDAAA00D6A2F6 /* Product.m in Sources */,
+				14B1153A194EDAAA00D6A2F6 /* File.m in Sources */,
+				14B114A4194B948300D6A2F6 /* BOOTestClass.m in Sources */,
+				14B114A3194B947D00D6A2F6 /* BOOMapper.m in Sources */,
+				14B1149C194B945A00D6A2F6 /* BOOMapper_Tests.m in Sources */,
+				14B11544194EDAAA00D6A2F6 /* Usp.m in Sources */,
+				14B1153E194EDAAA00D6A2F6 /* Language.m in Sources */,
+				14B11542194EDAAA00D6A2F6 /* StructureNode.m in Sources */,
+				14B1153C194EDAAA00D6A2F6 /* Image.m in Sources */,
+				14B114A9194DC4F500D6A2F6 /* BOOTestCoreDataService.m in Sources */,
+				14B11532194EDAAA00D6A2F6 /* Certificate.m in Sources */,
+				14B114DC194ED8D200D6A2F6 /* Model.xcdatamodeld in Sources */,
+				14B114E2194ED95D00D6A2F6 /* BOOImportTest.m in Sources */,
+				14B11538194EDAAA00D6A2F6 /* Document.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14B114AC194DCB7A00D6A2F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14B114B5194DCB7B00D6A2F6 /* main.m in Sources */,
+				14B114BA194DCB7B00D6A2F6 /* CoreDataMapperTest.xcdatamodeld in Sources */,
+				14B114E3194ED95D00D6A2F6 /* BOOImportTest.m in Sources */,
+				14B114D4194E262D00D6A2F6 /* CoreDataTestEntity.m in Sources */,
+				14B114DD194ED8D200D6A2F6 /* Model.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		14B50A5D1920012100A6C372 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,10 +888,12 @@
 				147AC57D1928E90C00A59FC7 /* BOODemoDetailViewController.m in Sources */,
 				14EB511D192366480072B383 /* main.m in Sources */,
 				14EB510A192366480072B383 /* BOOImageCache.m in Sources */,
-				14EB5110192366480072B383 /* UIImage+TINImageCache.m in Sources */,
+				14EB5110192366480072B383 /* UIImage+BOOImageCache.m in Sources */,
+				14B11469194B916900D6A2F6 /* BOOMapper.m in Sources */,
 				142CB4C6192891BE005D5A8C /* BOODemoTableViewController.m in Sources */,
 				14EB510B192366480072B383 /* BOODisplayLinkTimer.m in Sources */,
 				14EB510C192366480072B383 /* UIImage+Alpha.m in Sources */,
+				14996808192927FA0058E0B5 /* BOODemoCollectionViewCell.m in Sources */,
 				1455C5E719236F3200A8CCF8 /* BOOBreadCrumbView.m in Sources */,
 				14EB510F192366480072B383 /* UIImage+RoundedCorner.m in Sources */,
 				14EB5111192366480072B383 /* UIImage+Utilities.m in Sources */,
@@ -365,7 +905,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		14B1149F194B945A00D6A2F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14B1146D194B91AB00D6A2F6 /* BOOMapperTest */;
+			targetProxy = 14B1149E194B945A00D6A2F6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		14B11498194B945A00D6A2F6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14B11499194B945A00D6A2F6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		14EB50FE192366480072B383 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -385,6 +941,105 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		14B11478194B91AC00D6A2F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BOOMapperTest/BOOMapperTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		14B11479194B91AC00D6A2F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BOOMapperTest/BOOMapperTest-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		14B114A1194B945A00D6A2F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BOOMapper Tests/BOOMapper Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BOOMapper Tests/BOOMapper Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		14B114A2194B945A00D6A2F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BOOMapper Tests/BOOMapper Tests-Prefix.pch";
+				INFOPLIST_FILE = "BOOMapper Tests/BOOMapper Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		14B114BE194DCB7B00D6A2F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoreDataMapperTest/CoreDataMapperTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		14B114BF194DCB7B00D6A2F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CoreDataMapperTest/CoreDataMapperTest-Prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		14B50A8C1920012100A6C372 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -490,6 +1145,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		14B11477194B91AC00D6A2F6 /* Build configuration list for PBXNativeTarget "BOOMapperTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14B11478194B91AC00D6A2F6 /* Debug */,
+				14B11479194B91AC00D6A2F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14B114A0194B945A00D6A2F6 /* Build configuration list for PBXNativeTarget "BOOMapper Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14B114A1194B945A00D6A2F6 /* Debug */,
+				14B114A2194B945A00D6A2F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14B114BD194DCB7B00D6A2F6 /* Build configuration list for PBXNativeTarget "CoreDataMapperTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14B114BE194DCB7B00D6A2F6 /* Debug */,
+				14B114BF194DCB7B00D6A2F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		14B50A8B1920012100A6C372 /* Build configuration list for PBXNativeTarget "BOOiOSGoodiesDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -509,6 +1191,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		14B114B8194DCB7B00D6A2F6 /* CoreDataMapperTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				14B114B9194DCB7B00D6A2F6 /* CoreDataMapperTest.xcdatamodel */,
+			);
+			currentVersion = 14B114B9194DCB7B00D6A2F6 /* CoreDataMapperTest.xcdatamodel */;
+			path = CoreDataMapperTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		14B114D9194ED8D200D6A2F6 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				14B114DA194ED8D200D6A2F6 /* Model.xcdatamodel */,
+			);
+			currentVersion = 14B114DA194ED8D200D6A2F6 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 14D8603B191FE75900E2AD38 /* Project object */;
 }

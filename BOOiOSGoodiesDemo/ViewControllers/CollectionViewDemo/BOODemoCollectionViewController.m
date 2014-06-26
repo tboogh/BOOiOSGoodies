@@ -7,6 +7,14 @@
 //
 
 #import "BOODemoCollectionViewController.h"
+#import "BOODemoCollectionViewCell.h"
+
+#import "BOOImageCache.h"
+#import "UIImage+BOOImageCache.h"
+#import "BOOHorizontalCollectionViewLayout.h"
+#import "BOOVerticalCollectionViewLayout.h"
+#import "BOOHorizontalLinearLayout.h"
+
 
 @interface BOODemoCollectionViewController ()
 @property (nonatomic) BOODemoCollectionViewLayouts currentLayout;
@@ -14,19 +22,35 @@
 
 @implementation BOODemoCollectionViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSFileManager *fileManager = [[NSFileManager alloc] init];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"TestImages" ofType:nil];
+    NSArray *filePathContents = [fileManager contentsOfDirectoryAtPath:path error:nil];
+    if (filePathContents == nil){
+        return;
+    }
+    NSMutableArray *imageFileArray = [[NSMutableArray alloc] init];
+    [filePathContents enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSString *fileName = (NSString *)obj;
+        NSDictionary *dataDict = @{@"title": [[fileName lastPathComponent] stringByDeletingPathExtension], @"imageName": [path stringByAppendingPathComponent:fileName]};
+        [imageFileArray addObject:dataDict];
+    }];
+    self.collectionViewSectionData = @[
+                                           @{
+                                               @"title": @"section1",
+                                               @"rowData": imageFileArray
+                                           },
+                                           @{
+                                               @"title": @"section1",
+                                               @"rowData": imageFileArray
+                                           },
+                                           @{
+                                               @"title": @"section1",
+                                               @"rowData": imageFileArray
+                                           }
+                                           ];
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,17 +60,47 @@
 }
 
 -(void)setLayout:(BOODemoCollectionViewLayouts)layout{
-    NSLog(@"new layout: %d", layout);
+    UICollectionViewLayout *collectionViewLayout = nil;
+    switch (layout) {
+        case kBOODemoCollectionViewHorizontalLayout:
+            collectionViewLayout = [[BOOHorizontalCollectionViewLayout alloc] init];
+            break;
+        case kBOODemoCollectionViewLinearLayout:
+            collectionViewLayout = [[BOOHorizontalLinearLayout alloc] init];
+            break;
+        case kBOODemoCollectionViewVerticalLayout:
+            collectionViewLayout = [[BOOVerticalCollectionViewLayout alloc] init];
+            break;
+    }
+    [self.collectionView setCollectionViewLayout:collectionViewLayout animated:YES];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return self.collectionViewSectionData.count;
 }
-*/
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    NSDictionary *sectionDict = [self.collectionViewSectionData objectAtIndex:section];
+    NSArray *rowData = [sectionDict valueForKey:@"rowData"];
+    return rowData.count;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    BOODemoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"demoCell" forIndexPath:indexPath];
+    NSDictionary *sectionDict = [self.collectionViewSectionData objectAtIndex:indexPath.section];
+    NSArray *rowData = [sectionDict valueForKey:@"rowData"];
+    NSDictionary *itemDict = [rowData objectAtIndex:indexPath.row];
+    
+    cell.titleLabel.text = itemDict[@"title"];
+    [UIImage thumbnailForImageWithFilepath:itemDict[@"imageName"] withSize:cell.imageView.bounds.size withCompletion:^(UIImage *image) {
+        cell.imageView.image = image;
+    }];
+    
+    return cell;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(200, 220);
+}
 
 @end

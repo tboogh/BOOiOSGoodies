@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Tobias Boogh. All rights reserved.
 //
 
-#import "UIImage+TINImageCache.h"
+#import "UIImage+BOOImageCache.h"
 
-@implementation UIImage (TINImageCache)
+@implementation UIImage (BOOImageCache)
 +(void)thumbnailForImageWithFilepath:(NSString *)filePath withSize:(CGSize)size withCompletion:(BOOImageCacheCompletion)completion{
     [[BOOImageCache getInstance] getThumbnailForImage:filePath withSize:size withCompletion:^(UIImage *image) {
         if(completion){

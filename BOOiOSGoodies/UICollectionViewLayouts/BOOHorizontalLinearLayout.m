@@ -103,6 +103,7 @@ NSString * const kTINHorizontalLinearLayoutViewReflectionKind = @"kTINHorizontal
             }
         }
     }
+    
     CGRect frame = self.backgroundAttribute.frame;
     frame.origin =self.collectionView.contentOffset;
     self.backgroundAttribute.frame = frame;
