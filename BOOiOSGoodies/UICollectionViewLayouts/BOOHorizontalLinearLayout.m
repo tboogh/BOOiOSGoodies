@@ -221,9 +221,15 @@ NSString * const kBOOCollectionViewElementKindNavigationSectionBackground = @"kB
         CGRect indiciatorFrame = indiciatorAttribute.frame;
         
         CGPoint contentOffset = self.collectionView.contentOffset;
-        CGFloat fraction = contentOffset.x / (self.collectionView.contentSize.width - self.collectionView.bounds.size.width);
-        CGFloat navigationX = ((self.navigationRect.size.width - self.navigationItemSize.width) * fraction) + self.navigationRect.origin.x + contentOffset.x + ((self.navigationItemSize.width * 0.5) - (indiciatorFrame.size.width * 0.5));
+        CGSize contentSize = self.collectionView.contentSize;
+        CGRect collectionViewBounds = self.collectionView.bounds;
+        CGFloat fraction = contentOffset.x / (contentSize.width - collectionViewBounds.size.width);
         
+        if (isnan(fraction)){
+            fraction = 0;
+        }
+        CGFloat navigationX = ((self.navigationRect.size.width - self.navigationItemSize.width) * fraction) + self.navigationRect.origin.x + contentOffset.x + ((self.navigationItemSize.width * 0.5) - (indiciatorFrame.size.width * 0.5));
+
         
         indiciatorFrame.origin.x = navigationX;
         indiciatorFrame.origin.y = self.navigationRect.origin.y + self.navigationRect.size.height - 1 - indiciatorFrame.size.height;
