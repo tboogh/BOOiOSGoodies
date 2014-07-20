@@ -24,10 +24,11 @@ class TableViewController: UITableViewController, SegmentedTableViewCellDataSour
             return cell
         }
         var cell = tableView.dequeueReusableCellWithIdentifier("OptionCell", forIndexPath: indexPath) as OptionTableViewCell
-        var buttons = [OptionTableViewCellButton(textColor: UIColor.blackColor(), backgroundColor: UIColor.lightGrayColor(), width: 75, text: "Add"),
-            OptionTableViewCellButton(textColor: UIColor.whiteColor(), backgroundColor: UIColor.redColor(), width: 75, text: "Delete"),
-            OptionTableViewCellButton(textColor: UIColor.whiteColor(), backgroundColor: UIColor.lightGrayColor(), width: 75, text: "More")]
-        cell.setRightButtons(buttons)
+
+        
+        
+        cell.setRightButtons(createButtons())
+        cell.setLeftButtons(createButtons())
         cell.tag = indexPath.row
         var label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 44))
         label.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
@@ -37,6 +38,26 @@ class TableViewController: UITableViewController, SegmentedTableViewCellDataSour
         return cell
     }
 
+    func createButtons() -> [OptionTableViewCellButton]{
+        var editButton = OptionTableViewCellButton(style: OptionTableViewCellButton.Style.Default)
+        editButton.backgroundColor = UIColor.blueColor()
+        if let label = editButton.textLabel{
+            label.text = "Edit"
+        }
+        var deleteButton = OptionTableViewCellButton(style: OptionTableViewCellButton.Style.Default)
+        deleteButton.backgroundColor = UIColor.redColor()
+        if let label = deleteButton.textLabel{
+            label.text = "Delete"
+        }
+        
+        var moreButton = OptionTableViewCellButton(style: OptionTableViewCellButton.Style.Default)
+        moreButton.backgroundColor = UIColor.grayColor()
+        if let label = moreButton.textLabel{
+            label.text = "More..."
+        }
+        return [editButton, deleteButton, moreButton]
+    }
+    
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return 5
     }

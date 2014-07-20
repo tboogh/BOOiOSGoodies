@@ -12,11 +12,63 @@ import UIKit
     @optional func optionTableViewCell(cell: UITableViewCell!, didSelectButtonAt index : Int)
 }
 
-struct OptionTableViewCellButton{
-    var textColor : UIColor
-    var backgroundColor : UIColor
-    var width : CGFloat
-    var text : String
+class OptionTableViewCellButton : UIControl{
+    var preferedWidth : CGFloat?
+    var style : Style!
+    var textLabel : UILabel?
+    var imageView : UIImageView?
+    
+    enum Style{
+        case Default
+        case ImageOnly
+        case TextOnly
+        case Custom
+    }
+    
+    init(style : Style){
+        super.init(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+        self.style = style
+        if (style != Style.Custom){
+            createSubViews()
+        }
+    }
+    
+    func createSubViews(){
+        var imageView : UIImageView?
+        var label : UILabel?
+        if (style == Style.Default || style == Style.ImageOnly){
+            imageView = UIImageView()
+            self.addSubview(imageView)
+        }
+        if (style == Style.Default || style == Style.TextOnly){
+            label = UILabel()
+            self.addSubview(label)
+        }
+        
+        if let imageView = imageView{
+            if let label = label{
+                // Image & Label layout
+                var constraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[imageView][label]|", options: nil, metrics: nil, views: ["imageView" : imageView, "label": label]) as [NSLayoutConstraint]
+                constraints += NSLayoutConstraint.constraintsWithVisualFormat("|[imageView]|", options: nil, metrics: nil, views: ["imageView" : imageView]) as [NSLayoutConstraint]
+                constraints += NSLayoutConstraint.constraintsWithVisualFormat("|[label]|", options: nil, metrics: nil, views: ["label": label]) as [NSLayoutConstraint]
+                self.addConstraints(constraints)
+            } else {
+                // Image only layout
+                var constraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[imageView]|", options: nil, metrics: nil, views: ["imageView" : imageView]) as [NSLayoutConstraint]
+                constraints += NSLayoutConstraint.constraintsWithVisualFormat("|[imageView]|", options: nil, metrics: nil, views: ["imageView" : imageView]) as [NSLayoutConstraint]
+                self.addConstraints(constraints)
+            }
+        } else {
+            if let label = label{
+                // No image make label take up entire frame
+                var constraints = NSLayoutConstraint.constraintsWithVisualFormat("V:|[label]|", options: nil, metrics: nil, views: ["label" : label]) as [NSLayoutConstraint]
+                constraints += NSLayoutConstraint.constraintsWithVisualFormat("|[label]|", options: nil, metrics: nil, views: ["label" : label]) as [NSLayoutConstraint]
+                self.addConstraints(constraints)
+            }
+        }
+        self.textLabel = label
+        self.imageView = imageView
+    }
 }
 
 class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
@@ -66,37 +118,50 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
         }
     }
     
-    func setRightButtons(let buttonArray: [OptionTableViewCellButton]){
-        for view in self.rightButtonView.subviews as [UIView]{
+    func setupButtons(buttonArray : [OptionTableViewCellButton], inView buttonView:UIView){
+        for view in buttonView.subviews as [UIView]{
             view.removeFromSuperview()
         }
         
-        var totalButtonWidth = CGFloat(0.0)
+        var previousButton : OptionTableViewCellButton?
+        var layoutConstraints : [NSLayoutConstraint] = []
         
-        for (var i=0; i < buttonArray.count; ++i){
+        for i in 0..<buttonArray.count{
             let actionButton = buttonArray[i]
-            var buttonRect = CGRectMake(0, 0, actionButton.width, self.rightButtonView.bounds.size.height)
-            buttonRect.origin.x = buttonRect.size.width * CGFloat(i)
+            actionButton.removeConstraints(actionButton.constraints())
+            actionButton.setTranslatesAutoresizingMaskIntoConstraints(false)
             
-            var button = UIButton(frame: buttonRect)
-            button.setTitle(actionButton.text, forState: UIControlState.Normal)
-            button.backgroundColor = actionButton.backgroundColor
-            button.setTitleColor(actionButton.textColor, forState: UIControlState.Normal)
+            actionButton.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
+            actionButton.tag = i
+            buttonView.addSubview(actionButton)
             
-            button.addTarget(self, action: "buttonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
-            button.tag = i
-            self.rightButtonView.addSubview(button)
+            var fraction = CGFloat(1.0/Float(buttonArray.count))
+            var widthConstraint = NSLayoutConstraint(item: actionButton, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: buttonView, attribute: NSLayoutAttribute.Width, multiplier:fraction , constant: 0)
+            layoutConstraints.append(widthConstraint)
             
-            totalButtonWidth += actionButton.width
+            if let prevButton = previousButton{
+                var positionConstraint = NSLayoutConstraint(item: actionButton, attribute: NSLayoutAttribute.Leading, relatedBy: NSLayoutRelation.Equal, toItem: previousButton, attribute: NSLayoutAttribute.Trailing, multiplier: 1.0, constant: 0)
+                layoutConstraints.append(positionConstraint)
+            }
+            
+            var heightConstraint = NSLayoutConstraint(item: actionButton, attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal, toItem: buttonView, attribute: NSLayoutAttribute.Height, multiplier:1.0, constant: 0)
+            layoutConstraints.append(heightConstraint)
+            
+            previousButton = actionButton
         }
-        
-        rightButtonView.frame.size.width = totalButtonWidth
+        buttonView.addConstraints(layoutConstraints)
+    }
+    
+    func setRightButtons(let buttonArray: [OptionTableViewCellButton]){
+        setupButtons(buttonArray, inView: self.rightButtonView)
         self.setNeedsLayout()
         self.setState(State.Closed, animated: true)
     }
     
     func setLeftButtons(let buttonArray : [OptionTableViewCellButton]){
-        
+        setupButtons(buttonArray, inView: self.leftButtonView)
+        self.setNeedsLayout()
+        self.setState(State.Closed, animated: true)
     }
     
     override var contentView : UIView!{
@@ -154,6 +219,7 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
         buttonView.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleLeftMargin
         self.contentView.addSubview(buttonView)
         self.rightButtonView = buttonView
+        self.rightButtonView.backgroundColor = UIColor.greenColor()
         
         // The scrollview overlay
         var scrollViewRect = self.bounds;
@@ -167,21 +233,34 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
         var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didTap:");
         tapGestureRecognizer.numberOfTapsRequired = 1
         scrollView.contentView.addGestureRecognizer(tapGestureRecognizer)
-
+        
         self.leftButtonView.hidden = true
         self.rightButtonView.hidden = true
         
         self.scrollView = scrollView;
+        
+        self.scrollView.panGestureRecognizer.addObserver(self, forKeyPath: "state", options: NSKeyValueObservingOptions.New, context: nil)
     }
     
     deinit{
         self.tableView.panGestureRecognizer.removeObserver(self, forKeyPath: "state")
+        self.scrollView.panGestureRecognizer.removeObserver(self, forKeyPath: "state")
     }
     
     override func observeValueForKeyPath(keyPath: String!, ofObject object: AnyObject!, change: [NSObject : AnyObject]!, context: UnsafePointer<()>) {
-        if (keyPath == "state" && object as NSObject == self.tableView.panGestureRecognizer){
-            // Any panning in the tableView closes the scrollview
-            self.setState(State.Closed, animated: true)
+        if (keyPath == "state"){
+            if (object as NSObject == self.tableView.panGestureRecognizer){
+                if (self.tableView.panGestureRecognizer.state == UIGestureRecognizerState.Began){
+                // Any panning in the tableView closes the scrollview
+                    self.setState(State.Closed, animated: true)
+                }
+            } else if (object as NSObject == self.scrollView.panGestureRecognizer){
+                // At currentzero and panning ended
+                if (self.scrollView.panGestureRecognizer.state == .Ended && self.scrollView.contentOffset.x == currentZero){
+                    self.setState(State.Closed, animated: false)
+                    self.direction = .NotSet
+                }
+            }
         }
     }
     
@@ -200,24 +279,25 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
     }
     
     func layoutLeftButtons(){
-        var contentFrame = self.bounds
-        contentFrame.origin.x = self.leftButtonView.frame.size.width
-        self.scrollView.contentView.frame = contentFrame
+        self.scrollView.contentView.frame.origin.x = self.leftButtonView.frame.size.width
         self.scrollView.contentSize = CGSizeMake(self.bounds.size.width + leftButtonView.frame.size.width, self.bounds.size.height)
-        var contentOffset = self.scrollView.contentOffset
+        
         var scrollDirection = self.scrollView.panGestureRecognizer.translationInView(self.scrollView.superview).x
-        contentOffset.x = self.leftButtonView.frame.size.width - scrollDirection
-        self.scrollView.contentOffset = contentOffset
+        self.scrollView.contentOffset.x = self.leftButtonView.frame.size.width - scrollDirection
     }
     
     func layoutRightButtons(){
-        var contentFrame = self.bounds
-        contentFrame.origin.x = 0
+        var rightButtonCount = rightButtonView.subviews.count
         var rightButtonFrame = self.rightButtonView.frame
-        rightButtonFrame.origin.x = contentFrame.size.width - rightButtonFrame.size.width
+        rightButtonFrame.size.width = CGFloat(80 * rightButtonCount)
+        rightButtonFrame.origin.x = self.bounds.size.width - rightButtonFrame.size.width
         self.rightButtonView.frame = rightButtonFrame
-        self.scrollView.contentView.frame = contentFrame
+        self.rightButtonView.updateConstraints()
+        self.scrollView.contentView.frame.origin.x = 0
         self.scrollView.contentSize = CGSizeMake(self.bounds.size.width + rightButtonView.frame.size.width, self.bounds.size.height)
+        
+        var scrollDirection = self.scrollView.panGestureRecognizer.translationInView(self.scrollView.superview).x
+        self.scrollView.contentOffset.x = 0
     }
     
     // Mark : Method overrides
@@ -254,10 +334,10 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
     
     // Mark : Public methods
     func setState(state : State, animated : Bool){
+        
         prepareState(state)
         switch (state){
             case .Closed:
-                NSLog("%@ %@ %f", __FUNCTION__, state.description, currentZero)
                 self.scrollView.setContentOffset(CGPoint(x: currentZero, y:0.0), animated: animated)
             case .OpenRight:
                 self.scrollView.setContentOffset(CGPoint(x: self.rightButtonView.frame.size.width, y: 0), animated: animated)
@@ -270,8 +350,7 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
     func prepareState(state : State){
         switch (state){
             case .Closed:
-//                direction = Direction.NotSet
-                var x = 0
+                break
             case .OpenLeft:
                 direction = Direction.Left
                 self.layoutLeftButtons()
@@ -309,7 +388,6 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
     
     // Mark : - UIScrollViewDelegate
     func scrollViewDidScroll(scrollView: UIScrollView!){
-        NSLog("%@ %@ %@", __FUNCTION__, state.description, direction.description)
         if (direction == Direction.NotSet){
             var scrollDirection = self.scrollView.panGestureRecognizer.translationInView(self.scrollView.superview).x
             if (scrollDirection > 0.0){
@@ -320,16 +398,36 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
                 direction = Direction.Right
             }
         }
-        var contentOffset = scrollView.contentOffset
         if (scrollView.contentOffset.x == currentZero){
-            self.state = State.Closed
-            direction = Direction.NotSet
-        } else if (scrollView.contentOffset.x == 0 && direction == Direction.Left){
-            self.state = State.OpenLeft
-        } else if (scrollView.contentOffset.x == self.rightButtonView.frame.size.width && direction == Direction.Right){
-            self.state = State.OpenRight
+            if (self.scrollView.panGestureRecognizer.state == UIGestureRecognizerState.Possible){
+
+                self.scrollView.contentView.backgroundColor = UIColor.redColor()
+                self.scrollView.contentView.frame.origin.x = 0
+                
+                // Setting contentsize triggers scrollViewDidScroll
+                self.scrollView.contentSize = self.scrollView.frame.size
+                self.scrollView.contentSize.width += 50
+                currentZero = 0
+                self.leftButtonView.hidden = true
+                self.rightButtonView.hidden = true
+                
+                // Safe to set this here after scrollview change
+                self.state = State.Closed
+                direction = Direction.NotSet
+            }
+        } else if (direction == Direction.Left){
+            if (scrollView.contentOffset.x == 0){
+                self.state = State.OpenLeft
+            } else if (scrollView.contentOffset.x >= self.leftButtonView.frame.size.width){
+                setState(OptionTableViewCell.State.Closed, animated: false)
+            }
+        } else if (direction == Direction.Right){
+            if (scrollView.contentOffset.x == self.rightButtonView.frame.size.width){
+                self.state = State.OpenRight
+            } else if (scrollView.contentOffset.x <= 0){
+                setState(OptionTableViewCell.State.Closed, animated: false)
+            }
         }
-        scrollView.contentOffset = contentOffset
     }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView!) {
