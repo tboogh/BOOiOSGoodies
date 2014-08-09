@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol OptionTableViewCellDelegate{
-    @optional func optionTableViewCell(cell: UITableViewCell!, didSelectButtonAt index : Int)
+    optional func optionTableViewCell(cell: UITableViewCell!, didSelectButtonAt index : Int)
 }
 
 class OptionTableViewCellButton : UIControl{
@@ -17,6 +17,10 @@ class OptionTableViewCellButton : UIControl{
     var style : Style!
     var textLabel : UILabel?
     var imageView : UIImageView?
+    
+    required init(coder aDecoder: NSCoder!) {
+        super.init(coder: aDecoder)
+    }
     
     enum Style{
         case Default
@@ -38,11 +42,11 @@ class OptionTableViewCellButton : UIControl{
         var label : UILabel?
         if (style == Style.Default || style == Style.ImageOnly){
             imageView = UIImageView()
-            self.addSubview(imageView)
+            self.addSubview(imageView!)
         }
         if (style == Style.Default || style == Style.TextOnly){
             label = UILabel()
-            self.addSubview(label)
+            self.addSubview(label!)
         }
         
         if let imageView = imageView{
@@ -78,27 +82,13 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
     var rightButtonView : UIView!
     var delegate : OptionTableViewCellDelegate? = nil
     var tableView  : UITableView!
-    var state : State = State.Closed
-    var direction = Direction.NotSet
-    var currentZero : CGFloat = 0.0
-    
-    enum Direction: Printable{
-        case NotSet
-        case Left
-        case Right
-        
-        var description: String { get{
-            switch(self){
-            case .NotSet:
-                return "NotSet"
-            case .Left:
-                return "Left"
-            case .Right:
-                return "Right"
-            }
-        }
+    var state : State = State.Closed{
+        didSet{
+            NSLog("%@", state.description)
         }
     }
+    var currentZero : CGFloat = 0.0
+    var isTransitioning : Bool
     
     enum State: Printable{
         case Closed
@@ -175,10 +165,16 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
     }
     
     // Mark : Cell initialization
-    init(style: UITableViewCellStyle, reuseIdentifier: String!) {
+    override init(style: UITableViewCellStyle, reuseIdentifier: String!) {
+        self.isTransitioning = false
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
         
+    }
+    
+    required init(coder aDecoder: NSCoder!) {
+        self.isTransitioning = false
+        super.init(coder: aDecoder)
     }
     
     override func awakeFromNib() {
@@ -240,6 +236,8 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
         self.scrollView = scrollView;
         
         self.scrollView.panGestureRecognizer.addObserver(self, forKeyPath: "state", options: NSKeyValueObservingOptions.New, context: nil)
+//        self.addGestureRecognizer(tapGestureRecognizer)
+        self.isTransitioning = false
     }
     
     deinit{
@@ -247,7 +245,7 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
         self.scrollView.panGestureRecognizer.removeObserver(self, forKeyPath: "state")
     }
     
-    override func observeValueForKeyPath(keyPath: String!, ofObject object: AnyObject!, change: [NSObject : AnyObject]!, context: UnsafePointer<()>) {
+    override func observeValueForKeyPath(keyPath: String!, ofObject object: AnyObject!, change: [NSObject : AnyObject]!, context: UnsafeMutablePointer<()>) {
         if (keyPath == "state"){
             if (object as NSObject == self.tableView.panGestureRecognizer){
                 if (self.tableView.panGestureRecognizer.state == UIGestureRecognizerState.Began){
@@ -258,7 +256,7 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
                 // At currentzero and panning ended
                 if (self.scrollView.panGestureRecognizer.state == .Ended && self.scrollView.contentOffset.x == currentZero){
                     self.setState(State.Closed, animated: false)
-                    self.direction = .NotSet
+                    isTransitioning = false
                 }
             }
         }
@@ -303,13 +301,13 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
     // Mark : Method overrides
     override func hitTest(point: CGPoint, withEvent event: UIEvent!) -> UIView! {
         let hitView = super.hitTest(point, withEvent: event)
-        if (hitView){
+        if ((hitView) != nil){
             // Hit detected and no options displaying, act like a regular cell
-            if (self.scrollView.contentOffset.x == 0){
+            if (self.scrollView.contentOffset.x == currentZero){
                 return self;
             }
         } else {
-            if (self.scrollView.contentOffset.x != 0){
+            if (self.scrollView.contentOffset.x != currentZero){
                 self.setState(State.Closed, animated: true)
             }
         }
@@ -332,10 +330,10 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
         }
     }
     
-    // Mark : Public methods
+    //MARK:- Public methods
     func setState(state : State, animated : Bool){
-        
         prepareState(state)
+
         switch (state){
             case .Closed:
                 self.scrollView.setContentOffset(CGPoint(x: currentZero, y:0.0), animated: animated)
@@ -352,13 +350,11 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
             case .Closed:
                 break
             case .OpenLeft:
-                direction = Direction.Left
                 self.layoutLeftButtons()
                 leftButtonView.hidden = false
                 rightButtonView.hidden = true
                 currentZero = self.leftButtonView.frame.size.width
             case .OpenRight:
-                direction = Direction.Right
                 self.layoutRightButtons()
                 rightButtonView.hidden = false
                 leftButtonView.hidden = true
@@ -377,53 +373,53 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
             if (view.superview == parent){
                 return true;
             }
-            return isView(view.superview, childOf: parent)
+            return isView(view.superview!, childOf: parent)
         }
         return false;
     }
     
     func didTap(gestureRecognizer : UIGestureRecognizer){
+        NSLog("%@", __FUNCTION__)
         self.setState(State.Closed, animated: true)
     }
     
     // Mark : - UIScrollViewDelegate
     func scrollViewDidScroll(scrollView: UIScrollView!){
-        if (direction == Direction.NotSet){
+        if (!isTransitioning && state == State.Closed){
             var scrollDirection = self.scrollView.panGestureRecognizer.translationInView(self.scrollView.superview).x
             if (scrollDirection > 0.0){
-                self.prepareState(State.OpenLeft)
-                direction = Direction.Left
+                prepareState(State.OpenLeft)
+                state = State.OpenLeft
             } else {
-               self.prepareState(State.OpenRight)
-                direction = Direction.Right
+                prepareState(State.OpenRight)
+                state = State.OpenRight
             }
+            isTransitioning = true
         }
         if (scrollView.contentOffset.x == currentZero){
-            if (self.scrollView.panGestureRecognizer.state == UIGestureRecognizerState.Possible){
-
-                self.scrollView.contentView.backgroundColor = UIColor.redColor()
+            if (scrollView.panGestureRecognizer.state == UIGestureRecognizerState.Possible){
                 self.scrollView.contentView.frame.origin.x = 0
                 
                 // Setting contentsize triggers scrollViewDidScroll
-                self.scrollView.contentSize = self.scrollView.frame.size
-                self.scrollView.contentSize.width += 50
+                scrollView.contentSize = self.scrollView.frame.size
+                scrollView.contentSize.width += 50
                 currentZero = 0
-                self.leftButtonView.hidden = true
-                self.rightButtonView.hidden = true
+                leftButtonView.hidden = true
+                rightButtonView.hidden = true
                 
                 // Safe to set this here after scrollview change
-                self.state = State.Closed
-                direction = Direction.NotSet
+                state = State.Closed
+                isTransitioning = false
             }
-        } else if (direction == Direction.Left){
+        } else if (state == State.OpenLeft){
             if (scrollView.contentOffset.x == 0){
-                self.state = State.OpenLeft
+                isTransitioning = false
             } else if (scrollView.contentOffset.x >= self.leftButtonView.frame.size.width){
                 setState(OptionTableViewCell.State.Closed, animated: false)
             }
-        } else if (direction == Direction.Right){
+        } else if (state == State.OpenRight){
             if (scrollView.contentOffset.x == self.rightButtonView.frame.size.width){
-                self.state = State.OpenRight
+                isTransitioning = false
             } else if (scrollView.contentOffset.x <= 0){
                 setState(OptionTableViewCell.State.Closed, animated: false)
             }
@@ -434,28 +430,28 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
         for visibleCell in self.tableView.visibleCells(){
             if let visibleCell = visibleCell as? OptionTableViewCell{
                 if (visibleCell != self){
-                    visibleCell.setState(State.Closed, animated: true)
+//                    visibleCell.setState(State.Closed, animated: true)
                 }
             }
         }
         self.tableView.deselectRowAtIndexPath(self.tableView.indexPathForSelectedRow(), animated: true)
     }
     
-    func scrollViewWillEndDragging(scrollView: UIScrollView!, withVelocity velocity: CGPoint, targetContentOffset: UnsafePointer<CGPoint>){
+    func scrollViewWillEndDragging(scrollView: UIScrollView!, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let contentOffset = UnsafePointer<CGPoint>(targetContentOffset).memory
         let velocityThreshold : CGFloat = 0.2
         if (abs(velocity.x) < velocityThreshold){
-            if (self.direction == .Right){
+            if (self.state == State.OpenRight){
                 if (contentOffset.x > self.rightButtonView.bounds.size.width * 0.5){
-                    UnsafePointer<CGPoint>(targetContentOffset).memory.x = self.rightButtonView.bounds.size.width
+                    UnsafeMutablePointer<CGPoint>(targetContentOffset).memory.x = self.rightButtonView.bounds.size.width
                 } else {
-                    UnsafePointer<CGPoint>(targetContentOffset).memory.x = 0
+                    UnsafeMutablePointer<CGPoint>(targetContentOffset).memory.x = 0
                 }
-            } else if (self.direction == .Left){
+            } else if (self.state == State.OpenLeft){
                 if (contentOffset.x < self.leftButtonView.bounds.size.width * 0.5){
-                    UnsafePointer<CGPoint>(targetContentOffset).memory.x = 0
+                    UnsafeMutablePointer<CGPoint>(targetContentOffset).memory.x = 0
                 } else {
-                    UnsafePointer<CGPoint>(targetContentOffset).memory.x = self.leftButtonView.bounds.size.width
+                    UnsafeMutablePointer<CGPoint>(targetContentOffset).memory.x = self.leftButtonView.bounds.size.width
                 }
             }
         }
@@ -465,12 +461,12 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
 class OptionTableViewCellScrollView : UIScrollView{
     var contentView : UIView!
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
         commonInit()
     }
     
-    init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }

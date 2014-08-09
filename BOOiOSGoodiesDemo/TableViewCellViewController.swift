@@ -15,6 +15,7 @@ class TableViewController: UITableViewController, SegmentedTableViewCellDataSour
         super.viewDidLoad()
         self.tableView.registerClass(SegmentedTableViewCell.self, forCellReuseIdentifier: "Cell")
         self.tableView.registerClass(OptionTableViewCell.self, forCellReuseIdentifier: "OptionCell")
+        self.tableView.registerClass(BOOOptionTableViewCell.self, forCellReuseIdentifier: "BOOOptionCell")
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
@@ -22,19 +23,31 @@ class TableViewController: UITableViewController, SegmentedTableViewCellDataSour
             var cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as SegmentedTableViewCell
             cell.datasource = self
             return cell
-        }
-        var cell = tableView.dequeueReusableCellWithIdentifier("OptionCell", forIndexPath: indexPath) as OptionTableViewCell
+        } else if (indexPath.row == 5){
+            var cell = tableView.dequeueReusableCellWithIdentifier("OptionCell", forIndexPath: indexPath) as OptionTableViewCell
 
+            cell.setRightButtons(createButtons())
+            cell.setLeftButtons(createButtons())
+            cell.tag = indexPath.row
+            var label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 44))
+            label.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+            label.text = "Hello"
+            cell.contentView.addSubview(label)
+            optionCell = cell
+            return cell
+        }
         
+        var cell = tableView.dequeueReusableCellWithIdentifier("BOOOptionCell", forIndexPath: indexPath) as BOOOptionTableViewCell
         
-        cell.setRightButtons(createButtons())
-        cell.setLeftButtons(createButtons())
-        cell.tag = indexPath.row
-        var label = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 44))
-        label.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-        label.text = "Hello"
-        cell.contentView.addSubview(label)
-        optionCell = cell
+//        cell.setState(BOOOptionTableViewCell.State.RightOpen)
+//        if (indexPath.row % 2 == 0){
+//            cell.setState(BOOOptionTableViewCell.State.LeftOpen)
+//        } else if (indexPath.row % 3 == 0){
+//            cell.setState(BOOOptionTableViewCell.State.RightOpen)
+//        } else {
+//            cell.setState(BOOOptionTableViewCell.State.Closed)
+//        }
+        
         return cell
     }
 
@@ -59,11 +72,15 @@ class TableViewController: UITableViewController, SegmentedTableViewCellDataSour
     }
     
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     
     func numberOfSegmentsInCell(cell: SegmentedTableViewCell) -> Int {
         return 5
+    }
+    
+    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        return 44.0
     }
     
     func segmentedCell(cell: SegmentedTableViewCell, viewForIndex index: Int) -> UIView {
@@ -78,6 +95,10 @@ class TableViewController: UITableViewController, SegmentedTableViewCellDataSour
         if let cell = optionCell{
             cell.setState(OptionTableViewCell.State.OpenLeft, animated: true)
         }
+    }
+    
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        NSLog("Selected \(indexPath)")
     }
 
 }

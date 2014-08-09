@@ -37,7 +37,7 @@ class SegmentedTableViewCell: UITableViewCell {
                     var widthConstraint = NSLayoutConstraint(item: view, attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal, toItem: contentView, attribute: NSLayoutAttribute.Width, multiplier: 1.0/CGFloat(segmentCount), constant: 0)
                     
                     constraints += NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options: nil, metrics: nil, views: ["view" : view]) as [NSLayoutConstraint]
-                    constraints += widthConstraint
+                    constraints.append(widthConstraint)
                     if let previousView = previousView{
                         constraints += NSLayoutConstraint.constraintsWithVisualFormat("[previousView][view]", options: nil, metrics: nil, views: ["view" : view, "previousView" : previousView] ) as [NSLayoutConstraint]
                     } else {

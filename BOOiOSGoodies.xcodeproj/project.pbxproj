@@ -13,6 +13,7 @@
 		1496B56F195C499B00AEDF25 /* BOOShapeViewControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 1496B56C195C499B00AEDF25 /* BOOShapeViewControl.m */; };
 		1496B572195C49A700AEDF25 /* BOOUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 1496B571195C49A700AEDF25 /* BOOUtilities.m */; };
 		1496B575195C49B700AEDF25 /* UIImage+BOOImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1496B574195C49B700AEDF25 /* UIImage+BOOImageCache.m */; };
+		14ADE906197D94AF008F1CD8 /* BOOOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ADE905197D94AF008F1CD8 /* BOOOptionTableViewCell.swift */; };
 		14B50A621920012100A6C372 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86046191FE75900E2AD38 /* Foundation.framework */; };
 		14B50A631920012100A6C372 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D86048191FE75900E2AD38 /* CoreGraphics.framework */; };
 		14B50A641920012100A6C372 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D8604A191FE75900E2AD38 /* UIKit.framework */; };
@@ -52,6 +53,7 @@
 		1496B571195C49A700AEDF25 /* BOOUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOOUtilities.m; sourceTree = "<group>"; };
 		1496B573195C49B700AEDF25 /* UIImage+BOOImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BOOImageCache.h"; sourceTree = "<group>"; };
 		1496B574195C49B700AEDF25 /* UIImage+BOOImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BOOImageCache.m"; sourceTree = "<group>"; };
+		14ADE905197D94AF008F1CD8 /* BOOOptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BOOOptionTableViewCell.swift; sourceTree = "<group>"; };
 		14B11450194B89E000D6A2F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14B11453194B89E000D6A2F6 /* BOOMapperTesting-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BOOMapperTesting-Prefix.pch"; sourceTree = "<group>"; };
 		14B11454194B89E000D6A2F6 /* BOOMapperTesting.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BOOMapperTesting.1; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				14BF18B1197988900089343D /* OptionTableViewCell.swift */,
+				14ADE905197D94AF008F1CD8 /* BOOOptionTableViewCell.swift */,
 			);
 			path = BOOOptionTableViewCell;
 			sourceTree = "<group>";
@@ -335,6 +338,11 @@
 				CLASSPREFIX = BOO;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Tobias Boogh";
+				TargetAttributes = {
+					14B50A601920012100A6C372 = {
+						DevelopmentTeam = 52X3P8S6Q3;
+					};
+				};
 			};
 			buildConfigurationList = 14D8603E191FE75900E2AD38 /* Build configuration list for PBXProject "BOOiOSGoodies" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -372,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14ADE906197D94AF008F1CD8 /* BOOOptionTableViewCell.swift in Sources */,
 				14EB5118192366480072B383 /* BOODemoAppDelegate.m in Sources */,
 				14BF18BA197989060089343D /* BOODisplayLinkTimerExampleViewController.m in Sources */,
 				14BF18B2197988900089343D /* OptionTableViewCell.swift in Sources */,
@@ -427,6 +436,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BOOiOSGoodiesDemo/BOOiOSGoodiesDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -436,6 +447,7 @@
 				INFOPLIST_FILE = "BOOiOSGoodiesDemo/BOOiOSGoodiesDemo-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = BOOiOSGoodiesDemo;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BOOiOSGoodiesDemo/BOOiOSGoodiesDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,11 +461,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BOOiOSGoodiesDemo/BOOiOSGoodiesDemo-Prefix.pch";
 				INFOPLIST_FILE = "BOOiOSGoodiesDemo/BOOiOSGoodiesDemo-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = BOOiOSGoodiesDemo;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "BOOiOSGoodiesDemo/BOOiOSGoodiesDemo-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
