@@ -32,35 +32,41 @@ internal class BOOOptionTableViewCellScrollView : UIScrollView{
         commonInit()
     }
     
-    override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!) {
-        NSLog("\(__FUNCTION__)")
-        if let optionDelegate = optionDelegate{
-            optionDelegate.touchEnded(self)
-        }
+    override func pointInside(point: CGPoint, withEvent event: UIEvent?) -> Bool {
+        var adjustedPoint = point;
+        adjustedPoint.x -= self.contentView.frame.origin.x
+        let inside = self.contentView.pointInside(adjustedPoint, withEvent: event)
+        NSLog("\(inside) : \(adjustedPoint)")
+        return inside
     }
     
     override func hitTest(point: CGPoint, withEvent event: UIEvent!) -> UIView! {
         var result = super.hitTest(point, withEvent: event)
-//        
-//        if result == self.contentView{
+        return self
+        if result == self.contentView{
+            // Return nil to select cell
+//            return nil
+            
+            // return result to scroll
+            
 //            if let optionDelegate = optionDelegate{
 //                if !optionDelegate.shouldHitTestReturnContentView(self){
-//                    NSLog("self")
+//                    NSLog("Do close")
 //                    return self
 //                } else {
 //                    NSLog("result")
 //                    return result
 //                }
 //            }
-//        }
-//        NSLog("nil")
+        }
+        NSLog("hitTest")
         return result
     }
-    
-    
+
     override func setContentOffset(contentOffset: CGPoint, animated: Bool) {
         super.setContentOffset(contentOffset, animated: animated)
     }
+    
     func commonInit(){
         var contentView = UIView()
         self.addSubview(contentView)
@@ -246,14 +252,6 @@ class BOOOptionTableViewCell: UITableViewCell, UIScrollViewDelegate, BOOOptionTa
     
     override func prepareForReuse() {
         scrollView.setContentOffset(CGPoint(x: leftButtonViewWidthConstraint.constant, y: 0), animated: false)
-    }
-    
-    override func hitTest(point: CGPoint, withEvent event: UIEvent!) -> UIView! {
-        var result = super.hitTest(point, withEvent: event)
-        if result == scrollView.contentView{
-            return contentView
-        }
-        return result
     }
     
     override func willMoveToSuperview(newSuperview: UIView!) {

@@ -223,12 +223,8 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
         scrollView.autoresizingMask = cellResizingMask
         scrollView.contentSize = CGSizeMake(self.bounds.size.width + rigthButtonFrame.size.width + leftButtonView.frame.size.width, self.bounds.size.height)
         scrollView.delegate = self
-        self.addGestureRecognizer(scrollView.panGestureRecognizer)
+//        self.addGestureRecognizer(scrollView.panGestureRecognizer)
         self.contentView.addSubview(scrollView)
-        
-        var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: "didTap:");
-        tapGestureRecognizer.numberOfTapsRequired = 1
-        scrollView.contentView.addGestureRecognizer(tapGestureRecognizer)
         
         self.leftButtonView.hidden = true
         self.rightButtonView.hidden = true
@@ -236,7 +232,6 @@ class OptionTableViewCell: UITableViewCell, UIScrollViewDelegate{
         self.scrollView = scrollView;
         
         self.scrollView.panGestureRecognizer.addObserver(self, forKeyPath: "state", options: NSKeyValueObservingOptions.New, context: nil)
-//        self.addGestureRecognizer(tapGestureRecognizer)
         self.isTransitioning = false
     }
     
@@ -485,5 +480,11 @@ class OptionTableViewCellScrollView : UIScrollView{
     override func layoutSubviews() {
         super.layoutSubviews()
         self.contentView.frame.size = self.bounds.size
+    }
+    
+    override func hitTest(point: CGPoint, withEvent event: UIEvent?) -> UIView? {
+        let result = super.hitTest(point, withEvent: event);
+        NSLog("\(result)");
+        return result;
     }
 }
