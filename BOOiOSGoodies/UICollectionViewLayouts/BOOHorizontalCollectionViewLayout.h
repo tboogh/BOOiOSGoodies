@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface BOOHorizontalCollectionViewLayout : UICollectionViewFlowLayout
-
+@property (nonatomic) BOOL stickHeader;
 @end
