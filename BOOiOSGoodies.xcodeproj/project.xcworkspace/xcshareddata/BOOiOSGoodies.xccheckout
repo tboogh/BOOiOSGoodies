@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>F445BC75-9D4F-42C4-8F1F-B3E78659AB36</string>
+	<string>1D284E3A-BB5F-4393-820D-82A696A1C622</string>
 	<key>IDESourceControlProjectName</key>
 	<string>BOOiOSGoodies</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,7 +14,7 @@
 		<string>https://github.com/tboogh/BOOiOSGoodies.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BOOiOSGoodies.xcodeproj/project.xcworkspace</string>
+	<string>BOOiOSGoodies.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>773687F9EBEF9B4DC8A2FCD5BB6F6B3C2E73AFC1</key>

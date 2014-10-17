@@ -11,6 +11,7 @@ import UIKit
 protocol BOOOptionTableViewCellScrollViewDelegate{
     func touchEnded(scrollView : BOOOptionTableViewCellScrollView)
     func shouldHitTestReturnContentView(scrollView : BOOOptionTableViewCellScrollView) -> Bool
+    func allowGesture() -> Bool;
 }
 
 internal class BOOOptionTableViewCellScrollView : UIScrollView{
@@ -61,6 +62,13 @@ internal class BOOOptionTableViewCellScrollView : UIScrollView{
         }
         NSLog("hitTest")
         return result
+    }
+    
+    override func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+        if let delegate = optionDelegate{
+            return delegate.allowGesture()
+        }
+        return super.gestureRecognizerShouldBegin(gestureRecognizer);
     }
 
     override func setContentOffset(contentOffset: CGPoint, animated: Bool) {
@@ -348,6 +356,13 @@ class BOOOptionTableViewCell: UITableViewCell, UIScrollViewDelegate, BOOOptionTa
     
     func touchEnded(scrollView: BOOOptionTableViewCellScrollView) {
         scrollView.setContentOffset(CGPoint(x: self.leftButtonViewWidthConstraint.constant, y: 0.0), animated: true)
+    }
+    
+    func allowGesture() -> Bool {
+        if (scrollView.contentOffset.x != self.leftButtonViewWidthConstraint.constant){
+            return false
+        }
+        return true
     }
     
     //MARK: - KVO
