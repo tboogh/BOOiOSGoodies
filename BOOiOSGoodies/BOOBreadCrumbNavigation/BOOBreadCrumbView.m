@@ -42,18 +42,18 @@
             return;
         }
     }
-    [self removeButtonsAfterIndex:index];
+    [self removeButtonsAfterIndex:index animated:YES];
     if ([self.breadCrumbDelegate respondsToSelector:@selector(breadCrumbView:didSelectedButtonAtIndex:)]){
         [_breadCrumbDelegate breadCrumbView:self didSelectedButtonAtIndex:index];
     }
 }
 
--(void)removeButtonsAfterIndex:(NSUInteger)index{
+-(void)removeButtonsAfterIndex:(NSUInteger)index animated:(BOOL)animated{
     NSMutableArray *removeArray = [[NSMutableArray alloc] init];
     if (index+1 >= self.buttons.count){
         return;
     }
-    [UIView animateWithDuration:0.3 animations:^{
+    void (^animations)() = ^{
         for (NSUInteger i=index + 1; i < self.buttons.count; i++){
             UIView *view = (self.buttons)[i];
             
@@ -64,7 +64,9 @@
                 [removeArray addObject:view];
             }
         }
-    } completion:^(BOOL finished) {
+    };
+    
+    void (^completion)(BOOL) = ^(BOOL finished){
         for (UIView *view in removeArray){
             [view removeFromSuperview];
             [self.buttons removeObject:view];
@@ -76,7 +78,15 @@
         self.contentSize = contentSize;
         [self updateButtons];
         [self scrollRectToVisible:lastButton.frame animated:YES];
-    }];
+    };
+    
+    if (animated){
+        [UIView animateWithDuration:0.3 animations:animations
+                     completion:completion];
+    } else {
+        animations();
+        completion(YES);
+    }
 }
 
 -(void)addButton{
