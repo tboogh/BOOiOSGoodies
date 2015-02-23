@@ -54,6 +54,11 @@
     [super drawRect:rect];
 }
 
+-(void)addColors:(NSArray *)colors{
+    [self.colors addObjectsFromArray:colors];
+    [self setNeedsDisplay];
+}
+
 -(void)addColor:(UIColor *)color{
     [self.colors addObject:color];
     [self setNeedsDisplay];

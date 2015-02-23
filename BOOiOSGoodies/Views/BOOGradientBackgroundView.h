@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BOOGradientBackgroundView : UIView
+-(void)addColors:(NSArray *)colors;
 -(void)addColor:(UIColor *)color;
 -(void)insertColor:(UIColor *)color atIndex:(int)index;
 -(void)removeColorAtIndex:(int)index;
