@@ -48,6 +48,19 @@
     }
 }
 
+-(void)reloadButtonsAnimated:(BOOL)animated{
+    [self.buttons removeAllObjects];
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    
+    if ([self.breadCrumbDataSource respondsToSelector:@selector(numberOfButtonsInBreadCrumbView:)]){
+        NSUInteger count = [self.breadCrumbDataSource numberOfButtonsInBreadCrumbView:self];
+        for (int i=0; i < count; ++i){
+            [self addButtonAnimated:animated];
+        }
+    }
+    
+}
+
 -(void)removeButtonsAfterIndex:(NSUInteger)index animated:(BOOL)animated{
     NSMutableArray *removeArray = [[NSMutableArray alloc] init];
     if (index+1 >= self.buttons.count){
@@ -89,7 +102,7 @@
     }
 }
 
--(void)addButton{
+-(void)addButtonAnimated:(BOOL)animated{
     CGRect buttonFrame;
     CGRect targetFrame;
     if (![self.breadCrumbDataSource respondsToSelector:@selector(breadCrumbView:controlForButtonAtIndex:)]){
@@ -118,12 +131,18 @@
     [buttonView addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:buttonView];
     [self updateButtons];
-    [UIView animateWithDuration:0.3 animations:^{
+    void (^animation)() = ^{
         buttonView.frame = targetFrame;
-    } completion:^(BOOL finished) {
-        
-        [self scrollRectToVisible:buttonView.frame animated:YES];
-    }];
+    };
+    void (^completion)(BOOL) = ^(BOOL finished) {
+        [self scrollRectToVisible:buttonView.frame animated:animated];
+    };
+    if (animated){
+        [UIView animateWithDuration:0.3 animations:animation completion:completion];
+    } else {
+        animation();
+        completion(YES);
+    }
 }
 
 -(void)updateButtons{

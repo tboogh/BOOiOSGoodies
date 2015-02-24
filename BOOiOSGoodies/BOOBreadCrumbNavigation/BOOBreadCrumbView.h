@@ -14,6 +14,7 @@
 
 @protocol BOOBreadCrumbDataSource <NSObject>
 -(BOOBreadCrumbButton *)breadCrumbView:(BOOBreadCrumbView *)breadCrumbView controlForButtonAtIndex:(NSUInteger)index;
+-(NSUInteger)numberOfButtonsInBreadCrumbView:(BOOBreadCrumbView *)breadCrumView;
 @end
 
 @protocol BOOBreadCrumbDelegate <NSObject>
@@ -29,6 +30,7 @@
 @property (nonatomic, weak) IBOutlet id <BOOBreadCrumbDataSource> breadCrumbDataSource;
 @property (nonatomic) CGFloat buttonSpacing;
 -(void)setHomeButtonTitle:(NSString *)title;
--(void)addButton;
+-(void)addButtonAnimated:(BOOL)animated;
 -(void)removeButtonsAfterIndex:(NSUInteger)index animated:(BOOL)animated;
+-(void)reloadButtonsAnimated:(BOOL)animated;
 @end
