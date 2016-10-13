@@ -225,7 +225,7 @@ NSString * const kBOOCollectionViewElementKindNavigationSectionBackground = @"kB
         CGRect collectionViewBounds = self.collectionView.bounds;
         CGFloat fraction = contentOffset.x / (contentSize.width - collectionViewBounds.size.width);
         
-        if (isnan(fraction)){
+        if (isnan(fraction) || isinf(fraction)){
             fraction = 0;
         }
         CGFloat navigationX = ((self.navigationRect.size.width - self.navigationItemSize.width) * fraction) + self.navigationRect.origin.x + contentOffset.x + ((self.navigationItemSize.width * 0.5) - (indiciatorFrame.size.width * 0.5));
