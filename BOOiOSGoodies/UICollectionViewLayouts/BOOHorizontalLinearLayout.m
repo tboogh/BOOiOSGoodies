@@ -34,6 +34,7 @@ NSString * const kBOOCollectionViewElementKindNavigationSectionBackground = @"kB
 }
 
 -(void)awakeFromNib{
+    [super awakeFromNib];
     [self commonInit];
 }
 
